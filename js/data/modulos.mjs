@@ -6,14 +6,39 @@
  * exercícios, resumo) fica em js/data/questoes/aula-N.mjs.
  */
 const MODULOS = [
+  {
+    id:      1,
+    titulo:  "Direito Tributário",
+    materia: "Direito Tributário",
+    aulas: [
+      {
+        id:      1,
+        titulo:  "Aula 1 - Conceitos iniciais",
+        arquivo: "aula-1",
+        icone:   'padrao',
+      }
+    ],
+  },
+  {
+    id:      2,
+    titulo:  "Contabilidade Geral",
+    materia: "Contabilidade Geral",
+    aulas: [
 
+    ],
+  }
 ];
 
 /**
  * NIVEIS.JS — Agrupa etapas em ciclos.
  */
 const NIVEIS = [
-
+  {
+    id:          1,
+    titulo:      "Etapa 1 - Conceitos",
+    etapas:      [1, 2],
+    insigniaUrl: "",
+  }
 ];
 
 /**
