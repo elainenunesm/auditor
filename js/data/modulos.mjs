@@ -24,7 +24,12 @@ const MODULOS = [
     titulo:  "Contabilidade Geral",
     materia: "Contabilidade Geral",
     aulas: [
-
+      {
+        id:      3,
+        titulo:  "Nova aula",
+        arquivo: "aula-3",
+        icone:   'padrao',
+      }
     ],
   },
   {
