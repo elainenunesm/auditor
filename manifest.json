@@ -1,7 +1,7 @@
 {
-  "name": "Minhas Aulas",
-  "short_name": "Minhas Aulas",
-  "description": "Gerado pelo Construtor de Aulas",
+  "name": "Auditor",
+  "short_name": "Auditor",
+  "description": "Construção do",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
