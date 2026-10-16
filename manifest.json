@@ -1,7 +1,7 @@
 {
   "name": "Auditor",
   "short_name": "Auditor",
-  "description": "Construção do",
+  "description": "Construção do conhecimento para concurso",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
