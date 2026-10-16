@@ -1,0 +1,2299 @@
+/* Cor de marca em variáveis — o export injeta um :root{} novo no final do
+   arquivo com a cor escolhida no Construtor de Aulas (ver js/export.js). */
+:root {
+  --cor-primaria: #5B2BCB;
+  --cor-primaria-rgb: 91,43,203;
+  --cor-primaria-escura: #4a22a8;
+  --cor-gradiente-1: #8E5CF5;
+  --cor-gradiente-2: #6D2EE8;
+  --cor-clara: #f0eaff;
+  --cor-borda-clara: #e9dffb;
+  --cor-borda-media: #d4c4f0;
+  --cor-hover-fundo: #faf7ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #fff;
+  min-height: 100vh;
+}
+
+.app-wrapper {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+  height: 100vh;   /* fallback para navegadores antigos */
+  height: 100dvh;  /* viewport dinâmico */
+  height: 100svh;  /* viewport "pequeno" garantido — evita que a barra de
+                       gestos do sistema (comum no PWA instalado) corte o
+                       rodapé com os botões Anterior/Próxima */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 60px rgba(91, 43, 203, 0.15);
+  overflow: hidden;
+}
+
+/* HEADER */
+.estudo-header {
+  background: var(--cor-primaria);
+  padding: 16px 20px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+}
+
+.btn-fechar {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+.btn-fechar:hover { background: rgba(255,255,255,0.3); }
+
+.header-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.questao-info {
+  color: rgba(255,255,255,0.9);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.progress-segmentos {
+  display: flex;
+  gap: 4px;
+}
+
+.seg {
+  flex: 1;
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.3);
+  transition: background 0.4s ease;
+}
+
+.seg.respondida { background: #fff; }
+.seg.atual      { background: rgba(255,255,255,0.7); }
+
+/* TAGS */
+.tags-row {
+  display: flex;
+  gap: 8px;
+  padding: 14px 20px 0;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tag-dificuldade {
+  background: var(--cor-clara);
+  color: var(--cor-primaria);
+}
+
+.tag-consultar {
+  background: var(--cor-clara);
+  color: var(--cor-primaria);
+  transition: background 0.2s;
+}
+.tag-consultar:hover { background: var(--cor-borda-media); }
+
+/* QUESTÃO */
+.questao-wrap {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.questao-area {
+  height: 100%;
+  overflow-y: auto;
+  padding: 24px 20px 12px;
+}
+
+.scroll-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: linear-gradient(to bottom, transparent, #ffffff);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.scroll-fade.oculto {
+  opacity: 0;
+}
+
+.questao-titulo {
+  font-size: 21px;
+  font-weight: 400;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.questao-subtitulo {
+  font-size: 15px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+/* TELA DE CHECAGEM — pergunta curta em negrito antes do título grande */
+.checagem-pergunta {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.checagem-titulo {
+  margin-bottom: 24px;
+}
+
+/* Perguntas de "o verbo em destaque indica" — instrução menor,
+   frase analisada maior (é o que realmente importa ler com atenção). */
+.checagem-instrucao {
+  font-size: 16px;
+}
+
+.checagem-frase {
+  font-size: 19px;
+  font-weight: 400;
+  color: #1a1a2e;
+}
+
+.checagem-frase strong {
+  font-weight: 700;
+  color: #4A80F0;
+}
+
+/* TELA DE INTRODUÇÃO (Antes de começar) */
+.intro-card { position: relative; }
+.intro-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #4A80F0;
+  margin-bottom: 8px;
+}
+
+.intro-titulo {
+  font-size: 32px;
+  font-weight: 400;
+  color: #1a1a2e;
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.intro-desc {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  text-align: justify;
+}
+
+.intro-info {
+  background: #f5f8ff;
+  border: 1.5px solid #d9e6fc;
+  border-radius: 18px;
+  padding: 22px 20px;
+}
+
+.intro-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.intro-info-item + .intro-info-item {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #d9e6fc;
+}
+
+.intro-info-icone-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #eef2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.intro-info-texto h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #4A80F0;
+  margin-bottom: 6px;
+}
+
+.intro-info-texto p {
+  font-size: 16px;
+  color: #374151;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* TELA DE DEFINIÇÃO */
+.definicao-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 32px 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* ETIQUETA "MARCAR PARA REVISÃO" — botão único e fixo no cabeçalho (não é
+   mais recriado a cada tela, ver ligarBotaoMarcar/atualizarBotaoMarcar em
+   estudo.mjs), preso no rodapé do próprio .estudo-header (position:absolute
+   nele, que tem position:relative) — assim ele acompanha a altura real do
+   cabeçalho (que varia com o tamanho do título da aula), em vez de um valor
+   fixo em pixels que ficava errado quando o título quebrava em 2 linhas. */
+.btn-marcar-cartao {
+  position: absolute;
+  bottom: -40px;
+  right: 16px;
+  width: 36px;
+  height: 44px;
+  padding: 0;
+  background: #ffffff;
+  border: 2px solid #dbe4fb;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #b9c6f0;
+  z-index: 15;
+  transition: color 0.2s, transform 0.15s;
+}
+
+.btn-marcar-cartao:hover {
+  color: #4A80F0;
+  transform: translateY(1px);
+}
+
+.btn-marcar-cartao svg {
+  width: 19px;
+  height: 19px;
+}
+
+.btn-marcar-cartao.marcada {
+  color: #4A80F0;
+}
+
+.btn-marcar-cartao.marcada svg {
+  fill: #4A80F0;
+}
+
+.definicao-icone-wrap {
+  width: 88px;
+  height: 88px;
+  background: #eef2ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.definicao-texto {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a2e;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.destaque {
+  color: #4A80F0;
+  font-weight: 700;
+}
+
+/* TELA DE CONTEXTO */
+.contexto-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 8px 4px;
+  position: relative;
+}
+
+.contexto-icone-wrap {
+  width: 80px;
+  height: 80px;
+  background: #eef2ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.contexto-texto {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a1a2e;
+  line-height: 1.65;
+  text-align: justify;
+}
+
+.contexto-texto strong { font-weight: 700; }
+
+.contexto-nota {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.contexto-nota svg { flex-shrink: 0; margin-top: 1px; }
+
+.contexto-nota span {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* TELA DE EXEMPLO */
+.exemplo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 8px 4px;
+  position: relative;
+}
+
+/* Filho de um flex column sem min-width:0 não deixa o overflow-x:auto (ver
+   .frase-anotada-wrap) funcionar — o item cresce pra caber a frase inteira
+   em vez de encolher e deixar rolar, empurrando a caixa pra fora da tela no
+   celular. Aplica em .exemplo-card (telas de exemplo) e .opcoes (telas de
+   checagem), pra cobrir qualquer frase, em qualquer tela, sem precisar
+   lembrar disso de novo a cada caixa nova. */
+.exemplo-card > *,
+.opcoes > * {
+  min-width: 0;
+}
+
+.exemplo-icone-wrap {
+  width: 88px;
+  height: 88px;
+  background: #eef2ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.exemplo-texto {
+  font-size: 16px;
+  color: #1a1a2e;
+  line-height: 1.65;
+  text-align: justify;
+}
+
+.exemplo-conclusao {
+  font-size: 16px;
+  color: #1a1a2e;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.exemplo-obs-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #eef2ff;
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.exemplo-obs-icone {
+  flex-shrink: 0;
+  display: flex;
+}
+
+.exemplo-obs-texto {
+  font-size: 14.5px;
+  color: #1a1a2e;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.exemplo-pontos {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.exemplo-ponto {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.exemplo-ponto-icone {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #eef2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.exemplo-ponto-texto {
+  font-size: 16px;
+  color: #1a1a2e;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.card-imagem {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #ececf5;
+  background: #fbfaff;
+}
+
+.card-imagem-img {
+  display: block;
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+}
+
+.card-imagem-corpo {
+  padding: 14px 16px;
+}
+
+.card-imagem-titulo {
+  font-size: 17px;
+  color: #1a1a2e;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.card-imagem-subtitulo {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.4;
+  text-align: left;
+  margin-top: 2px;
+}
+
+.card-imagem-texto {
+  font-size: 15px;
+  color: #1a1a2e;
+  line-height: 1.55;
+  text-align: left;
+  margin-top: 8px;
+}
+
+.card-imagem-titulo:first-child,
+.card-imagem-subtitulo:first-child,
+.card-imagem-texto:first-child {
+  margin-top: 0;
+}
+
+.card-audio {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #ececf5;
+  background: #fbfaff;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-audio-player {
+  display: block;
+  width: 100%;
+}
+
+.card-audio-titulo {
+  font-size: 17px;
+  color: #1a1a2e;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.card-audio-subtitulo {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.4;
+  text-align: left;
+  margin-top: 2px;
+}
+
+.card-audio-texto {
+  font-size: 15px;
+  color: #1a1a2e;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.gravacao-aluno-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gravacao-aluno-controles {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-gravar-audio-aluno {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: var(--cor-primaria);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-gravar-audio-aluno:hover { background: var(--cor-primaria-escura); }
+.btn-gravar-audio-aluno.gravando { background: #dc2626; }
+.btn-gravar-audio-aluno.gravando:hover { background: #b91c1c; }
+
+.gravacao-aluno-status {
+  font-size: 13px;
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.gravacao-aluno-preview audio {
+  display: block;
+  width: 100%;
+}
+
+.flashcard-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.flashcard {
+  width: 100%;
+  max-width: 380px;
+  min-height: 180px;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  transition: transform .5s cubic-bezier(.4, .2, .2, 1);
+  transform-style: preserve-3d;
+}
+
+.flashcard.virado .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 18px;
+  border: 1px solid #ececf5;
+  background: #fbfaff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.flashcard-verso {
+  transform: rotateY(180deg);
+  background: #eef2ff;
+}
+
+.flashcard-texto {
+  font-size: 16px;
+  color: #1a1a2e;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.flashcard-dica {
+  font-size: 12.5px;
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* TELA DE "PASSO" (numerado) — Como encontrar o sujeito, etc. */
+.passo-linha {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.passo-numero {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #eef2ff;
+  color: #4A80F0;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.passo-instrucao {
+  font-size: 16px;
+  color: #1a1a2e;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.passo-caixa {
+  background: #f5f7ff;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.point-label-titulo {
+  font-size: 16px;
+  color: #1a1a2e;
+  margin: 14px 0 4px;
+}
+
+.point-label-subtitulo {
+  font-size: 13px;
+  color: #6E6A7A;
+  margin: 0 0 10px;
+}
+
+.destaque-azul {
+  color: #3B82F6;
+}
+
+/* Trecho de um texto da tela sincronizado com o áudio (ver montarSincroniaAudio em
+   js/conteudo.js) — fica destacado só enquanto o áudio passa pelo intervalo de tempo
+   marcado, ver trocarAudioDaTela em vendor/estudo/js/estudo.mjs. */
+.tela-sincronia-frase { transition: background-color .2s ease, color .2s ease; border-radius: 4px; }
+.tela-sincronia-frase.ativa { background: var(--cor-clara); color: var(--cor-primaria); font-weight: 700; box-shadow: 0 0 0 4px var(--cor-clara); }
+
+.passo-caixa-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.passo-caixa-icone {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e6ebff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.passo-caixa-inline {
+  font-size: 15px;
+  color: #1a1a2e;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.passo-caixa-corpo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.passo-caixa-titulo {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.passo-caixa-texto {
+  font-size: 15px;
+  color: #1a1a2e;
+  line-height: 1.4;
+}
+
+/* Citação de exemplo em itálico (ex: "→ João comprou um livro.") — um
+   pouco menor que o texto normal da caixa, que fica largo/pesado nesse uso. */
+.passo-caixa-texto em {
+  font-size: 13px;
+}
+
+.passo-caixa-divisor {
+  height: 1px;
+  background: #dde3f5;
+  margin: 12px 0;
+}
+
+.passo-caixa-perguntas {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Checklist de perguntas sim/não dentro de um passo de exemplo (ex: "o
+   verbo destacado é haver? é fazer? é fenômeno da natureza?"). */
+.simnao-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.simnao-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.simnao-texto {
+  font-size: 14px;
+  color: #1a1a2e;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.simnao-botoes {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.simnao-btn {
+  padding: 6px 14px;
+  border: 2px solid var(--cor-borda-clara);
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a1a2e;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.simnao-btn:hover:not(:disabled):not(.correta) {
+  border-color: var(--cor-primaria);
+  background: var(--cor-hover-fundo);
+  color: var(--cor-primaria);
+}
+
+.simnao-btn.correta {
+  border-color: #16a34a;
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.simnao-btn.errada {
+  border-color: #dc2626;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.simnao-btn:disabled:not(.correta) {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.passo-caixa-seta {
+  font-size: 15px;
+  color: #1a1a2e;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* Linha de exemplo dentro das perguntas, sem a seta "→" — só indentada
+   pra se alinhar com o texto das linhas com seta acima/abaixo dela. */
+.passo-caixa-nota-indent {
+  font-size: 15px;
+  color: #1a1a2e;
+  line-height: 1.4;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.passo-nota {
+  font-size: 16px;
+  color: #1a1a2e;
+  line-height: 1.5;
+  text-align: left;
+  margin: 6px 0 0 54px;
+}
+
+.passo-caixa-resposta {
+  font-size: 15px;
+  color: #1a1a2e;
+  text-align: left;
+}
+
+.passo-caixa-resposta strong {
+  color: #4A80F0;
+}
+
+/* TELA DE INFINITIVO */
+.infinitivo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.infinitivo-icone-wrap {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.infinitivo-icone-simbolo {
+  font-size: 44px;
+  font-weight: 700;
+  color: #2563eb;
+  line-height: 1;
+  font-family: Arial, sans-serif;
+}
+
+.infinitivo-descricao {
+  font-size: 19px;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.infinitivo-nota {
+  font-size: 16px;
+  color: #374151;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.infinitivo-conj-titulo {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a2e;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.infinitivo-conjs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.infinitivo-conj-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.infinitivo-conj-sufixo {
+  font-size: 27px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.infinitivo-conj-label {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.infinitivo-extra {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a2e;
+  line-height: 1.6;
+  text-align: justify;
+  background: #eff6ff;
+  border-left: 3px solid #2563eb;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+/* TELA DE RESUMO */
+.resumo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.resumo-titulo {
+  font-size: 18px;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.resumo-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fafafa;
+  border: 1px solid var(--cor-clara);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.resumo-icone {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.resumo-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.resumo-item-titulo {
+  font-size: 16px;
+}
+
+.resumo-item-exemplos {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* TELA DE LISTA — mesmo cartão do resumo, mas cada item é uma linha só (ícone +
+   texto, sem título/exemplos separados) e uma descrição livre depois da lista. */
+.lista-item-texto {
+  font-size: 16px;
+  color: #1a1a2e;
+}
+
+.lista-descricao {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.lista-icone-topo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* TELA DE TIMELINE — linha do tempo com pontos clicáveis; a linha em si é um
+   pseudo-elemento atrás dos pontos (mesmo truque do path-line do Início). */
+.tl-trilha {
+  display: flex; justify-content: center; gap: 6px; position: relative; padding: 18px 4px 8px;
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+}
+.tl-trilha::before {
+  content: ''; position: absolute; top: 44px; left: 8px; right: 8px; height: 2px;
+  background: var(--cor-borda-clara);
+}
+.tl-ponto {
+  display: flex; flex-direction: column; align-items: center; gap: 5px; position: relative;
+  flex-shrink: 0; width: 76px; background: none; border: none; cursor: pointer;
+  font-family: inherit; padding: 0 2px;
+}
+/* Largura fixa por ponto (acima) garante distância constante entre eles, não
+   importa quantos existam nem o tamanho do texto — sem precisar recalcular
+   nada em JS. O "ano" nunca quebra linha (só trunca) pra não empurrar o ponto
+   pra baixo e desalinhar da linha; o "rótulo" fica abaixo do ponto, então
+   pode quebrar em várias linhas à vontade sem afetar esse alinhamento. */
+.tl-ano {
+  font-size: 12px; font-weight: 700; color: #9ca3af;
+  max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  transition: color .15s;
+}
+.tl-ponto.ativo .tl-ano { color: var(--tl-cor, var(--cor-primaria)); }
+.tl-dot {
+  width: 14px; height: 14px; border-radius: 50%; background: #fff;
+  border: 3px solid var(--tl-cor, var(--cor-borda-media)); opacity: .45;
+  z-index: 1; transition: all .15s; flex-shrink: 0;
+}
+.tl-ponto.ativo .tl-dot { background: var(--tl-cor, var(--cor-primaria)); opacity: 1; width: 18px; height: 18px; }
+.tl-rotulo { font-size: 11px; color: #6b7280; text-align: center; line-height: 1.3; max-width: 100%; overflow-wrap: break-word; word-break: break-word; }
+.tl-ponto.ativo .tl-rotulo { color: #1a1a2e; font-weight: 700; }
+
+.tl-detalhe { background: #f5f8ff; border: 1.5px solid #d9e6fc; border-radius: 16px; padding: 20px; margin-top: 6px; }
+.tl-detalhe-icone {
+  width: 44px; height: 44px; border-radius: 50%; background: var(--tl-cor, var(--cor-primaria));
+  display: flex; align-items: center; justify-content: center; margin-bottom: 12px;
+}
+.tl-detalhe-titulo { font-size: 17px; font-weight: 700; color: #1a1a2e; }
+.tl-detalhe-ano { font-size: 13px; color: #6b7280; margin-top: 2px; }
+.tl-detalhe-desc { font-size: 15px; color: #374151; margin-top: 12px; line-height: 1.6; text-align: justify; }
+.tl-carac { margin-top: 14px; padding-top: 14px; border-top: 1px solid #d9e6fc; }
+.tl-carac-titulo { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--tl-cor, #7c5cd6); margin-bottom: 10px; }
+.tl-carac-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; color: #374151; margin-top: 8px; }
+.tl-carac-check {
+  width: 18px; height: 18px; border-radius: 50%; background: #16A34A;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
+}
+
+/* ÁUDIO DA TELA — narração opcional disponível em qualquer tipo de tela (ver
+   montarAudioTelaHtml/trocarAudioDaTela em estudo.mjs). Toca sozinha assim que a tela é
+   mostrada (autoplay é permitido porque a troca de tela sempre parte de um clique da
+   aluna) — exceto nas telas de Matemática, onde começa junto com "Iniciar animação". */
+.tela-audio-bar {
+  display: flex; align-items: center; gap: 12px; background: var(--cor-clara); border-radius: 999px;
+  padding: 8px 16px 8px 8px; margin-bottom: 16px;
+}
+.tela-audio-btn {
+  flex-shrink: 0; width: 42px; height: 42px; border-radius: 50%; border: none; cursor: pointer;
+  background: var(--cor-primaria); display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.tela-audio-btn:hover { background: var(--cor-primaria-escura); }
+.tela-audio-onda { flex: 1; display: flex; align-items: center; gap: 2px; height: 26px; cursor: pointer; min-width: 0; }
+.tela-audio-barra { flex-shrink: 0; width: 3px; border-radius: 2px; background: var(--cor-borda-media); transition: background .1s; }
+.tela-audio-barra.tocada { background: var(--cor-primaria); }
+.tela-audio-tempo { flex-shrink: 0; font-size: 12px; font-weight: 600; color: #6b7280; white-space: nowrap; }
+
+
+/* TELA DE RETA NUMÉRICA — JOGO DE SINAIS: a aluna digita ponto inicial e movimento (os
+   dois campos abaixo), a reta horizontal tem pontos igualmente espaçados (0 sempre no
+   centro), um marcador percorre a reta casa por casa ao clicar em "Iniciar animação", e a
+   explicação (gerada a partir dos dois números) só aparece depois que a animação termina
+   — ver mostrarJogoSinais em estudo.mjs. */
+.jg-campos { display: flex; gap: 12px; margin-bottom: 18px; }
+.jg-campo { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.jg-campo label { font-size: 12.5px; font-weight: 700; color: #6b7280; }
+.jg-campo input {
+  width: 100%; border: 1.5px solid var(--cor-borda-clara); border-radius: 12px;
+  padding: 10px 12px; font-family: inherit; font-size: 16px; font-weight: 700;
+  color: #1a1a2e; background: #fff; text-align: center; transition: border-color .15s;
+}
+.jg-campo input:focus { outline: none; border-color: var(--cor-primaria); }
+.jg-campo input:disabled { background: #f5f4fa; color: #9ca3af; }
+.jg-expressao { font-size: 24px; font-weight: 800; color: #1a1a2e; text-align: center; margin: 4px 0 26px; letter-spacing: .02em; transition: color .3s ease, transform .3s ease; }
+.jg-reta-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; padding: 8px 0 0; }
+.jg-reta { position: relative; height: 88px; min-width: 100%; margin: 0 18px; }
+.jg-linha { position: absolute; top: 15px; left: 0; right: 0; height: 3px; background: var(--cor-borda-clara); border-radius: 2px; }
+.jg-trajetoria {
+  position: absolute; top: 11px; height: 11px; background: rgba(37,99,235,0.18); border-radius: 6px;
+  transition: left .5s ease, width .5s ease;
+}
+.jg-trajetoria::after {
+  content: ''; position: absolute; top: 50%; width: 0; height: 0; transform: translateY(-50%);
+  border-top: 7px solid transparent; border-bottom: 7px solid transparent;
+}
+.jg-trajetoria.jg-dir-direita::after  { right: -1px; border-left: 10px solid #2563EB; }
+.jg-trajetoria.jg-dir-esquerda::after { left: -1px;  border-right: 10px solid #2563EB; }
+/* Número fica bem abaixo da marca/linha (gap grande), pra reta e marcador ficarem limpos,
+   sem número nenhum colado neles — só a marquinha (tick) cruza a linha. */
+.jg-ponto { position: absolute; top: 3px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.jg-ponto-tick { width: 2px; height: 22px; background: var(--cor-borda-media); border-radius: 1px; }
+.jg-zero .jg-ponto-tick { background: var(--cor-primaria); width: 3px; }
+.jg-ponto-num { font-size: 13px; color: #9ca3af; font-weight: 600; }
+.jg-zero .jg-ponto-num { color: var(--cor-primaria); font-weight: 800; }
+.jg-marcador { position: absolute; top: 3px; transform: translateX(-50%); z-index: 2; transition: left .5s ease; }
+.jg-marcador-dot {
+  display: block; width: 22px; height: 22px; border-radius: 50%; background: #2563EB;
+  border: 3px solid #fff; box-shadow: 0 2px 6px rgba(37,99,235,0.55);
+}
+.jg-rotulo {
+  position: absolute; top: 68px; transform: translateX(-50%); font-size: 11px; font-weight: 800;
+  letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; transition: left .5s ease;
+}
+.jg-rotulo-inicio { color: #6b7280; }
+.jg-rotulo-fim { color: #2563EB; }
+.jg-btn-animar {
+  display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%;
+  margin-top: 20px; padding: 12px 16px; background: var(--cor-primaria); border: none;
+  border-radius: 12px; color: #fff; font-weight: 700; font-size: 14.5px; cursor: pointer;
+  transition: background 0.2s;
+}
+.jg-btn-animar:hover:not(:disabled) { background: var(--cor-primaria-escura); }
+.jg-btn-animar:disabled { opacity: 0.7; cursor: default; }
+.jg-explicacao {
+  background: #f5f8ff; border: 1.5px solid #d9e6fc; border-radius: 16px; padding: 18px 20px; margin-top: 16px;
+}
+.jg-explicacao-linha { font-size: 15px; color: #374151; line-height: 1.6; }
+.jg-explicacao-linha + .jg-explicacao-linha { margin-top: 6px; }
+
+/* TELA DE AGRUPAMENTO — MULTIPLICAÇÃO: a aluna digita quantos grupos e quantos elementos
+   por grupo (1 a 5 cada — mesmos campos/expressão/botão/explicação da Reta Numérica, ver
+   .jg-campos/.jg-campo/.jg-expressao/.jg-btn-animar/.jg-explicacao* acima). Ao clicar em
+   "Iniciar animação", cada grupo é destacado e seus elementos aparecem um por vez, depois
+   a soma repetida e por fim a multiplicação — ver mostrarAgrupamento em estudo.mjs. */
+.ag-grupos { display: flex; flex-direction: column; gap: 12px; margin-top: 4px; }
+.ag-grupo {
+  border: 1.5px solid var(--cor-borda-clara); border-radius: 14px; padding: 14px 16px;
+  transition: border-color .25s ease, background .25s ease, box-shadow .25s ease;
+}
+.ag-grupo.ativo { border-color: var(--cor-primaria); background: var(--cor-clara); box-shadow: 0 0 0 3px rgba(91,43,203,0.12); }
+.ag-grupos.ag-grupos-destaque .ag-grupo { border-color: #16A34A; background: #f0fdf4; }
+.ag-grupo-cabecalho { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.ag-grupo-titulo { font-size: 14.5px; font-weight: 700; color: #1a1a2e; }
+.ag-grupo-qtd {
+  font-size: 12px; font-weight: 800; color: #fff; background: var(--cor-primaria); border-radius: 999px;
+  padding: 2px 10px; opacity: 0; transform: scale(.6); transition: opacity .25s ease, transform .25s ease;
+}
+.ag-grupo-qtd.visivel { opacity: 1; transform: scale(1); }
+.ag-grupo-elementos { display: flex; flex-wrap: wrap; gap: 8px; }
+.ag-elemento {
+  width: 20px; height: 20px; border-radius: 50%; background: var(--cor-primaria); flex-shrink: 0;
+  opacity: 0; transform: scale(0); transition: opacity .25s ease, transform .25s cubic-bezier(.34,1.56,.64,1);
+}
+.ag-elemento.visivel { opacity: 1; transform: scale(1); }
+.ag-soma { font-size: 17px; font-weight: 700; color: #1a1a2e; text-align: center; margin-top: 18px; }
+.jg-expressao.ag-expressao-destaque { color: var(--cor-primaria); transform: scale(1.08); }
+
+/* TELA DE DISTRIBUIÇÃO — DIVISÃO: a aluna digita quantos elementos e entre quantos grupos
+   (mesmos campos/expressão/botão/explicação/grupos das outras telas de Matemática, ver
+   .jg-campos/.jg-expressao/.jg-btn-animar/.jg-explicacao*/.ag-grupos acima). Se a divisão
+   não for exata, mostra .dv-aviso em vez dos grupos. Ao animar, todos os elementos
+   aparecem juntos no "pool" (.dv-pool) e são distribuídos um a um, ciclicamente, entre os
+   grupos — ver mostrarDistribuicao em estudo.mjs. */
+.dv-aviso {
+  background: #fefce8; border: 1.5px solid #fde68a; border-radius: 14px; padding: 14px 16px;
+  font-size: 14.5px; font-weight: 600; color: #1a1a2e; line-height: 1.5; margin: 4px 0 4px;
+}
+.dv-pool {
+  display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 16px; margin-bottom: 14px;
+  border: 1.5px dashed var(--cor-borda-media); border-radius: 14px;
+}
+.ag-elemento.dv-elemento-pool { background: #9ca3af; }
+
+/* MAPA MENTAL — conceito central + tópicos conectados por setas (SVG recalculado ao
+   redimensionar, nunca uma imagem estática — ver desenharSetasMapaMental em estudo.mjs).
+   Mobile-first: por padrão os tópicos empilham numa lista vertical sem setas; a partir de
+   640px (onde o app-wrapper de 700px já tem espaço de sobra) os tópicos viram um círculo ao
+   redor do conceito central, com ângulos igualmente espaçados calculados em JS (ver
+   posicionarTopicosMapaMental) — fica equilibrado não importa quantos tópicos existam (1 a
+   8), sem os espaços vazios de um grid fixo quando há poucos. */
+.mm-mapa { position: relative; display: flex; flex-direction: column; gap: 14px; margin-top: 10px; }
+.mm-setas { display: none; position: absolute; inset: 0; pointer-events: none; z-index: 1; stroke-width: 2.2; fill: none; }
+.mm-seta { opacity: 0.8; transition: opacity .25s ease, stroke-width .25s ease; }
+.mm-seta.ativa { opacity: 1; stroke-width: 3.2; }
+
+.mm-conceito {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  text-align: center; background: #F1EBFF; border: 1.5px solid #5724D6;
+  border-radius: 18px; padding: 18px 16px;
+  position: relative; z-index: 2;
+}
+.mm-conceito-icone {
+  width: 44px; height: 44px; border-radius: 50%; background: #5724D6; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.mm-conceito-icone svg * { stroke: #fff !important; fill: #fff !important; }
+.mm-conceito-texto { font-size: 16px; font-weight: 700; color: #202033; line-height: 1.3; }
+
+.mm-topico {
+  background: var(--mm-cor, #F1EBFF); border-radius: 16px; padding: 12px 14px;
+  display: flex; flex-direction: column; gap: 8px; position: relative; z-index: 2;
+  border: 1.5px solid transparent; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease, opacity .25s ease;
+}
+.mm-topico-cabecalho { display: flex; align-items: center; gap: 8px; }
+.mm-topico-icone {
+  width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.7); flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.mm-topico-icone svg { width: 17px; height: 17px; }
+.mm-topico-icone svg * { stroke: #5724D6 !important; }
+.mm-topico-titulo { font-size: 13.5px; font-weight: 700; color: #202033; line-height: 1.25; }
+.mm-topico-paragrafo { font-size: 12.5px; color: #4b4b5a; line-height: 1.5; text-align: left; margin: 0; }
+.mm-topico-lista { list-style: none; padding: 0; margin: 0; text-align: left; }
+.mm-topico-lista li {
+  position: relative; padding-left: 13px; font-size: 12.5px; color: #4b4b5a; line-height: 1.5;
+}
+.mm-topico-lista li + li { margin-top: 2px; }
+.mm-topico-lista li::before { content: '•'; position: absolute; left: 0; font-weight: 800; color: #5724D6; }
+
+/* Destaque sincronizado com o áudio (opcional, marcado no Construtor) — só acende quando a
+   professora marcou início/fim daquele tópico; os demais escurecem um pouco pra guiar o
+   olhar, só enquanto algum estiver ativo. */
+.mm-topico.ativa { border-color: rgba(0,0,0,0.18); transform: scale(1.03); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+.mm-mapa.mm-tem-ativo .mm-topico:not(.ativa) { opacity: 0.55; }
+
+@media (min-width: 640px) {
+  .mm-mapa { display: block; min-height: 620px; padding: 24px 0; }
+  .mm-setas { display: block; }
+  .mm-conceito {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 160px; height: 160px; border-radius: 0;
+    clip-path: polygon(22% 4%, 78% 4%, 98% 50%, 78% 96%, 22% 96%, 2% 50%);
+    padding: 16px 30px;
+  }
+  .mm-topico {
+    position: absolute; top: 0; left: 0; transform: translate(-50%, -50%);
+    width: 190px;
+  }
+  .mm-topico.ativa { transform: translate(-50%, -50%) scale(1.04); }
+}
+
+/* TABELA GUIADA POR ANIMAÇÃO — cartão explicativo fixo no topo + tabela fixa embaixo; ao
+   navegar entre itens (Anterior/Próximo "tomam conta" da navegação primeiro — ver
+   navInterceptorAnterior/navInterceptorProximo em estudo.mjs), um "chip" com o ícone do item
+   (.ta-viajante) viaja numa curva do cartão até a célula de destino, que só ganha o contorno
+   roxo luminoso quando o chip "pousa" nela (ver lancarConteudoTabelaAnimada em estudo.mjs) —
+   não é uma seta se desenhando, é o próprio conteúdo sendo conduzido. A tabela rola na
+   horizontal sozinha quando não cabe (overflow-x), inclusive no celular. */
+.ta-tela { position: relative; margin-top: 10px; }
+.ta-cartao { position: relative; z-index: 2; background: #F1EBFF; border-radius: 18px; padding: 16px 18px; margin-bottom: 18px; }
+.ta-cartao-contagem { font-size: 11.5px; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; color: #5724D6; }
+.ta-cartao-cabecalho { display: flex; align-items: center; gap: 10px; margin-top: 6px; }
+.ta-cartao-icone {
+  width: 34px; height: 34px; border-radius: 50%; background: #5724D6; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.ta-cartao-icone svg * { stroke: #fff !important; fill: #fff !important; }
+.ta-cartao-titulo { font-size: 16px; font-weight: 700; color: #202033; }
+.ta-cartao-texto { font-size: 13.5px; color: #4b4b5a; line-height: 1.5; margin: 8px 0 0; }
+
+.ta-tabela-scroll {
+  overflow-x: auto; border-radius: 14px; border: 1px solid var(--cor-borda-clara, #e9dffb);
+  position: relative; z-index: 2; -webkit-overflow-scrolling: touch;
+}
+.ta-tabela { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.ta-tabela th, .ta-tabela td {
+  border: 1px solid var(--cor-borda-clara, #e9dffb); padding: 10px 12px; text-align: left;
+  white-space: pre-line; min-width: 110px;
+  transition: border-color .3s ease, background .3s ease, box-shadow .3s ease;
+}
+.ta-tabela th { background: var(--cor-clara, #f0eaff); font-weight: 700; color: #202033; }
+.ta-tabela td { background: #fff; color: #4b4b5a; }
+.ta-celula-ativa {
+  border-color: var(--cor-primaria, #5724D6) !important; background: var(--cor-clara, #f0eaff) !important;
+  box-shadow: 0 0 0 3px rgba(87,36,214,0.18); font-weight: 600; color: #202033 !important;
+}
+
+.ta-viajante {
+  position: absolute; top: 0; left: 0; z-index: 4; pointer-events: none; opacity: 0;
+  box-sizing: border-box; display: flex; align-items: center; overflow: hidden;
+  border: 1px solid var(--cor-primaria, #5724D6); border-radius: 4px; padding: 10px 12px;
+  background: var(--cor-clara, #f0eaff); font-size: 12.5px; font-weight: 600; color: #202033;
+  white-space: pre-line; box-shadow: 0 6px 16px rgba(87,36,214,0.25);
+}
+
+/* TELA DE IDENTIFICAÇÃO */
+.idf-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.idf-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.idf-icone-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.idf-titulo {
+  font-size: 19px;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.4;
+  padding-top: 4px;
+}
+
+.idf-intro {
+  font-size: 16px;
+  color: #374151;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.idf-exemplos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.idf-exemplo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 12px 16px;
+}
+
+.idf-palavra {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.idf-linha {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.idf-rodape {
+  font-size: 16px;
+  color: #374151;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* TELA DE SENTIDO */
+.sentido-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sentido-dica {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #fefce8;
+  border: 1.5px solid #fde68a;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a2e;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.sentido-dica-icone {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.sentido-texto {
+  font-size: 16px;
+  color: #374151;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.sentido-exemplos-titulo {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-top: 4px;
+}
+
+.sentido-exemplos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sentido-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.sentido-item-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sentido-item-frase {
+  font-size: 15px;
+  color: #1a1a2e;
+  line-height: 1.4;
+}
+
+.sentido-item-cadeia {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* OPÇÕES */
+.opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.opcao {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border: 2px solid var(--cor-borda-clara);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: white;
+  text-align: left;
+  width: 100%;
+}
+
+.opcao:hover:not(:disabled) {
+  border-color: var(--cor-primaria);
+  background: var(--cor-hover-fundo);
+}
+
+.opcao.selecionada {
+  border-color: var(--cor-primaria);
+  background: var(--cor-clara);
+}
+
+.opcao.correta {
+  border-color: #16a34a;
+  background: #f0fdf4;
+}
+
+.opcao.errada {
+  border-color: #dc2626;
+  background: #fef2f2;
+}
+
+.opcao:disabled { cursor: default; }
+
+.letra {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--cor-borda-media);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--cor-primaria);
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.opcao.selecionada .letra {
+  background: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+  color: white;
+}
+
+.opcao.correta .letra {
+  background: #16a34a;
+  border-color: #16a34a;
+  color: white;
+}
+
+.opcao.errada .letra {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: white;
+}
+
+.opcao-texto {
+  font-size: 16px;
+  color: #1a1a2e;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* CHECAGEM DO TIPO "CLIQUE NA PALAVRA" */
+.sentence-display {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.word-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 2px solid var(--cor-borda-clara);
+  border-radius: 12px;
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a2e;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+  user-select: none;
+}
+
+.word-chip:hover:not(:disabled):not(.pontuacao):not(.correta):not(.errada):not(.verbo-pendente):not(.sujeito-pendente):not(.predicado-pendente):not(.verbo-correto):not(.sujeito-correto):not(.predicado-correto):not(.verbo-errado):not(.sujeito-errado):not(.predicado-errado):not(.auxiliar-correto):not(.principal-correto) {
+  border-color: var(--cor-primaria);
+  background: var(--cor-hover-fundo);
+  color: var(--cor-primaria);
+}
+
+.word-chip.correta {
+  border-color: #16a34a;
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.word-chip.errada {
+  border-color: #dc2626;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.word-chip:disabled:not(.correta):not(.errada):not(.verbo-correto):not(.sujeito-correto):not(.predicado-correto):not(.auxiliar-correto):not(.principal-correto) {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.word-chip.pontuacao {
+  border: none;
+  background: transparent;
+  padding: 8px 2px;
+  cursor: default;
+  color: #1a1a2e;
+}
+
+.sentence-display-sm {
+  margin-top: 8px;
+}
+
+.word-chip-sm {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+/* Caixa de exemplo estático (sentencaAnotada) — frase só de referência,
+   já com os papéis marcados, sem interação. Um pouco mais compacta que os
+   chips clicáveis, que precisam ficar maiores por serem alvo de toque. */
+#exemploCaixaAnotada .word-chip-sm {
+  padding: 4px 9px;
+  font-size: 12px;
+}
+
+/* CHECAGEM DO TIPO "CLIQUE NO VERBO E NO SUJEITO" (duplo-select) */
+.dual-select-wrap {
+  margin-top: 4px;
+}
+
+/* CHECAGEM DO TIPO "REESCREVA NA ORDEM DIRETA" (banco de palavras) */
+.reordenar-wrap {
+  margin-top: 4px;
+}
+
+.reordenar-referencia {
+  background: #f5f7ff;
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+}
+
+.reordenar-referencia-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7280;
+  margin-bottom: 2px;
+}
+
+.reordenar-referencia-texto {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.reordenar-resposta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 10px;
+  border: 2px dashed #d8ccf5;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.reordenar-resposta-final {
+  border-style: solid;
+  border-color: var(--cor-borda-clara);
+}
+
+.reordenar-banco {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.modo-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.modo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 2px solid var(--cor-borda-clara);
+  background: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  color: #6b7280;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.modo-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.modo-dot-verbo     { background: #2563eb; }
+.modo-dot-sujeito   { background: #dc2626; }
+.modo-dot-predicado { background: var(--cor-primaria); }
+
+.modo-btn.ativo-verbo {
+  border-color: #2563eb;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.modo-btn.ativo-sujeito {
+  border-color: #dc2626;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.modo-btn.ativo-predicado {
+  border-color: var(--cor-primaria);
+  background: #f5f0ff;
+  color: var(--cor-primaria);
+}
+
+/* Botão "Oração sem sujeito" da checagem tripla — declaração explícita do
+   aluno de que a frase não tem sujeito (necessário pra liberar o "Confirmar
+   resposta" em frases impessoais, que não têm nenhuma palavra pra marcar). */
+.modo-sem-sujeito-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 10px;
+  border: 2px solid var(--cor-borda-clara);
+  background: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7280;
+  cursor: pointer;
+  margin-bottom: 14px;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.modo-sem-sujeito-btn.ativo {
+  border-color: #ea580c;
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.frase-anotada-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 16px;
+}
+
+/* Quando a frase é larga demais pra tela, o wrap acima já deixa arrastar
+   pro lado — mas sem nenhuma pista visual isso parecia palavra "sumida"
+   (cortada na borda). .tem-overflow é ligada via JS (marcarOverflowHorizontal
+   em estudo.js) só quando o conteúdo realmente não cabe inteiro, e desenha
+   um degradê na borda direita pra indicar que dá pra arrastar. Usa
+   mask-image (esmaece o próprio conteúdo) em vez de sobrepor uma cor, pra
+   funcionar igual em qualquer fundo (caixa azulada ou tela branca).  */
+.frase-anotada-wrap.tem-overflow {
+  -webkit-mask-image: linear-gradient(to right, black calc(100% - 28px), transparent 100%);
+  mask-image: linear-gradient(to right, black calc(100% - 28px), transparent 100%);
+}
+
+.frase-anotada {
+  display: inline-grid;
+  column-gap: 8px;
+  row-gap: 4px;
+  align-items: end;
+  grid-template-rows: auto minmax(38px, auto) minmax(38px, auto);
+}
+
+.word-chip.verbo-pendente {
+  border-color: #2563eb;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.word-chip.sujeito-pendente {
+  border-color: #dc2626;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.word-chip.verbo-correto {
+  border-color: #2563eb;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.word-chip.sujeito-correto {
+  border-color: #dc2626;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.word-chip.verbo-errado,
+.word-chip.sujeito-errado,
+.word-chip.predicado-errado {
+  border-color: #9ca3af;
+  background: #f9fafb;
+  color: #6b7280;
+  text-decoration: line-through;
+}
+
+.word-chip.predicado-pendente {
+  border-color: var(--cor-primaria);
+  background: #f5f0ff;
+  color: var(--cor-primaria);
+}
+
+.word-chip.predicado-correto {
+  border-color: var(--cor-primaria);
+  background: #f5f0ff;
+  color: var(--cor-primaria);
+}
+
+.word-chip.auxiliar-correto {
+  border-color: #2563eb;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.word-chip.principal-correto {
+  border-color: #16a34a;
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.word-chip.selecionavel-alvo {
+  border-color: var(--cor-primaria);
+  background: var(--cor-clara);
+  color: var(--cor-primaria);
+}
+
+.anotacao-verbo,
+.anotacao-sujeito,
+.anotacao-predicado,
+.anotacao-auxiliar,
+.anotacao-principal {
+  position: relative;
+  grid-row: 2;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 5px 6px 3px;
+  margin-top: 14px;
+  border-top: 2px solid currentColor;
+  white-space: nowrap;
+}
+
+.anotacao-verbo::before, .anotacao-verbo::after,
+.anotacao-sujeito::before, .anotacao-sujeito::after,
+.anotacao-predicado::before, .anotacao-predicado::after,
+.anotacao-auxiliar::before, .anotacao-auxiliar::after,
+.anotacao-principal::before, .anotacao-principal::after {
+  content: '';
+  position: absolute;
+  top: -14px;
+  width: 2px;
+  height: 14px;
+  background: currentColor;
+}
+
+.anotacao-verbo::before,   .anotacao-sujeito::before,   .anotacao-predicado::before,   .anotacao-auxiliar::before,   .anotacao-principal::before { left: 0; }
+.anotacao-verbo::after,    .anotacao-sujeito::after,    .anotacao-predicado::after,    .anotacao-auxiliar::after,    .anotacao-principal::after  { right: 0; }
+.anotacao-verbo      { color: #2563eb; }
+.anotacao-sujeito    { color: #dc2626; }
+.anotacao-predicado  { color: var(--cor-primaria); grid-row: 3; }
+.anotacao-auxiliar   { color: #2563eb; }
+.anotacao-principal  { color: #16a34a; }
+
+.anotacao-generica {
+  position: relative;
+  grid-row: 2;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 5px 6px 3px;
+  margin-top: 14px;
+  border-top: 2px solid currentColor;
+  white-space: nowrap;
+  color: var(--cor-primaria);
+}
+.anotacao-generica::before, .anotacao-generica::after {
+  content: '';
+  position: absolute;
+  top: -14px;
+  width: 2px;
+  height: 14px;
+  background: currentColor;
+}
+.anotacao-generica::before { left: 0; }
+.anotacao-generica::after  { right: 0; }
+
+.btn-confirmar-duplo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  border: none;
+  background: var(--cor-primaria);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-confirmar-duplo:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* RESULTADO DE CADA PALAVRA (depois de responder a checagem de "clique na palavra") */
+.checagem-resultado-itens {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 2px solid #efe9fb;
+}
+
+.checagem-resultado-titulo {
+  font-size: 12px;
+  font-weight: 800;
+  color: #1a1a2e;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 6px 10px;
+  background: #f4f0ff;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.checagem-resultado-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.checagem-resultado-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  padding: 6px 4px;
+}
+
+.checagem-resultado-item.errada-selecionada {
+  background: #fef2f2;
+  border-radius: 8px;
+  padding: 6px 8px;
+}
+
+.cri-palavra {
+  font-size: 15px;
+  font-weight: 800;
+  min-width: 90px;
+  color: #1a1a2e;
+}
+
+.cri-palavra.correta { color: #16a34a; }
+.cri-palavra.errada  { color: #dc2626; }
+
+.cri-seta {
+  color: #9ca3af;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.cri-classe { font-weight: 500; color: #6b7280; }
+.cri-classe.correta { color: #16a34a; font-weight: 600; }
+.cri-classe.errada  { color: #dc2626; font-weight: 700; }
+
+.cri-icone {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+/* FEEDBACK */
+.feedback-bar {
+  margin: 12px 20px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  display: none;
+  align-items: center;
+  gap: 12px;
+}
+
+.feedback-bar.show { display: flex; }
+
+.feedback-bar.acerto {
+  background: #f0fdf4;
+  border: 2px solid #86efac;
+}
+
+.feedback-bar.erro {
+  background: #fef2f2;
+  border: 2px solid #fca5a5;
+}
+
+.feedback-icon { font-size: 22px; }
+
+.feedback-texto {
+  font-size: 15px;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.feedback-titulo {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.feedback-explicacao {
+  display: block;
+  font-weight: 400;
+  white-space: pre-line;
+}
+
+.feedback-correta {
+  display: block;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.feedback-bar.acerto .feedback-texto { color: #16a34a; }
+.feedback-bar.erro .feedback-texto   { color: #dc2626; }
+
+/* FOOTER */
+.estudo-footer {
+  flex-shrink: 0;
+  padding: 14px 20px calc(24px + env(safe-area-inset-bottom, 0px));
+  display: flex;
+  gap: 10px;
+  background: #ffffff;
+}
+
+.btn-anterior {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 14px 16px;
+  background: white;
+  border: 1.5px solid var(--cor-borda-media);
+  border-radius: 14px;
+  color: var(--cor-primaria);
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-anterior:hover { background: var(--cor-hover-fundo); }
+.btn-anterior:disabled { opacity: 0.35; cursor: default; }
+
+.btn-proxima {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 14px 16px;
+  background: var(--cor-primaria);
+  border: none;
+  border-radius: 14px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-proxima:hover { background: var(--cor-primaria-escura); }
+.btn-proxima:disabled { background: var(--cor-borda-media); cursor: default; }
+
+/* MODAL LIÇÃO */
+.licao-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 500;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.licao-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.licao-card {
+  background: white;
+  border-radius: 24px 24px 0 0;
+  padding: 24px 24px 36px;
+  width: 100%;
+  max-width: 600px;
+  transform: translateY(100%);
+  transition: transform 0.35s ease;
+}
+.licao-overlay.show .licao-card { transform: translateY(0); }
+
+.licao-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.licao-header h3 { font-size: 19px; font-weight: 700; color: #1a1a2e; }
+
+.licao-fechar {
+  background: #f3f4f6;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.licao-corpo {
+  font-size: 16px;
+  color: #374151;
+  line-height: 1.7;
+}
+.licao-corpo ul { padding-left: 20px; margin: 10px 0; }
+.licao-corpo p  { margin-bottom: 8px; text-align: justify; }
+.licao-corpo li { text-align: justify; }
+
+.licao-btn-fechar {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  background: var(--cor-primaria);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* MODAL RESULTADO */
+.resultado-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.resultado-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.resultado-card {
+  background: white;
+  border-radius: 24px;
+  padding: 36px 28px;
+  text-align: center;
+  max-width: 340px;
+  width: 100%;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+.resultado-overlay.show .resultado-card { transform: scale(1); }
+
+.resultado-emoji { font-size: 56px; margin-bottom: 16px; }
+.resultado-titulo { font-size: 23px; font-weight: 700; color: #1a1a2e; margin-bottom: 10px; }
+.resultado-desc   { font-size: 15px; color: #6b7280; margin-bottom: 20px; line-height: 1.6; }
+
+.resultado-estrelas { font-size: 32px; margin-bottom: 24px; }
+
+.resultado-btn-continuar {
+  width: 100%;
+  padding: 14px;
+  background: var(--cor-primaria);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.resultado-btn-continuar:hover { background: var(--cor-primaria-escura); }
+
+@media (min-width: 768px) {
+  body { background: #f4f0ff; }
+}
+
+/* Ajuste fino em telas bem estreitas, para o texto justificado não ficar apertado */
+@media (max-width: 380px) {
+  .intro-titulo             { font-size: 27px; }
+  .intro-desc,
+  .intro-info-texto p,
+  .contexto-texto,
+  .exemplo-texto,
+  .exemplo-conclusao,
+  .infinitivo-nota,
+  .infinitivo-extra,
+  .idf-intro,
+  .idf-rodape,
+  .sentido-texto,
+  .sentido-dica,
+  .licao-corpo,
+  .opcao-texto               { font-size: 15px; }
+  .infinitivo-descricao      { font-size: 17px; }
+  .idf-titulo                { font-size: 17px; }
+  .word-chip                 { font-size: 13px; padding: 7px 10px; }
+}
+
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #1a1a2e;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 600;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+:root {
+  --cor-primaria: #5B2BCB;
+  --cor-primaria-rgb: 91,43,203;
+  --cor-primaria-escura: #4b23a6;
+  --cor-gradiente-1: #6f44d1;
+  --cor-gradiente-2: #5227b7;
+  --cor-clara: #efeafa;
+  --cor-borda-clara: #e3dbf6;
+  --cor-borda-media: #d1c4f0;
+  --cor-hover-fundo: #f7f4fc;
+}

@@ -1,11 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auditor</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Minhas Aulas</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/inicio.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Crect%20width%3D%2224%22%20height%3D%2224%22%20rx%3D%226%22%20fill%3D%22%235B2BCB%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M22%2010v6M2%2010l10-5%2010%205-10%205z%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M6%2012v5c3%203%209%203%2012%200v-5%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Crect%20width%3D%2224%22%20height%3D%2224%22%20rx%3D%226%22%20fill%3D%22%235B2BCB%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M22%2010v6M2%2010l10-5%2010%205-10%205z%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M6%2012v5c3%203%209%203%2012%200v-5%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#5B2BCB">
 </head>
 <body>
-  <h1>Olá</h1>
+
+<div class="app-wrapper">
+
+  <header class="header">
+    <div class="header-left">
+      <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg></div>
+      <div class="header-title">
+        <h1>Minhas Aulas</h1>
+        <p>Gerado pelo Construtor de Aulas</p>
+      </div>
+    </div>
+    <button type="button" class="pasta-progresso-badge" id="pastaProgressoBadge" onclick="conectarPastaProgresso()" title="Conecte uma pasta pra salvar seu progresso entre sessões">
+      <svg class="pasta-progresso-badge-icone" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20 6h-8l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2z"/></svg>
+      <span class="pasta-progresso-badge-texto" id="pastaProgressoBadgeTexto">Conectar pasta</span>
+    </button>
+  </header>
+
+  <div class="view-inicio" id="viewInicio">
+    <div id="etapasWrap"></div>
+  </div>
+
+  <div class="view-erros" id="viewErros" style="display:none">
+    <div class="erros-header">
+      <h2>Cadernos</h2>
+      <p>Suas questões erradas, aulas favoritas e telas marcadas para revisão.</p>
+    </div>
+    <div class="cadernos-tabs" id="cadernosTabs">
+      <button type="button" class="caderno-tab active" data-tab="erros">Erros</button>
+      <button type="button" class="caderno-tab" data-tab="favoritos">Favoritos</button>
+      <button type="button" class="caderno-tab" data-tab="revisao">Revisão</button>
+    </div>
+    <div class="cadernos-subtabs" id="cadernosSubtabs">
+      <button type="button" class="caderno-subtab active" data-subtab="aula">Por aula</button>
+      <button type="button" class="caderno-subtab" data-subtab="geral">Geral</button>
+    </div>
+    <div class="erros-list" id="errosList"></div>
+  </div>
+
+  <div class="view-erros" id="viewDesempenho" style="display:none">
+    <h2>Desempenho</h2>
+    <p>Insígnias por nível aparecem aqui.</p>
+  </div>
+
+  <div class="view-niveis" id="viewNiveis" style="display:none">
+    <div class="erros-header">
+      <h2>Estudos</h2>
+      <p>Cada nível reúne várias etapas — conclua todas as aulas para desbloquear o próximo.</p>
+    </div>
+    <div class="niveis-lista" id="niveisLista"></div>
+  </div>
+
+  <nav class="bottom-nav">
+    <div class="nav-item active" data-view="inicio">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"></path></svg>
+      <span>Início</span>
+    </div>
+    <div class="nav-item" data-view="erros">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+      <span>Cadernos</span>
+    </div>
+    <div class="nav-item" data-view="desempenho">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+      <span>Desempenho</span>
+    </div>
+    <div class="nav-item" data-view="niveis">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+      <span>Estudos</span>
+    </div>
+  </nav>
+
+</div>
+
+<script src="js/progresso.mjs"></script>
+<script src="js/data/modulos.mjs"></script>
+<script src="js/inicio.mjs"></script>
+<script src="js/cadernos.mjs"></script>
+<script src="js/niveis.mjs"></script>
+<script>
+  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+    window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+  }
+</script>
 </body>
 </html>

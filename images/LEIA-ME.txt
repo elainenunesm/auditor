@@ -1,0 +1,2 @@
+Coloque aqui as imagens usadas nas aulas (ex: aula-3-diagrama.png).
+Referencie o caminho "images/nome-do-arquivo" no conteúdo da aula.
