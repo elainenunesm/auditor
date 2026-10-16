@@ -26,6 +26,19 @@ const MODULOS = [
     aulas: [
 
     ],
+  },
+  {
+    id:      3,
+    titulo:  "Nova matéria",
+    materia: "Nova matéria",
+    aulas: [
+      {
+        id:      2,
+        titulo:  "Nova aula",
+        arquivo: "aula-2",
+        icone:   'padrao',
+      }
+    ],
   }
 ];
 
@@ -37,6 +50,12 @@ const NIVEIS = [
     id:          1,
     titulo:      "Etapa 1 - Conceitos",
     etapas:      [1, 2],
+    insigniaUrl: "",
+  },
+  {
+    id:          2,
+    titulo:      "Nova etapa",
+    etapas:      [3],
     insigniaUrl: "",
   }
 ];
