@@ -1,7 +1,7 @@
 {
-  "name": "Auditor",
-  "short_name": "Auditor",
-  "description": "Construção do conhecimento para concursos.",
+  "name": "Minhas Aulas",
+  "short_name": "Minhas Aulas",
+  "description": "Gerado pelo Construtor de Aulas",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
