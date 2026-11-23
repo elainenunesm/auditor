@@ -55,5 +55,7 @@ window.AULA_DATA = {
 
   mapaConceitual: [],
 
+  mapaInterativo: [],
+
   questoes: [],
 };
