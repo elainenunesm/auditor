@@ -96,7 +96,21 @@ window.AULA_DATA = {
     texto: "É a autoridade administrativa responsável por aplicar a lei tributária na prática, fiscalizando o contribuinte e garantindo que o estado receba os recursos devidos.\n",
     conclusao: "",
     obs: "",
-    pontos: []
+    pontos: [],
+    textoDestaque: [
+      6,
+      8,
+      9
+    ],
+    textoDestaqueNegrito: [
+      2,
+      3,
+      4,
+      6,
+      8,
+      9,
+      11
+    ]
   }
 ],
 
