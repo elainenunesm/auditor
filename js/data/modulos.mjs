@@ -8,13 +8,45 @@
 const MODULOS = [
   {
     id:      1,
+    titulo:  "Direito Tributário",
+    materia: "Direito Tributário",
+    aulas: [
+      {
+        id:      1,
+        titulo:  "Aula 1 - Conceitos iniciais",
+        arquivo: "aula-1",
+        icone:   'padrao',
+      }
+    ],
+  },
+  {
+    id:      2,
+    titulo:  "Contabilidade Geral",
+    materia: "Contabilidade Geral",
+    aulas: [
+      {
+        id:      3,
+        titulo:  "Nova aula",
+        arquivo: "aula-3",
+        icone:   'padrao',
+      }
+    ],
+  },
+  {
+    id:      3,
     titulo:  "Nova matéria",
     materia: "Nova matéria",
     aulas: [
       {
-        id:      1,
+        id:      2,
         titulo:  "Nova aula",
-        arquivo: "aula-1",
+        arquivo: "aula-2",
+        icone:   'padrao',
+      },
+      {
+        id:      4,
+        titulo:  "Nova aula",
+        arquivo: "aula-4",
         icone:   'padrao',
       }
     ],
@@ -27,8 +59,14 @@ const MODULOS = [
 const NIVEIS = [
   {
     id:          1,
+    titulo:      "Etapa 1 - Conceitos",
+    etapas:      [1, 2],
+    insigniaUrl: "",
+  },
+  {
+    id:          2,
     titulo:      "Nova etapa",
-    etapas:      [1],
+    etapas:      [3],
     insigniaUrl: "",
   }
 ];

@@ -59,5 +59,7 @@ window.AULA_DATA = {
 
   tabelaAnimada: [],
 
+  mapaConceitual: [],
+
   questoes: [],
 };

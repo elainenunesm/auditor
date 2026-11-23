@@ -22,9 +22,7 @@ window.AULA_DATA = {
   aprender: "",
   importancia: "",
   tituloDestaque: [],
-  tituloDestaqueNegrito: [],
-  descricaoDestaque: [],
-  descricaoDestaqueNegrito: []
+  tituloDestaqueNegrito: []
 },
 
   exemplo: [],
@@ -54,6 +52,8 @@ window.AULA_DATA = {
   mapaMental: [],
 
   tabelaAnimada: [],
+
+  mapaConceitual: [],
 
   questoes: [],
 };
