@@ -103,7 +103,9 @@ window.AULA_DATA = {
       9,
       11,
       13,
-      15
+      15,
+      21,
+      23
     ],
     textoDestaqueNegrito: [
       2,
@@ -114,7 +116,9 @@ window.AULA_DATA = {
       9,
       11,
       13,
-      15
+      15,
+      21,
+      23
     ]
   }
 ],
