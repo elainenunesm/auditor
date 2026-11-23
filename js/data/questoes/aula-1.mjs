@@ -142,8 +142,7 @@ window.AULA_DATA = {
         16,
         17,
         18,
-        14,
-        21
+        14
       ],
       tituloDestaqueNegrito: [
         0,
@@ -158,7 +157,9 @@ window.AULA_DATA = {
         15,
         16,
         17,
-        18
+        18,
+        21,
+        22
       ],
       subtituloDestaque: [],
       subtituloDestaqueNegrito: []
