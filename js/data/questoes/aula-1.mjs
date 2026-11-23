@@ -100,7 +100,8 @@ window.AULA_DATA = {
     textoDestaque: [
       6,
       21,
-      23
+      23,
+      24
     ],
     textoDestaqueNegrito: [
       2,
