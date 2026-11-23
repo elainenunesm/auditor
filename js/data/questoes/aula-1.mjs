@@ -133,8 +133,7 @@ window.AULA_DATA = {
       texto: "",
       tituloDestaque: [
         4,
-        5,
-        9
+        5
       ],
       tituloDestaqueNegrito: [
         0,
