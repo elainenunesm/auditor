@@ -132,7 +132,9 @@ window.AULA_DATA = {
       subtitulo: " A parte da distribuição dos recursos é estudado pelo direito financeiro.",
       texto: "",
       tituloDestaque: [],
-      tituloDestaqueNegrito: [],
+      tituloDestaqueNegrito: [
+        0
+      ],
       subtituloDestaque: [],
       subtituloDestaqueNegrito: []
     }
