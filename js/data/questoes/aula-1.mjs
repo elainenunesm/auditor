@@ -163,7 +163,10 @@ window.AULA_DATA = {
       subtituloDestaque: [],
       subtituloDestaqueNegrito: [],
       textoDestaque: [],
-      textoDestaqueNegrito: []
+      textoDestaqueNegrito: [
+        9,
+        10
+      ]
     }
   }
 ],
