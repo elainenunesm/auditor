@@ -73,7 +73,7 @@ window.AULA_DATA = {
     ]
   },
   {
-    tipo: "sujeito",
+    tipo: "servidor",
     texto: "O Auditor estuda essa matéria porque é a sua principal ferramenta de trabalho cotidiano.",
     conclusao: "",
     obs: "",
