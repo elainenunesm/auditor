@@ -297,7 +297,6 @@ window.AULA_DATA = {
         paiId: "n5",
         alternativas: [
           "É o conjunto de informações",
-          "",
           "O conjunto de bens, direitos e obrigações."
         ],
         lacuna: true,
