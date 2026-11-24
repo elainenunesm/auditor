@@ -304,7 +304,7 @@ window.AULA_DATA = {
       },
       {
         id: "n7",
-        texto: "",
+        texto: "O que são bens?",
         paiId: "n6",
         alternativas: [
           "",
