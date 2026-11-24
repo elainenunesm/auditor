@@ -192,7 +192,7 @@ window.AULA_DATA = {
       []
     ],
     dificuldade: "Fácil",
-    subtitulo: "O que é ",
+    subtitulo: "O que o direito tributário estuda?",
     subtituloDestaque: [],
     subtituloDestaqueNegrito: []
   }
