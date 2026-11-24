@@ -83,7 +83,7 @@ const NIVEIS = [
   },
   {
     id:          2,
-    titulo:      "Nova etapa",
+    titulo:      "Etapa 2 - Conceitos 2",
     etapas:      [3],
     insigniaUrl: "",
   }
