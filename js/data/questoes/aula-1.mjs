@@ -260,10 +260,10 @@ window.AULA_DATA = {
         paiId: "n1",
         alternativas: [
           "Distribui os recursos",
-          "Envia ao"
+          "Envia aos cofre públicos"
         ],
         lacuna: true,
-        correta: 0
+        correta: 1
       }
     ],
     tituloDestaque: [],
