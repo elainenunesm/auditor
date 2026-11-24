@@ -260,7 +260,7 @@ window.AULA_DATA = {
         paiId: "n1",
         alternativas: [
           "Distribui os recursos",
-          ""
+          "Envia ao"
         ],
         lacuna: true,
         correta: 0
