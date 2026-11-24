@@ -31,7 +31,10 @@ window.AULA_DATA = {
     3
   ],
   importanciaDestaque: [],
-  importanciaDestaqueNegrito: []
+  importanciaDestaqueNegrito: [
+    5,
+    4
+  ]
 },
 
   exemplo: [],
