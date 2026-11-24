@@ -64,14 +64,10 @@ window.AULA_DATA = {
     ],
     textoNegrito: true,
     conclusaoDestaque: [
-      5,
       11,
       15,
       22,
-      23,
-      0,
-      3,
-      4
+      23
     ],
     conclusaoDestaqueNegrito: [
       0,
