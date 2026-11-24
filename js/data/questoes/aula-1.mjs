@@ -238,8 +238,14 @@ window.AULA_DATA = {
       },
       {
         id: "n2",
-        texto: "Arrecarda",
+        texto: "Arrecada",
         paiId: "n1",
+        alternativas: []
+      },
+      {
+        id: "n3",
+        texto: "",
+        paiId: "n2",
         alternativas: []
       }
     ],
