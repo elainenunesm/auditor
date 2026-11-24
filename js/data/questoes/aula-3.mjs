@@ -50,7 +50,10 @@ window.AULA_DATA = {
       2
     ],
     conclusaoDestaque: [],
-    conclusaoDestaqueNegrito: []
+    conclusaoDestaqueNegrito: [
+      2,
+      3
+    ]
   }
 ],
 
