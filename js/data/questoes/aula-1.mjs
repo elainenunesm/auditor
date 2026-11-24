@@ -274,7 +274,8 @@ window.AULA_DATA = {
           "Envia aos cofre públicos"
         ],
         lacuna: true,
-        correta: 1
+        correta: 1,
+        dica: ""
       },
       {
         id: "n5",
