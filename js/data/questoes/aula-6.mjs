@@ -211,8 +211,8 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n3",
         alternativas: [
-          "",
-          ""
+          "Distribui a competência tributária",
+          "Deixa a lei compl"
         ],
         lacuna: true,
         correta: 0
