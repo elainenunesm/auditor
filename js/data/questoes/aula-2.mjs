@@ -6,7 +6,7 @@
  */
 window.AULA_DATA = {
   id:     2,
-  modulo: "Nova matéria",
+  modulo: "Direito tributário",
   titulo: "Nova aula",
 
   // Ordem das telas na sequência de estudo — definida em "Estrutura das telas".
