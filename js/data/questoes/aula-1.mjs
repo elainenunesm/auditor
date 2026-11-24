@@ -238,7 +238,7 @@ window.AULA_DATA = {
       },
       {
         id: "n2",
-        texto: "Essa pa",
+        texto: "Essa parte",
         paiId: "n1",
         alternativas: []
       },
