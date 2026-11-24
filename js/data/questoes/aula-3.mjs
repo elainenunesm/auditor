@@ -46,7 +46,7 @@ window.AULA_DATA = {
   itens: [
     {
       tipo: "certo",
-      cor: "#5B2BCB",
+      cor: "#ca2b53",
       corFundo: "#f0eaff",
       titulo: "",
       exemplos: ""
