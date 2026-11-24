@@ -119,7 +119,7 @@ window.AULA_DATA = {
   },
   {
     tipo: "acao",
-    texto: "Então a Constituição federal estabeleceu quê, uma lei complementar defini as normas gerais sobre tributos e disciplinar as limitações ao poder de tributar.",
+    texto: "Então a Constituição federal estabeleceu quê, uma lei complementar irá definir as normas gerais sobre tributos e disciplinar as limitações ao poder de tributar.",
     conclusao: "",
     obs: "",
     pontos: [],
