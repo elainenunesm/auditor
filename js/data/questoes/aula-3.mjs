@@ -40,7 +40,7 @@ window.AULA_DATA = {
 
   exemplo: [
   {
-    tipo: "acao",
+    tipo: "livro",
     texto: "Porque estudar contabilidade?",
     conclusao: "",
     obs: "",
