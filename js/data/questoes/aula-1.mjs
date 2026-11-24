@@ -116,7 +116,7 @@ window.AULA_DATA = {
       10,
       15
     ],
-    textoNegrito: true
+    textoNegrito: false
   },
   {
     tipo: "nenhum",
