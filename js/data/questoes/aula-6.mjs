@@ -117,7 +117,7 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n1",
         alternativas: [
-          "Criação d",
+          "Criação dos tributos",
           "Extinguir"
         ],
         lacuna: true,
