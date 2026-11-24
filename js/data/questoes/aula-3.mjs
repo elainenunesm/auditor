@@ -15,6 +15,7 @@ window.AULA_DATA = {
   "exemplo0",
   "exemplo1",
   "exemplo2",
+  "exemplo3",
   "resumo",
   "licao"
 ],
@@ -153,6 +154,13 @@ window.AULA_DATA = {
     obsDestaqueNegrito: [
       9
     ]
+  },
+  {
+    tipo: "nenhum",
+    texto: "",
+    conclusao: "",
+    obs: "",
+    pontos: []
   }
 ],
 

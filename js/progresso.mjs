@@ -5,15 +5,14 @@
  * nomes de função, mesmas assinaturas async) que estudo.js/inicio.mjs/cadernos.mjs/niveis.mjs já
  * esperam.
  *
- * Duas camadas de persistência:
- *  1. localStorage — sempre disponível, sem precisar configurar nada; é a base de toda aluna.
- *     Sem isso, cada tela (index.html/estudo.html) é um carregamento de página separado, e o
- *     progresso ficaria só na memória daquela página — perderia tudo ao trocar de aula (foi
- *     exatamente esse bug: completar a aula 1, ir pra aula 2, e a 1 "esquecer" que foi concluída).
- *  2. Pasta conectada (File System Access API, Chrome/Edge) — opcional, por cima da localStorage:
- *     um arquivo "progresso.json" de verdade no computador da aluna, pra ter uma cópia fora do
- *     navegador (não se perde limpando o cache, dá pra levar pra outro navegador). Se conectada,
- *     os dados de lá têm prioridade sobre a localStorage ao carregar a página.
+ * O progresso só é guardado na PASTA CONECTADA (File System Access API, Chrome/Edge): um arquivo
+ * "progresso.json" de verdade no computador da aluna. Nada é guardado de forma duradoura no
+ * navegador (localStorage) — atualizar a página sem pasta conectada zera o progresso.
+ *
+ * Única exceção: um "vai-e-vem" em sessionStorage, só pra o progresso sobreviver à troca de tela
+ * dentro da mesma visita (index.html ↔ estudo.html são carregamentos de página separados; sem isso
+ * completar a aula 1 e ir pra aula 2 faria a 1 "esquecer" que foi concluída). Ele é apagado ao
+ * atualizar a página (F5) e ao fechar a aba, e nunca é usado quando há pasta conectada.
  */
 
 const LOCALSTORAGE_CHAVE_PROGRESSO = 'estudo-progresso';
@@ -26,9 +25,21 @@ let _pastaProgressoHandle = null;
 let _progressoCache = {};
 let _inicializacaoPromise = null;
 
+const SESSION_CHAVE_PROGRESSO = 'estudo-progresso-sessao';
+
+/** Apaga a cópia antiga do navegador (versões anteriores guardavam o progresso aqui) e, se a página
+ * foi atualizada (F5), também o vai-e-vem da sessão — assim atualizar sem pasta conectada zera. */
+function limparProgressoDoNavegador() {
+  try { localStorage.removeItem(LOCALSTORAGE_CHAVE_PROGRESSO); } catch (e) { /* ignora */ }
+  try {
+    const nav = performance.getEntriesByType('navigation')[0];
+    if (nav && nav.type === 'reload') sessionStorage.removeItem(SESSION_CHAVE_PROGRESSO);
+  } catch (e) { /* ignora */ }
+}
+
 function lerProgressoLocalStorage() {
   try {
-    const bruto = localStorage.getItem(LOCALSTORAGE_CHAVE_PROGRESSO);
+    const bruto = sessionStorage.getItem(SESSION_CHAVE_PROGRESSO);
     return bruto ? JSON.parse(bruto) : {};
   } catch (e) {
     return {};
@@ -37,10 +48,10 @@ function lerProgressoLocalStorage() {
 
 function escreverProgressoLocalStorage(dados) {
   try {
-    localStorage.setItem(LOCALSTORAGE_CHAVE_PROGRESSO, JSON.stringify(dados));
+    sessionStorage.setItem(SESSION_CHAVE_PROGRESSO, JSON.stringify(dados));
     return true;
   } catch (e) {
-    console.warn('Não deu pra salvar o progresso no navegador:', e);
+    console.warn('Não deu pra guardar o progresso desta visita:', e);
     return false;
   }
 }
@@ -87,7 +98,7 @@ function atualizarBadgePastaProgresso() {
   } else {
     badge.classList.remove('conectado');
     texto.textContent = 'Conectar pasta';
-    badge.title = 'Seu progresso já salva sozinho neste navegador — conecte uma pasta se quiser uma cópia extra, fora do navegador';
+    badge.title = 'Conecte uma pasta para guardar o seu progresso — sem pasta, ele zera ao atualizar a página';
   }
 }
 
@@ -142,7 +153,8 @@ async function conectarPastaProgresso() {
   } catch (e) {
     console.warn('Não deu pra lembrar dessa pasta pra próxima vez:', e);
   }
-  _progressoCache = (await lerArquivoProgressoDaPasta()) || {};
+  _progressoCache = (await lerArquivoProgressoDaPasta()) || {}; // só o que está na pasta; nada da visita anterior
+  try { sessionStorage.removeItem(SESSION_CHAVE_PROGRESSO); } catch (e) { /* ignora */ }
   await escreverArquivoProgresso(); // garante que o arquivo já existe/está atualizado
   atualizarBadgePastaProgresso();
 
@@ -163,7 +175,8 @@ function garantirInicializado() {
 }
 
 async function inicializarInterno() {
-  _progressoCache = lerProgressoLocalStorage(); // base — sempre disponível, mesmo sem pasta
+  limparProgressoDoNavegador();
+  _progressoCache = lerProgressoLocalStorage(); // só o vai-e-vem desta visita (vazio ao atualizar)
   if ('showDirectoryPicker' in window) {
     try {
       const handle = await lerHandleProgresso();
@@ -172,7 +185,7 @@ async function inicializarInterno() {
         if (permissao === 'granted') {
           _pastaProgressoHandle = handle;
           const dadosPasta = await lerArquivoProgressoDaPasta();
-          if (dadosPasta) _progressoCache = dadosPasta; // pasta manda, se já tiver algo salvo nela
+          _progressoCache = dadosPasta || {}; // com pasta conectada, só vale o que está nela
         }
       }
     } catch (e) {
@@ -198,9 +211,10 @@ async function lerArquivoProgresso() {
 async function gravarArquivoProgresso(mudancas) {
   await garantirInicializado();
   _progressoCache = { ..._progressoCache, ...mudancas, savedAt: new Date().toISOString() };
-  const salvouLocal = escreverProgressoLocalStorage(_progressoCache);
+  // Com pasta conectada o progresso vai só pra pasta; sem pasta, só pro vai-e-vem da visita.
+  const salvou = _pastaProgressoHandle ? true : escreverProgressoLocalStorage(_progressoCache);
   await escreverArquivoProgresso();
-  return salvouLocal;
+  return salvou;
 }
 
 // ── CADERNO DE ERROS (persistido junto com o progresso) ──────
