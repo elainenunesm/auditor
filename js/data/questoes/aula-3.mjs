@@ -65,7 +65,7 @@ window.AULA_DATA = {
     tipo: "nenhum",
     texto: "Termos importantes:\n\n",
     conclusao: "Entidades",
-    obs: "",
+    obs: "Entidade — É uma pessoa ou organização que existe e possui patrimônio próprio",
     pontos: [],
     textoDestaque: [],
     textoDestaqueNegrito: [],
