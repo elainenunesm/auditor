@@ -281,7 +281,8 @@ window.AULA_DATA = {
           "Apuração de imposto"
         ],
         lacuna: true,
-        correta: 3
+        correta: 3,
+        dica: "A pegadinha da prova: Afirmar que o objeto é o caixa, o orçamento, o lucro ou apenas a apuração de impostos"
       }
     ],
     tituloDestaque: [],
