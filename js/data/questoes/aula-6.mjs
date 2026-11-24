@@ -14,8 +14,8 @@ window.AULA_DATA = {
   "antesComecar",
   "exemplo0",
   "exemplo1",
-  "exemplo2",
-  "checagem0"
+  "checagem0",
+  "mapaInterativo0"
 ],
 
   antesComecar: {
@@ -102,34 +102,6 @@ window.AULA_DATA = {
     ]
   },
   {
-    tipo: "livro",
-    texto: "Então a Constituição federal estabeleceu quê, uma lei complementar irá definir as normas gerais sobre tributos e disciplinar as limitações ao poder de tributar.",
-    conclusao: "A titulo de informação:",
-    obs: "A lei complementar não escolhe livremente quem terá competência para criar cada tributo. \n\nA própria Constituição distribui as competências tributárias, e a lei complementar estabelece regras para disciplinar essa matéria e resolver conflitos.",
-    pontos: [],
-    textoDestaque: [],
-    textoDestaqueNegrito: [
-      3,
-      2,
-      8,
-      9
-    ],
-    conclusaoDestaque: [
-      3,
-      0,
-      1,
-      2
-    ],
-    conclusaoDestaqueNegrito: [
-      3,
-      2,
-      1,
-      0
-    ],
-    obsDestaque: [],
-    obsDestaqueNegrito: []
-  },
-  {
     tipo: "conjugar",
     texto: "A lei complementar é:",
     conclusao: "CNT (CÓDIGO TRIBUTÁRIO NACIONAL) 5.172/1966",
@@ -207,7 +179,19 @@ window.AULA_DATA = {
 
   mapaConceitual: [],
 
-  mapaInterativo: [],
+  mapaInterativo: [
+  {
+    titulo: "Constituição x Lei complementar.",
+    instrucao: "",
+    nos: [
+      {
+        id: "n1",
+        texto: "",
+        paiId: ''
+      }
+    ]
+  }
+],
 
   questoes: [],
 };
