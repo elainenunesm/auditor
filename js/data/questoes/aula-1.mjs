@@ -58,9 +58,7 @@ window.AULA_DATA = {
     pontos: [],
     textoDestaque: [
       3,
-      9,
-      10,
-      11
+      8
     ],
     textoDestaqueNegrito: [
       1,
