@@ -16,7 +16,8 @@ window.AULA_DATA = {
   "exemplo1",
   "exemplo2",
   "checagem0",
-  "checagem1"
+  "checagem1",
+  "mapaConceitual0"
 ],
 
   antesComecar: {
@@ -223,7 +224,20 @@ window.AULA_DATA = {
 
   tabelaAnimada: [],
 
-  mapaConceitual: [],
+  mapaConceitual: [
+  {
+    titulo: "",
+    nos: [
+      {
+        id: "n1",
+        texto: "Arrecardação",
+        tipo: "nenhum",
+        paiId: '',
+        cartaoTexto: ""
+      }
+    ]
+  }
+],
 
   mapaInterativo: [],
 
