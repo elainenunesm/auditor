@@ -13,7 +13,8 @@ window.AULA_DATA = {
   ordem: [
   "antesComecar",
   "mapaInterativo0",
-  "exemplo0"
+  "exemplo0",
+  "mapaInterativo1"
 ],
 
   antesComecar: {
@@ -140,6 +141,17 @@ window.AULA_DATA = {
     tituloDestaque: [],
     tituloDestaqueNegrito: [],
     tituloNegrito: true
+  },
+  {
+    titulo: "",
+    instrucao: "O que o Direito tributário faz?",
+    nos: [
+      {
+        id: "n1",
+        texto: "",
+        paiId: ''
+      }
+    ]
   }
 ],
 
