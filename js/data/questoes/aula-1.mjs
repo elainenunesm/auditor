@@ -212,7 +212,7 @@ window.AULA_DATA = {
   },
   {
     titulo: "A distribuição dos valores arrecadados entre União, Estados e Municípios é a mesma coisa que arrecadação tributária?",
-    correta: 0,
+    correta: 1,
     feedbackCorreto: "",
     feedbackErrado: "",
     opcoes: [
