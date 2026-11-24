@@ -275,7 +275,7 @@ window.AULA_DATA = {
         ],
         lacuna: true,
         correta: 1,
-        dica: "Entre arrecadar e enviar aos cofre"
+        dica: "Entre arrecadar e enviar aos cofres públicos houve a criação d"
       },
       {
         id: "n5",
