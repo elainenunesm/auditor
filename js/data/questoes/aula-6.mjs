@@ -16,6 +16,7 @@ window.AULA_DATA = {
   "mapaInterativo0",
   "exemplo1",
   "exemplo2",
+  "exemplo3",
   "resumo",
   "licao"
 ],
@@ -144,6 +145,13 @@ window.AULA_DATA = {
     ],
     obsDestaque: [],
     obsDestaqueNegrito: []
+  },
+  {
+    tipo: "acao",
+    texto: "A lei complementar é ",
+    conclusao: "",
+    obs: "",
+    pontos: []
   }
 ],
 
