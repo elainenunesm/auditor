@@ -64,13 +64,15 @@ window.AULA_DATA = {
   {
     tipo: "nenhum",
     texto: "Termos importantes:\n\n",
-    conclusao: "Entidades",
+    conclusao: "* Entidade — É uma pessoa ou organização que existe e possui patrimônio próprio\n\n",
     obs: "Entidade — É uma pessoa ou organização que existe e possui patrimônio próprio",
     pontos: [],
     textoDestaque: [],
     textoDestaqueNegrito: [],
     conclusaoDestaque: [],
-    conclusaoDestaqueNegrito: []
+    conclusaoDestaqueNegrito: [],
+    obsDestaque: [],
+    obsDestaqueNegrito: []
   }
 ],
 
