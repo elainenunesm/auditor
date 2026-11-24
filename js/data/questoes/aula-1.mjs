@@ -257,7 +257,7 @@ window.AULA_DATA = {
         ],
         lacuna: true,
         correta: 0,
-        dica: "Tributo não é a mesma coisa que multa."
+        dica: "Tributo não é a mesma coisa que multa. \nO tributo é "
       },
       {
         id: "n3",
