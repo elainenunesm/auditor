@@ -45,7 +45,7 @@ window.AULA_DATA = {
   titulo: "Porque estudar contabilidade?",
   itens: [
     {
-      tipo: "acao",
+      tipo: "certo",
       cor: "#5B2BCB",
       corFundo: "#f0eaff",
       titulo: "",
