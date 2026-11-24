@@ -62,7 +62,7 @@ window.AULA_DATA = {
   },
   {
     tipo: "nenhum",
-    texto: "A Constituição federal (art 145 a 162) sobre a criação da lei, fala que cabe a lei complementar dispor conflito de competencia, em méteria de tributária entre os entes(\n",
+    texto: "A Constituição federal (art 145 a 162) sobre a criação da lei, fala que cabe a lei complementar dispor conflito de competencia, em méteria de tributária entre os entes(união, estados, distrito federal, e os municípios)\n",
     conclusao: "",
     obs: "",
     pontos: [],
