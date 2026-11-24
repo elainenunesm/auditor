@@ -113,11 +113,11 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n1",
         alternativas: [
-          "",
+          "Distribuição dos tributos.",
           ""
         ],
         lacuna: true,
-        correta: 0
+        correta: 1
       }
     ],
     tituloDestaque: [],
