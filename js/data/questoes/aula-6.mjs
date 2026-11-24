@@ -227,7 +227,12 @@ window.AULA_DATA = {
         id: "n6",
         texto: "",
         paiId: "n5",
-        alternativas: []
+        alternativas: [
+          "",
+          ""
+        ],
+        lacuna: true,
+        correta: 0
       }
     ],
     tituloDestaque: [],
