@@ -67,8 +67,14 @@ window.AULA_DATA = {
     conclusao: "* Entidade — É uma pessoa ou organização que existe e possui patrimônio próprio,\n\n* Patrimônio — É o conjunto de bens, direitos e obrigações.\n\n* Bens — São coisas que têm valor econômico e fazem parte do patrimônio. É o que a entidade já possui. Um carro, uma casa, uma loja...\n\n* Direitos — o que a entidade tem a receber.\nEu tenho o direito de receber o salário por mês pq trabalhei 8 horas.\n\n* Obrigações — o que a entidade tem a pagar.\nEu tenho obrigações no final do mês como por exemplo o aluguel.",
     obs: "",
     pontos: [],
-    textoDestaque: [],
-    textoDestaqueNegrito: [],
+    textoDestaque: [
+      0,
+      1
+    ],
+    textoDestaqueNegrito: [
+      0,
+      1
+    ],
     conclusaoDestaque: [],
     conclusaoDestaqueNegrito: [
       1,
