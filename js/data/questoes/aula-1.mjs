@@ -88,13 +88,16 @@ window.AULA_DATA = {
     ],
     conclusaoDestaque: [
       4,
-      5
+      5,
+      8
     ],
     conclusaoDestaqueNegrito: [
       1,
       5,
       4,
-      6
+      6,
+      8,
+      10
     ]
   },
   {
