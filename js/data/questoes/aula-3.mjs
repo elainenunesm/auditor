@@ -250,7 +250,8 @@ window.AULA_DATA = {
         alternativas: [
           "Ciência exata",
           "Ciência Social",
-          "É uma arte"
+          "É uma arte",
+          ""
         ],
         lacuna: true,
         correta: 0
