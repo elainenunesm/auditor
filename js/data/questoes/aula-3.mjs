@@ -360,7 +360,7 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n11",
         alternativas: [
-          "",
+          "Algo que vou pagar",
           "Algo que já possuo",
           "Algo que ainda vou receber"
         ],
