@@ -132,18 +132,13 @@ window.AULA_DATA = {
       titulo: "Direito Tributário → Arrecadação → Ingresso dos tributos nos cofres públicos.",
       subtitulo: "",
       texto: " A Distribuição dos recursos é estudado pelo Direito Financeiro.",
-      tituloDestaque: [
-        10,
-        11,
-        0
-      ],
+      tituloDestaque: [],
       tituloDestaqueNegrito: [
-        4,
-        5,
         9,
         10,
-        11,
-        0
+        0,
+        1,
+        3
       ],
       subtituloDestaque: [],
       subtituloDestaqueNegrito: [],
