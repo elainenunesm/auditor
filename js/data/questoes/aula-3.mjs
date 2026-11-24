@@ -258,7 +258,7 @@ window.AULA_DATA = {
       },
       {
         id: "n3",
-        texto: "Objeto de estudo",
+        texto: "Objeto de estudo?",
         paiId: "n1",
         alternativas: [
           "",
@@ -274,7 +274,8 @@ window.AULA_DATA = {
         alternativas: [
           "O social",
           "O patrimônio",
-          "Técnicas contábeis"
+          "Técnicas contábeis",
+          ""
         ],
         lacuna: true,
         correta: 1
