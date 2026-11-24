@@ -250,7 +250,7 @@ window.AULA_DATA = {
       },
       {
         id: "n4",
-        texto: "A ",
+        texto: "A distribuição fica a parte do ",
         paiId: "n3",
         alternativas: []
       }
