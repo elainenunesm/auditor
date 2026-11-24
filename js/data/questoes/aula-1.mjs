@@ -56,12 +56,8 @@ window.AULA_DATA = {
     conclusao: "Tributo é uma obrigação de pagar uma quantia em dinheiro ao Estado, criada por lei, para que o governo possa arrecadar recursos e financiar suas atividades.",
     obs: "",
     pontos: [],
-    textoDestaque: [
-      4
-    ],
-    textoDestaqueNegrito: [
-      4
-    ],
+    textoDestaque: [],
+    textoDestaqueNegrito: [],
     textoNegrito: true,
     conclusaoDestaque: [
       5,
