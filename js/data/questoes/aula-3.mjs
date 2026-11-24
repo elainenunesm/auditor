@@ -168,11 +168,16 @@ window.AULA_DATA = {
       3
     ],
     conclusaoDestaque: [
-      1
+      1,
+      17,
+      20
     ],
     conclusaoDestaqueNegrito: [
       1,
-      5
+      5,
+      17,
+      20,
+      27
     ]
   }
 ],
