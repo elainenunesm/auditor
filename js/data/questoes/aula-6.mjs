@@ -17,7 +17,7 @@ window.AULA_DATA = {
 ],
 
   antesComecar: {
-  titulo: "Outros conceitos do direito ",
+  titulo: "Outros conceitos do direito tributário.",
   descricao: "",
   aprender: "",
   importancia: "",
