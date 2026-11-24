@@ -247,6 +247,12 @@ window.AULA_DATA = {
         lacuna: true,
         correta: 0,
         dica: "Tributo não é a mesma coisa que multa."
+      },
+      {
+        id: "n3",
+        texto: "",
+        paiId: "n1",
+        alternativas: []
       }
     ],
     tituloDestaque: [],
