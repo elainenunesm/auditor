@@ -17,7 +17,7 @@ window.AULA_DATA = {
 ],
 
   antesComecar: {
-  titulo: "D",
+  titulo: "Direito Tributário",
   descricao: "",
   aprender: "Outros conceitos do Direito Tributário.",
   importancia: "Outros conceitos do Direito Tributário.",
