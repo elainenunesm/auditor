@@ -52,23 +52,19 @@ window.AULA_DATA = {
   exemplo: [
   {
     tipo: "dinheiro",
-    texto: "O Direito tributário Regula a forma como o Estado Arrecada Recursos Financeiros.\n\nAfinal de contas o estado precisa de dinheiro para pagar servidores, construir escolas, pagar os políticos, etc...",
+    texto: "O que é um tributo?",
     conclusao: "",
     obs: "",
     pontos: [],
     textoDestaque: [
-      3,
-      8
+      3
     ],
     textoDestaqueNegrito: [
       1,
       2,
-      3,
-      8,
-      9,
-      10,
-      11
-    ]
+      3
+    ],
+    textoNegrito: true
   },
   {
     tipo: "servidor",
