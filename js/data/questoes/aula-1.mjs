@@ -250,7 +250,7 @@ window.AULA_DATA = {
       },
       {
         id: "n4",
-        texto: "A distribuição desse recu",
+        texto: "A distribuição desse recurso fica responsável pelo Direito Financeiro",
         paiId: "n3",
         alternativas: []
       }
