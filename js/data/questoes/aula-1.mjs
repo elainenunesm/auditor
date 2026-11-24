@@ -265,7 +265,7 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n1",
         alternativas: [
-          "EN",
+          "Envia aos cofres públicos",
           ""
         ],
         lacuna: true,
