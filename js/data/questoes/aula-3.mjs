@@ -274,10 +274,10 @@ window.AULA_DATA = {
         alternativas: [
           "O social",
           "O patrimônio",
-          ""
+          "Técnicas contábeis"
         ],
         lacuna: true,
-        correta: 0
+        correta: 1
       }
     ],
     tituloDestaque: [],
