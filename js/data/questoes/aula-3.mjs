@@ -351,9 +351,20 @@ window.AULA_DATA = {
       },
       {
         id: "n11",
-        texto: "O que são obrig",
+        texto: "O que são obrigações?",
         paiId: "n6",
         alternativas: []
+      },
+      {
+        id: "n12",
+        texto: "",
+        paiId: "n1",
+        alternativas: [
+          "",
+          ""
+        ],
+        lacuna: true,
+        correta: 0
       }
     ],
     tituloDestaque: [],
