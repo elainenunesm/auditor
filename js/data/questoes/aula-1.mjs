@@ -86,7 +86,7 @@ window.AULA_DATA = {
   {
     tipo: "servidor",
     texto: "Direito Tributário é o ramo do Direito Público que estuda as regras relacionadas à:",
-    conclusao: "\n* Criação de tributos,\n\n* Arrecadação de tributos e \n\n* Fiscalização dos tributos\n",
+    conclusao: "* Criação de tributos,\n\n* Arrecadação de tributos e \n\n* Fiscalização dos tributos\n",
     obs: "Bem como os limites do poder do Estado de tributar.",
     pontos: [],
     textoDestaque: [
@@ -103,9 +103,7 @@ window.AULA_DATA = {
     ],
     conclusaoDestaque: [],
     conclusaoDestaqueNegrito: [
-      14,
       3,
-      4,
       8,
       9,
       13
