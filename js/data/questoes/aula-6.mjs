@@ -13,10 +13,8 @@ window.AULA_DATA = {
   ordem: [
   "antesComecar",
   "exemplo0",
-  "mapaInterativo0",
   "exemplo1",
   "exemplo2",
-  "exemplo3",
   "checagem0"
 ],
 
@@ -40,30 +38,8 @@ window.AULA_DATA = {
 
   exemplo: [
   {
-    tipo: "estudo",
-    texto: "Além da Arrecardação o Direito Tributário também Cria tributos e Fiscaliza esse tributo.",
-    conclusao: "",
-    obs: "",
-    pontos: [],
-    textoDestaque: [
-      7,
-      10,
-      5,
-      4
-    ],
-    textoDestaqueNegrito: [
-      2,
-      4,
-      5,
-      7,
-      10,
-      12,
-      8
-    ]
-  },
-  {
     tipo: "nenhum",
-    texto: "A Constituição federal (Art 146 ) sobre a criação da lei, fala que cabe a lei complementar dispor conflito de compêtencia, em máteria de tributário entre os entes(união, estados, distrito federal, e os municípios)\n",
+    texto: "A Constituição federal (art. 146 ) sobre a criação da lei, fala que cabe a lei complementar dispor conflito de compêtencia, em máteria de tributário entre os entes(união, estados, distrito federal, e os municípios)\n",
     conclusao: "O que isso quer dizer?\n\nImagine a seguinte situação:",
     obs: "Uma empresa presta um serviço e vende um produto.\n\nSurge uma dúvida:\n\n- O Estado pode cobrar ICMS sobre essa operação?\n- O Município pode cobrar ISS?\n- Qual ente(união, estados, distrito federal, e os municípios) tem competência para tributar essa atividade?",
     pontos: [],
@@ -76,14 +52,10 @@ window.AULA_DATA = {
       2,
       17,
       3,
-      4,
       5,
       16,
       29,
-      31,
-      33,
       34,
-      36,
       37,
       38
     ],
@@ -232,60 +204,7 @@ window.AULA_DATA = {
 
   mapaConceitual: [],
 
-  mapaInterativo: [
-  {
-    titulo: "O que o Direito tributário faz?",
-    instrucao: "",
-    nos: [
-      {
-        id: "n1",
-        texto: "Direito tributário",
-        paiId: ''
-      },
-      {
-        id: "n2",
-        texto: "",
-        paiId: "n1",
-        alternativas: [
-          "Arrecardação de tributos",
-          "Distribuição de tributos"
-        ],
-        lacuna: true,
-        correta: 0
-      },
-      {
-        id: "n3",
-        texto: "",
-        paiId: "n1",
-        alternativas: [
-          "Criação dos tributos",
-          "Extinguir os tributos"
-        ],
-        lacuna: true,
-        correta: 0
-      },
-      {
-        id: "n4",
-        texto: "",
-        paiId: "n1",
-        alternativas: [
-          "Fiscalização os tributos",
-          "Ditribuição dos tributos."
-        ],
-        lacuna: true,
-        correta: 0
-      }
-    ],
-    tituloDestaque: [
-      4,
-      3
-    ],
-    tituloDestaqueNegrito: [
-      3,
-      4
-    ]
-  }
-],
+  mapaInterativo: [],
 
   questoes: [],
 };
