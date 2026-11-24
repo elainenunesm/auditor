@@ -275,6 +275,7 @@ window.AULA_DATA = {
           "O social",
           "O patrimônio",
           "Técnicas contábeis",
+          "É o caixa",
           ""
         ],
         lacuna: true,
