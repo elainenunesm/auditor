@@ -39,7 +39,7 @@ window.AULA_DATA = {
   exemplo: [
   {
     tipo: "nenhum",
-    texto: "Constituição Federal — Art. 146, I\n\nA Constituição Federal estabelece que cabe à lei complementar dispor sobre conflitos de competência em matéria tributária entre os entes federativos: União, Estados, Distrito Federal e Municípios.\n\nIsso significa que a lei complementar estabelece regras para solucionar dúvidas sobre qual ente federativo possui competência para instituir determinado tributo.",
+    texto: "Constituição Federal — Art. 146, I\n\nA Constituição Federal estabelece que cabe à lei complementar dispor sobre conflitos de competência em matéria tributária entre os entes federativos: União, Estados, Distrito Federal e Municípios.\n",
     conclusao: "O que isso quer dizer?\n\nImagine a seguinte situação:",
     obs: "Uma empresa presta um serviço e vende um produto.\n\nSurge uma dúvida:\n\n- O Estado pode cobrar ICMS sobre essa operação?\n- O Município pode cobrar ISS?\n- Qual ente(união, estados, distrito federal, e os municípios) tem competência para tributar essa atividade?",
     pontos: [],
@@ -54,10 +54,8 @@ window.AULA_DATA = {
       3,
       5,
       16,
-      29,
       34,
-      37,
-      38
+      37
     ],
     conclusaoDestaque: [
       6,
