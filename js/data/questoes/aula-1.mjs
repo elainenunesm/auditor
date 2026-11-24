@@ -239,7 +239,7 @@ window.AULA_DATA = {
       },
       {
         id: "n2",
-        texto: "fgwgw",
+        texto: "",
         tipo: "nenhum",
         cor: "#DFF3FC",
         paiId: "n1",
