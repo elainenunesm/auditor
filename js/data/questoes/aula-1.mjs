@@ -233,7 +233,9 @@ window.AULA_DATA = {
         texto: "Arrecardação",
         tipo: "nenhum",
         paiId: '',
-        cartaoTexto: ""
+        cartaoTexto: "(direito tributário)",
+        cartaoTextoDestaque: [],
+        cartaoTextoDestaqueNegrito: []
       }
     ]
   }
