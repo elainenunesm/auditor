@@ -112,7 +112,11 @@ window.AULA_DATA = {
     ],
     textoNegrito: false,
     obsDestaque: [],
-    obsDestaqueNegrito: []
+    obsDestaqueNegrito: [
+      3,
+      4,
+      5
+    ]
   },
   {
     tipo: "nenhum",
