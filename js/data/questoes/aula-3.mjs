@@ -87,10 +87,14 @@ window.AULA_DATA = {
   },
   {
     tipo: "nenhum",
-    texto: "Termos importantes, co",
+    texto: "Termos importantes, continua...",
     conclusao: "",
     obs: "",
-    pontos: []
+    pontos: [],
+    textoDestaque: [],
+    textoDestaqueNegrito: [],
+    conclusaoDestaque: [],
+    conclusaoDestaqueNegrito: []
   }
 ],
 
