@@ -16,7 +16,8 @@ window.AULA_DATA = {
   "mapaInterativo0",
   "exemplo1",
   "exemplo2",
-  "exemplo3"
+  "exemplo3",
+  "checagem0"
 ],
 
   antesComecar: {
@@ -169,7 +170,30 @@ window.AULA_DATA = {
   }
 ],
 
-  checagem: [],
+  checagem: [
+  {
+    titulo: "Compete à lei ordinária municipal resolver conflitos de competência tributária entre os Municípios e os Estados.",
+    correta: 0,
+    feedbackCorreto: "",
+    feedbackErrado: "",
+    opcoes: [
+      "Certo",
+      "Errado"
+    ],
+    certoErrado: true,
+    opcoesNegrito: [],
+    opcoesItalico: [],
+    opcoesDestaque: [
+      [],
+      []
+    ],
+    dificuldade: "Fácil",
+    subtituloDestaque: [],
+    subtituloDestaqueNegrito: [],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: []
+  }
+],
 
   resumo: {
   titulo: "",
