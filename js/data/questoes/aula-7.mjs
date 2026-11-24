@@ -111,7 +111,7 @@ window.AULA_DATA = {
       {
         id: "n5",
         texto: "",
-        paiId: "n1",
+        paiId: "n2",
         alternativas: [
           "Distribuição dos tributos.",
           "Fiscalização os tributos"
