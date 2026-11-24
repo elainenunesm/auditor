@@ -192,7 +192,7 @@ window.AULA_DATA = {
       []
     ],
     dificuldade: "Fácil",
-    subtitulo: "O que o direito tributário estuda?",
+    subtitulo: "Quando os contribuintes pagam tributos, como impostos, taxas e contribuições, e esses valores ingressam nos cofres públicos, estamos diante de qual conceito?",
     subtituloDestaque: [],
     subtituloDestaqueNegrito: []
   }
