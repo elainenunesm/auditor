@@ -85,18 +85,13 @@ window.AULA_DATA = {
   },
   {
     tipo: "servidor",
-    texto: "O Auditor estuda essa matéria porque é a sua principal ferramenta de trabalho cotidiano.",
+    texto: "Direito Tributário é o ramo do Direito Público",
     conclusao: "O Auditor é a autoridade administrativa responsável por aplicar a lei tributária na prática, fiscalizando o contribuinte e garantindo que o estado receba os recursos devidos.",
     obs: "",
     pontos: [],
-    textoDestaque: [
-      9,
-      10
-    ],
+    textoDestaque: [],
     textoDestaqueNegrito: [
       1,
-      10,
-      9,
       4
     ],
     conclusaoDestaque: [
@@ -113,7 +108,8 @@ window.AULA_DATA = {
       8,
       10,
       15
-    ]
+    ],
+    textoNegrito: true
   },
   {
     tipo: "nenhum",
