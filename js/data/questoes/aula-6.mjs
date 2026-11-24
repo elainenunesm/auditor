@@ -107,7 +107,7 @@ window.AULA_DATA = {
         paiId: "n1",
         alternativas: [
           "Arrecarda",
-          "Dist"
+          "Distribui"
         ],
         lacuna: true,
         correta: 0
