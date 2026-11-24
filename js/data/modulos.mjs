@@ -25,7 +25,7 @@ const MODULOS = [
       },
       {
         id:      6,
-        titulo:  "Aula 2 - Conceitos iniciais - Constituição",
+        titulo:  "Aula 2 - Conceitos iniciais - Constituição art.146",
         arquivo: "aula-6",
         icone:   'padrao',
       }
