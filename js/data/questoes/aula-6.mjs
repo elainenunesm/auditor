@@ -135,7 +135,10 @@ window.AULA_DATA = {
         correta: 0
       }
     ],
-    tituloDestaque: [],
+    tituloDestaque: [
+      4,
+      3
+    ],
     tituloDestaqueNegrito: [
       3,
       4
