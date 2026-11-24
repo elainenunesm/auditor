@@ -114,6 +114,12 @@ window.AULA_DATA = {
         correta: 1
       },
       {
+        id: "n6",
+        texto: "",
+        paiId: "n1",
+        alternativas: []
+      },
+      {
         id: "n5",
         texto: "",
         paiId: "n1",
