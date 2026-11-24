@@ -85,7 +85,6 @@ window.AULA_DATA = {
     ],
     obsDestaque: [
       46,
-      44,
       27,
       35
     ],
@@ -94,7 +93,6 @@ window.AULA_DATA = {
       16,
       46,
       35,
-      42,
       44,
       24,
       27,
