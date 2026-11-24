@@ -119,7 +119,7 @@ window.AULA_DATA = {
   },
   {
     tipo: "acao",
-    texto: "Então a Constituição federal estabeleceu qu",
+    texto: "Então a Constituição federal estabeleceu quê, uma lei complementar ",
     conclusao: "",
     obs: "",
     pontos: []
