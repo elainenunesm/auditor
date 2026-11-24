@@ -249,7 +249,7 @@ window.AULA_DATA = {
         paiId: "n1",
         alternativas: [
           "Ciência exata",
-          "Ciêc"
+          "Ciência Social"
         ],
         lacuna: true,
         correta: 0
