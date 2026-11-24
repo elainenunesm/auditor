@@ -64,7 +64,7 @@ window.AULA_DATA = {
   {
     tipo: "nenhum",
     texto: "Termos importantes:",
-    conclusao: "* Entidade — É uma pessoa ou organização que existe e possui patrimônio próprio,\n\n* Patrimônio — É o conjunto de bens, direitos e obrigações.\n\n",
+    conclusao: "* Entidade — É uma pessoa ou organização que existe e possui patrimônio próprio,\n\n* Patrimônio — É o conjunto de bens, direitos e obrigações.\n\n* Bens — São coisas que têm valor econômico e fazem parte do patrimônio. É o que a entidade já possui. Um carro, uma casa, uma loja...\n\n",
     obs: "",
     pontos: [],
     textoDestaque: [],
