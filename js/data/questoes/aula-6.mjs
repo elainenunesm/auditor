@@ -189,7 +189,9 @@ window.AULA_DATA = {
         texto: "",
         paiId: ''
       }
-    ]
+    ],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: []
   }
 ],
 
