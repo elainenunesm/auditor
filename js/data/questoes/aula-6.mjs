@@ -94,7 +94,7 @@ window.AULA_DATA = {
   mapaInterativo: [
   {
     titulo: "",
-    instrucao: "O Que o direito",
+    instrucao: "O Que o Direito tributário",
     nos: [
       {
         id: "n1",
