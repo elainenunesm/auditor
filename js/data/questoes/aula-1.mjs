@@ -185,7 +185,7 @@ window.AULA_DATA = {
       "Distribuição de receitas públicas",
       "Arrecadação tributária",
       "Repartição das competências tributárias",
-      ""
+      "Despesa pública"
     ],
     opcoesNegrito: [
       false,
