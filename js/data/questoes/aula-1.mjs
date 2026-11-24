@@ -259,7 +259,7 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n1",
         alternativas: [
-          "",
+          "Distribui os recursos",
           ""
         ],
         lacuna: true,
