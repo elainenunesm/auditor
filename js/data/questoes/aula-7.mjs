@@ -107,11 +107,22 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n1",
         alternativas: [
-          "",
+          "Distribuição dos tributos.",
           "Fiscalização os tributos"
         ],
         lacuna: true,
         correta: 1
+      },
+      {
+        id: "n5",
+        texto: "",
+        paiId: "n1",
+        alternativas: [
+          "",
+          ""
+        ],
+        lacuna: true,
+        correta: 0
       }
     ],
     tituloDestaque: [],
