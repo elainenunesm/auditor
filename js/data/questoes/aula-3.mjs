@@ -52,7 +52,9 @@ window.AULA_DATA = {
     conclusaoDestaque: [],
     conclusaoDestaqueNegrito: [
       2,
-      3
+      3,
+      9,
+      12
     ]
   }
 ],
