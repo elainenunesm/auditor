@@ -233,7 +233,7 @@ window.AULA_DATA = {
     nos: [
       {
         id: "n1",
-        texto: "Arrecardação",
+        texto: "O que faz parte da arrecadação?",
         paiId: ''
       },
       {
