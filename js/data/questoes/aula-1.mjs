@@ -226,7 +226,7 @@ window.AULA_DATA = {
 
   mapaConceitual: [
   {
-    titulo: "",
+    titulo: "Arrecardação",
     nos: [
       {
         id: "n1",
@@ -243,9 +243,13 @@ window.AULA_DATA = {
         tipo: "nenhum",
         cor: "#DFF3FC",
         paiId: "n1",
-        cartaoTexto: ""
+        cartaoTexto: "",
+        textoDestaque: [],
+        textoDestaqueNegrito: []
       }
-    ]
+    ],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: []
   }
 ],
 
