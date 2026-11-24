@@ -351,8 +351,8 @@ window.AULA_DATA = {
       },
       {
         id: "n11",
-        texto: "",
-        paiId: "n1",
+        texto: "O que são obrig",
+        paiId: "n6",
         alternativas: []
       }
     ],
