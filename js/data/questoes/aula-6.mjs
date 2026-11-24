@@ -41,7 +41,7 @@ window.AULA_DATA = {
     tipo: "nenhum",
     texto: "Constituição Federal — Art. 146, I\n\nA Constituição Federal estabelece que cabe à lei complementar dispor sobre conflitos de competência em matéria tributária entre os entes federativos: União, Estados, Distrito Federal e Municípios.\n",
     conclusao: "O que isso quer dizer?\n\nImagine a seguinte situação:",
-    obs: "Uma empresa presta um serviço e vende um produto.\n\nSurge uma dúvida:\n\n- O Estado pode cobrar ICMS sobre essa operação?\n- O Município pode cobrar ISS?\n- Qual ente(união, estados, distrito federal, e os municípios) tem competência para tributar essa atividade?",
+    obs: "Uma empresa presta um serviço e vende um produto.\n\nSurge uma dúvida:\n\n- O Estado pode cobrar ICMS?\n\n\n\nO Município pode cobrar ISS?\n\n\n\nOs dois podem cobrar tributos sobre essa operação?\n\n\n\nComo saber qual ente tem competência para tributar?",
     pontos: [],
     textoDestaque: [
       30,
