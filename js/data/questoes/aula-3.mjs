@@ -17,12 +17,13 @@ window.AULA_DATA = {
 ],
 
   antesComecar: {
-  titulo: "t",
+  titulo: "Aprenda porque se estuda essa matéria",
   descricao: "2t",
   aprender: "",
   importancia: "",
   tituloDestaque: [],
-  tituloDestaqueNegrito: []
+  tituloDestaqueNegrito: [],
+  tituloNegrito: true
 },
 
   exemplo: [],
