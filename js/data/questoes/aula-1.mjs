@@ -251,7 +251,7 @@ window.AULA_DATA = {
       {
         id: "n3",
         texto: "Envia ao cofre público",
-        paiId: "n1",
+        paiId: "n2",
         alternativas: []
       },
       {
