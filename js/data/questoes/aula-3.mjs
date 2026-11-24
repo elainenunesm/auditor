@@ -161,8 +161,14 @@ window.AULA_DATA = {
     conclusao: "A contabilidade é a ciência social que estuda, interpreta e registra os fenômenos que afetam o patrimônio de uma entidade, que é formado pelos seus bens, direitos e obrigações.\n",
     obs: "",
     pontos: [],
-    textoDestaque: [],
-    textoDestaqueNegrito: []
+    textoDestaque: [
+      3
+    ],
+    textoDestaqueNegrito: [
+      3
+    ],
+    conclusaoDestaque: [],
+    conclusaoDestaqueNegrito: []
   }
 ],
 
