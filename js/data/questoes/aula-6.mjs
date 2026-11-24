@@ -228,7 +228,7 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n5",
         alternativas: [
-          "",
+          "Disciplina os conflitos e estabelece normas gerais para que essa competência seja exercida corretamente",
           ""
         ],
         lacuna: true,
