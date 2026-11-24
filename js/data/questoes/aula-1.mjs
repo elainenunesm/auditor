@@ -256,7 +256,7 @@ window.AULA_DATA = {
       },
       {
         id: "n4",
-        texto: "O que fa",
+        texto: "O que faz com a arrecad",
         paiId: "n3",
         alternativas: []
       }
