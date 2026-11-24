@@ -66,7 +66,9 @@ window.AULA_DATA = {
     ],
     textoNegrito: true,
     conclusaoDestaque: [],
-    conclusaoDestaqueNegrito: []
+    conclusaoDestaqueNegrito: [
+      0
+    ]
   },
   {
     tipo: "servidor",
