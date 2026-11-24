@@ -90,7 +90,6 @@ window.AULA_DATA = {
     ],
     conclusaoDestaqueNegrito: [
       1,
-      16,
       26,
       5,
       6,
