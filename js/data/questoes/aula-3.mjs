@@ -20,12 +20,16 @@ window.AULA_DATA = {
   titulo: "Aprenda porque se estuda essa matéria",
   descricao: "Nesta aula você vai dar o primeiro passo para entender os conceitos iniciais.",
   aprender: "Porque se estuda Contabilidade?",
-  importancia: "",
+  importancia: "Entender o papel do Auditor Fiscal.",
   tituloDestaque: [],
   tituloDestaqueNegrito: [],
   tituloNegrito: true,
   descricaoDestaque: [],
-  descricaoDestaqueNegrito: []
+  descricaoDestaqueNegrito: [],
+  aprenderDestaque: [],
+  aprenderDestaqueNegrito: [],
+  importanciaDestaque: [],
+  importanciaDestaqueNegrito: []
 },
 
   exemplo: [],
