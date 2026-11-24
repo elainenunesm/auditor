@@ -168,7 +168,7 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n7",
         alternativas: [
-          "CNT (CÓDIGO TRIBUTÁRIO) 5.172/1966",
+          "CT (CÓDIGO TRIBUTÁRIO) 5.172/1966",
           "CNT (CÓDIGO TRIBUTÁRIO NACIONAL) 5.172/1966"
         ],
         lacuna: true,
