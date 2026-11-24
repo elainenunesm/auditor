@@ -81,6 +81,12 @@ window.AULA_DATA = {
         paiId: ''
       },
       {
+        id: "n6",
+        texto: "",
+        paiId: "n1",
+        alternativas: []
+      },
+      {
         id: "n2",
         texto: "",
         paiId: "n1",
@@ -90,12 +96,6 @@ window.AULA_DATA = {
         ],
         lacuna: true,
         correta: 0
-      },
-      {
-        id: "n6",
-        texto: "",
-        paiId: "n1",
-        alternativas: []
       },
       {
         id: "n3",
