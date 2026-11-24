@@ -298,7 +298,7 @@ window.AULA_DATA = {
         alternativas: [
           "",
           "",
-          "O conjunto de b"
+          "O conjunto de bens, direitos e obrigações."
         ],
         lacuna: true,
         correta: 0
