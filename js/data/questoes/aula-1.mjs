@@ -53,7 +53,7 @@ window.AULA_DATA = {
 
   exemplo: [
   {
-    tipo: "nenhum",
+    tipo: "dinheiro",
     texto: "O Direito tributário regula a forma como o estado arrecada recursos financeiros para as políticas públicas, afinal precisa de dinheiro para pagar servidores, construir escolas, pagar os políticos, etc...",
     conclusao: "",
     obs: "",
