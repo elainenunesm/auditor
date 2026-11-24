@@ -72,7 +72,7 @@ window.AULA_DATA = {
     nos: [
       {
         id: "n1",
-        texto: "r3qr",
+        texto: "",
         paiId: ''
       }
     ],
