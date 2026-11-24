@@ -19,12 +19,6 @@ const ARQUIVOS = [
   "./js/estudo.mjs",
   "./js/data/modulos.mjs",
   "./images/LEIA-ME.txt",
-  "./js/data/questoes/aula-1.mjs",
-  "./js/data/questoes/aula-5.mjs",
-  "./js/data/questoes/aula-6.mjs",
-  "./js/data/questoes/aula-7.mjs",
-  "./js/data/questoes/aula-3.mjs",
-  "./js/data/questoes/aula-2.mjs",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./manifest.json"
