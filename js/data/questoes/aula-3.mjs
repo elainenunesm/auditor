@@ -240,8 +240,19 @@ window.AULA_DATA = {
     nos: [
       {
         id: "n1",
-        texto: "Cp",
+        texto: "Contabilidade",
         paiId: ''
+      },
+      {
+        id: "n2",
+        texto: "",
+        paiId: "n1",
+        alternativas: [
+          "Ci",
+          ""
+        ],
+        lacuna: true,
+        correta: 0
       }
     ],
     tituloDestaque: [],
