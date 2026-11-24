@@ -300,7 +300,7 @@ window.AULA_DATA = {
           "O conjunto de bens, direitos e obrigações."
         ],
         lacuna: true,
-        correta: 0
+        correta: 1
       },
       {
         id: "n7",
