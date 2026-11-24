@@ -63,9 +63,6 @@ window.AULA_DATA = {
     textoNegrito: false,
     conclusaoDestaque: [
       11,
-      15,
-      22,
-      23,
       0
     ],
     conclusaoDestaqueNegrito: [
