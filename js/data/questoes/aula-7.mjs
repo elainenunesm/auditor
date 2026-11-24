@@ -161,6 +161,17 @@ window.AULA_DATA = {
           "Disciplinar as limitações ao poder"
         ],
         lacuna: true,
+        correta: 1
+      },
+      {
+        id: "n10",
+        texto: "",
+        paiId: "n1",
+        alternativas: [
+          "",
+          ""
+        ],
+        lacuna: true,
         correta: 0
       }
     ],
