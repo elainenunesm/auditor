@@ -222,6 +222,12 @@ window.AULA_DATA = {
         texto: "Lei complementar",
         paiId: "n1",
         alternativas: []
+      },
+      {
+        id: "n6",
+        texto: "",
+        paiId: "n5",
+        alternativas: []
       }
     ],
     tituloDestaque: [],
