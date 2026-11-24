@@ -13,6 +13,7 @@ window.AULA_DATA = {
   ordem: [
   "antesComecar",
   "exemplo0",
+  "mapaInterativo0",
   "resumo",
   "licao"
 ],
@@ -90,7 +91,21 @@ window.AULA_DATA = {
 
   mapaConceitual: [],
 
-  mapaInterativo: [],
+  mapaInterativo: [
+  {
+    titulo: "Direito Tributário",
+    instrucao: "",
+    nos: [
+      {
+        id: "n1",
+        texto: "",
+        paiId: ''
+      }
+    ],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: []
+  }
+],
 
   questoes: [],
 };
