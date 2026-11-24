@@ -46,7 +46,7 @@ window.AULA_DATA = {
   itens: [
     {
       tipo: "certo",
-      cor: "#ca2b53",
+      cor: "#352bca",
       corFundo: "#f0eaff",
       titulo: "Porque o Auditor Fiscal precisa entender como funciona o patrimônio de uma entidade, como o dinheiro entra e sai e como identificar se as informações financeiras estão corretas.",
       exemplos: "",
