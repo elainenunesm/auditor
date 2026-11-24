@@ -66,13 +66,17 @@ window.AULA_DATA = {
     ],
     textoNegrito: true,
     conclusaoDestaque: [
-      5
+      5,
+      11,
+      15,
+      20
     ],
     conclusaoDestaqueNegrito: [
       0,
       3,
       5,
-      11
+      11,
+      15
     ]
   },
   {
