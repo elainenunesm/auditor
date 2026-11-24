@@ -163,8 +163,8 @@ window.AULA_DATA = {
       0
     ],
     conclusaoDestaqueNegrito: [
-      3,
-      0
+      0,
+      4
     ]
   }
 ],
