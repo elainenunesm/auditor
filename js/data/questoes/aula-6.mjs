@@ -106,8 +106,8 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n1",
         alternativas: [
-          "Arrecarda",
-          "Distribui"
+          "Arrecardação de tributos",
+          "Distribuição de "
         ],
         lacuna: true,
         correta: 0
