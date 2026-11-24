@@ -158,7 +158,7 @@ window.AULA_DATA = {
         paiId: "n8",
         alternativas: [
           "Só disciplina o poder.",
-          ""
+          "Disciplinar as limitações ao poder"
         ],
         lacuna: true,
         correta: 0
