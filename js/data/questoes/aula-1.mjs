@@ -275,7 +275,7 @@ window.AULA_DATA = {
         ],
         lacuna: true,
         correta: 1,
-        dica: ""
+        dica: "Entre arrecadar e enviar aos cofre"
       },
       {
         id: "n5",
