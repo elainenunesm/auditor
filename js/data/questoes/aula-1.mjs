@@ -89,10 +89,16 @@ window.AULA_DATA = {
     conclusao: "O Auditor é a autoridade administrativa responsável por aplicar a lei tributária na prática, fiscalizando o contribuinte e garantindo que o estado receba os recursos devidos.",
     obs: "",
     pontos: [],
-    textoDestaque: [],
+    textoDestaque: [
+      1,
+      0,
+      6,
+      7
+    ],
     textoDestaqueNegrito: [
       1,
-      4
+      4,
+      0
     ],
     conclusaoDestaque: [
       4,
