@@ -69,7 +69,8 @@ window.AULA_DATA = {
       5,
       11,
       15,
-      22
+      22,
+      23
     ],
     conclusaoDestaqueNegrito: [
       0,
@@ -78,7 +79,8 @@ window.AULA_DATA = {
       11,
       15,
       20,
-      22
+      22,
+      23
     ]
   },
   {
