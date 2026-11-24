@@ -182,7 +182,7 @@ window.AULA_DATA = {
     feedbackCorreto: "",
     feedbackErrado: "",
     opcoes: [
-      "",
+      "Distribuição de receitas públicas",
       ""
     ],
     opcoesNegrito: [],
