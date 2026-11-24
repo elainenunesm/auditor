@@ -80,8 +80,8 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n1",
         alternativas: [
-          "Pagam tribu",
-          ""
+          "Pagam tributos",
+          "Pagam taxa"
         ],
         lacuna: true,
         correta: 0
