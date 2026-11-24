@@ -118,7 +118,7 @@ window.AULA_DATA = {
         paiId: "n1",
         alternativas: [
           "Criação",
-          ""
+          "Extinguir"
         ],
         lacuna: true,
         correta: 0
