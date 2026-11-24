@@ -160,7 +160,10 @@ window.AULA_DATA = {
       3
     ],
     conclusaoDestaque: [],
-    conclusaoDestaqueNegrito: []
+    conclusaoDestaqueNegrito: [
+      3,
+      0
+    ]
   }
 ],
 
