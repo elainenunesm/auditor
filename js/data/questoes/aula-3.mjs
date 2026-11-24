@@ -258,7 +258,7 @@ window.AULA_DATA = {
       },
       {
         id: "n3",
-        texto: "Estuda o quê?",
+        texto: "Objeto de estudo",
         paiId: "n1",
         alternativas: [
           "",
