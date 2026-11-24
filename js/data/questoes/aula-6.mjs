@@ -43,7 +43,11 @@ window.AULA_DATA = {
     conclusao: "O que isso quer dizer?\n\nImagine a seguinte situação:",
     obs: "Uma empresa presta um serviço e vende um produto.\n\nSurge uma dúvida:\n\n- O Estado pode cobrar ICMS sobre essa operação?\n- O Município pode cobrar ISS?\n- Qual ente(união, estados, distrito federal, e os municípios) tem competência para tributar essa atividade?",
     pontos: [],
-    textoDestaque: [],
+    textoDestaque: [
+      19,
+      20,
+      21
+    ],
     textoDestaqueNegrito: [
       3,
       5,
@@ -53,7 +57,10 @@ window.AULA_DATA = {
       1,
       7,
       15,
-      16
+      16,
+      19,
+      20,
+      21
     ],
     conclusaoDestaque: [
       6,
