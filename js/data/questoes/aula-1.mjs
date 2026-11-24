@@ -240,7 +240,12 @@ window.AULA_DATA = {
         id: "n2",
         texto: "Arre",
         paiId: "n1",
-        alternativas: []
+        alternativas: [
+          "Arre",
+          ""
+        ],
+        lacuna: true,
+        correta: 0
       },
       {
         id: "n3",
