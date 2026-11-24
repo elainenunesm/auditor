@@ -179,7 +179,7 @@ window.AULA_DATA = {
         paiId: "n1",
         alternativas: [
           "Ditribuição dos tributos.",
-          ""
+          "Fiscalização os tributos"
         ],
         lacuna: true,
         correta: 1
