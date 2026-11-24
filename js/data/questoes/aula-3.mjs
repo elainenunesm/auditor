@@ -13,6 +13,7 @@ window.AULA_DATA = {
   ordem: [
   "antesComecar",
   "exemplo0",
+  "exemplo1",
   "resumo",
   "licao"
 ],
@@ -59,6 +60,15 @@ window.AULA_DATA = {
       9,
       12
     ]
+  },
+  {
+    tipo: "nenhum",
+    texto: "",
+    conclusao: "",
+    obs: "",
+    pontos: [],
+    textoDestaque: [],
+    textoDestaqueNegrito: []
   }
 ],
 
