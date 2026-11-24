@@ -119,7 +119,7 @@ window.AULA_DATA = {
   },
   {
     tipo: "acao",
-    texto: "Então a Constituição federal estabeleceu quê, uma lei complementar é quem irá falar quem tem a competencia em relação a",
+    texto: "Então a Constituição federal estabeleceu quê, uma lei complementar é quem irá falar quem tem a competencia em relação ao tributo e como ",
     conclusao: "",
     obs: "",
     pontos: []
