@@ -147,7 +147,7 @@ window.AULA_DATA = {
         paiId: "n7",
         alternativas: [
           "Escolhe livremente quem terá competência para criar cada tributo.",
-          "Conflito de competência"
+          "Dispõe sobre os conflito de competencia"
         ],
         lacuna: true,
         correta: 1
