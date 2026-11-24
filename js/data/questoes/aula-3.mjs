@@ -318,7 +318,7 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n7",
         alternativas: [
-          "",
+          "Algo que j",
           ""
         ],
         lacuna: true,
