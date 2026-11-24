@@ -149,7 +149,7 @@ window.AULA_DATA = {
   {
     tipo: "conjugar",
     texto: "A lei complementar é:",
-    conclusao: "CNT(CÓDIGO TRIBUTÁRIO NACIONAL) 5.172/1966",
+    conclusao: "CNT (CÓDIGO TRIBUTÁRIO NACIONAL) 5.172/1966",
     obs: "",
     pontos: [],
     textoDestaque: [],
@@ -159,7 +159,9 @@ window.AULA_DATA = {
       2,
       3
     ],
-    conclusaoDestaque: [],
+    conclusaoDestaque: [
+      0
+    ],
     conclusaoDestaqueNegrito: [
       3,
       0
