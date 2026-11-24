@@ -97,10 +97,21 @@ window.AULA_DATA = {
         paiId: "n2",
         alternativas: [
           "Extinguir os tributos",
-          ""
+          "Criação dos tributos"
         ],
         lacuna: true,
         correta: 1
+      },
+      {
+        id: "n4",
+        texto: "",
+        paiId: "n3",
+        alternativas: [
+          "",
+          ""
+        ],
+        lacuna: true,
+        correta: 0
       }
     ],
     tituloDestaque: [],
