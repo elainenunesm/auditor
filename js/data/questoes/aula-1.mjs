@@ -52,13 +52,15 @@ window.AULA_DATA = {
   exemplo: [
   {
     tipo: "dinheiro",
-    texto: "O que é um tributo?",
+    texto: "O que é um Tributo?",
     conclusao: "Tributo é uma obrigação de pagar uma quantia em dinheiro ao Estado, criada por lei, para que o governo possa arrecadar recursos e financiar suas atividades.",
     obs: "",
     pontos: [],
     textoDestaque: [],
-    textoDestaqueNegrito: [],
-    textoNegrito: true,
+    textoDestaqueNegrito: [
+      4
+    ],
+    textoNegrito: false,
     conclusaoDestaque: [
       5,
       11,
