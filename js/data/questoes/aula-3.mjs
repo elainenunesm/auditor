@@ -272,8 +272,8 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n3",
         alternativas: [
-          "",
-          ""
+          "O social",
+          "O patrim"
         ],
         lacuna: true,
         correta: 0
