@@ -104,7 +104,11 @@ window.AULA_DATA = {
       6,
       5,
       11,
-      10
+      10,
+      14,
+      18,
+      19,
+      20
     ],
     textoNegrito: false,
     obsDestaque: [],
