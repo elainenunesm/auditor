@@ -16,6 +16,7 @@ window.AULA_DATA = {
   "exemplo1",
   "exemplo2",
   "exemplo3",
+  "mapaInterativo0",
   "resumo",
   "licao"
 ],
@@ -232,7 +233,21 @@ window.AULA_DATA = {
 
   mapaConceitual: [],
 
-  mapaInterativo: [],
+  mapaInterativo: [
+  {
+    titulo: "Contabilidade",
+    instrucao: "",
+    nos: [
+      {
+        id: "n1",
+        texto: "",
+        paiId: ''
+      }
+    ],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: []
+  }
+],
 
   questoes: [],
 };
