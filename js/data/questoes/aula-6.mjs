@@ -197,6 +197,17 @@ window.AULA_DATA = {
       },
       {
         id: "n3",
+        texto: "Lei Complementar",
+        paiId: "n1",
+        alternativas: [
+          "",
+          ""
+        ],
+        lacuna: false,
+        correta: 0
+      },
+      {
+        id: "n4",
         texto: "",
         paiId: "n1",
         alternativas: [
