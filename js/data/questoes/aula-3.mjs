@@ -235,12 +235,12 @@ window.AULA_DATA = {
 
   mapaInterativo: [
   {
-    titulo: "Contabilidade",
+    titulo: "",
     instrucao: "",
     nos: [
       {
         id: "n1",
-        texto: "",
+        texto: "Cp",
         paiId: ''
       }
     ],
