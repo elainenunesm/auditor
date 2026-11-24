@@ -323,6 +323,18 @@ window.AULA_DATA = {
           "Algo vou pagar"
         ],
         lacuna: true,
+        correta: 0,
+        dica: "São coisas que têm valor econômico e fazem parte do patrimônio. É o que a entidade(pessoa ou organização) já possui. Um carro, uma casa, uma loja..."
+      },
+      {
+        id: "n9",
+        texto: "",
+        paiId: "n1",
+        alternativas: [
+          "",
+          ""
+        ],
+        lacuna: true,
         correta: 0
       }
     ],
