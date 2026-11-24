@@ -167,8 +167,13 @@ window.AULA_DATA = {
     textoDestaqueNegrito: [
       3
     ],
-    conclusaoDestaque: [],
-    conclusaoDestaqueNegrito: []
+    conclusaoDestaque: [
+      1
+    ],
+    conclusaoDestaqueNegrito: [
+      1,
+      5
+    ]
   }
 ],
 
