@@ -190,7 +190,7 @@ window.AULA_DATA = {
         paiId: "n1",
         alternativas: [
           "Limitar o poder do estado ao tributar",
-          "Ampli"
+          "Ampliar o poder do estado a"
         ],
         lacuna: true,
         correta: 0
