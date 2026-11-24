@@ -46,7 +46,13 @@ window.AULA_DATA = {
     textoDestaque: [
       19,
       20,
-      21
+      21,
+      30,
+      32,
+      34,
+      35,
+      36,
+      37
     ],
     textoDestaqueNegrito: [
       3,
@@ -60,7 +66,13 @@ window.AULA_DATA = {
       16,
       19,
       20,
-      21
+      21,
+      27,
+      28,
+      30,
+      32,
+      35,
+      36
     ],
     conclusaoDestaque: [
       6,
