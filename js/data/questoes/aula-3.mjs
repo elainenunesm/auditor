@@ -273,15 +273,15 @@ window.AULA_DATA = {
         paiId: "n3",
         alternativas: [
           "O social",
-          "",
           "Técnicas contábeis",
           "É o caixa",
           "O patrimônio",
           "O lucro",
-          "O orçamento"
+          "O orçamento",
+          ""
         ],
         lacuna: true,
-        correta: 4
+        correta: 3
       }
     ],
     tituloDestaque: [],
