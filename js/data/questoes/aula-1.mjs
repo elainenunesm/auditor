@@ -54,7 +54,7 @@ window.AULA_DATA = {
     tipo: "dinheiro",
     texto: "O que é um Tributo?",
     conclusao: "Tributo é uma obrigação de pagar uma quantia em dinheiro ao Estado, criada por lei, para que o governo possa arrecadar recursos e financiar suas atividades.",
-    obs: "As atividades são: Criar hospitais, escolas, comprar materiais, pagar servidores, etc...",
+    obs: "As atividades são: Criar hospitais, escolas, comprar materiais, pagar servidores, etc...\n\nPor esse motivo ",
     pontos: [],
     textoDestaque: [],
     textoDestaqueNegrito: [
