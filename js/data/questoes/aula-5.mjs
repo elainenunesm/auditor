@@ -91,7 +91,7 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n2",
         alternativas: [
-          "Os tributos arrecardadosão vai para os cofres públicos",
+          "Os tributos arrecardados vai para os cofres públicos",
           "Arrecardação é distribuída para a união, estados e municipios"
         ],
         lacuna: true,
