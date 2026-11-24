@@ -270,8 +270,13 @@ window.AULA_DATA = {
       {
         id: "n4",
         texto: "",
-        paiId: "n1",
-        alternativas: []
+        paiId: "n3",
+        alternativas: [
+          "",
+          ""
+        ],
+        lacuna: true,
+        correta: 0
       }
     ],
     tituloDestaque: [],
