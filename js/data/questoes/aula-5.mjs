@@ -68,7 +68,7 @@ window.AULA_DATA = {
   mapaInterativo: [
   {
     titulo: "Arrecardação",
-    instrucao: "fagag",
+    instrucao: "",
     nos: [
       {
         id: "n1",
