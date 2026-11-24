@@ -257,7 +257,7 @@ window.AULA_DATA = {
       {
         id: "n4",
         texto: "",
-        paiId: "n1",
+        paiId: "n3",
         alternativas: [
           "Distribui os recursos",
           "Envia aos cofre públicos"
