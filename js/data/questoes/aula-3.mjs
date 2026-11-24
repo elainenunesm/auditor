@@ -297,7 +297,8 @@ window.AULA_DATA = {
         paiId: "n5",
         alternativas: [
           "",
-          ""
+          "",
+          "O conjunto de b"
         ],
         lacuna: true,
         correta: 0
