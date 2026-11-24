@@ -17,15 +17,17 @@ window.AULA_DATA = {
 ],
 
   antesComecar: {
-  titulo: "Outros conceitos do Direito Tributário.",
+  titulo: "",
   descricao: "",
-  aprender: "",
+  aprender: "Outros conceitos do Direito Tributário.",
   importancia: "",
   tituloDestaque: [],
   tituloDestaqueNegrito: [],
   descricaoDestaque: [],
   descricaoDestaqueNegrito: [],
-  tituloNegrito: true
+  tituloNegrito: true,
+  aprenderDestaque: [],
+  aprenderDestaqueNegrito: []
 },
 
   exemplo: [],
