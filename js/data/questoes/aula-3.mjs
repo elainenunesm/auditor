@@ -258,13 +258,13 @@ window.AULA_DATA = {
       },
       {
         id: "n3",
-        texto: "",
+        texto: "Estuda",
         paiId: "n2",
         alternativas: [
           "",
           ""
         ],
-        lacuna: true,
+        lacuna: false,
         correta: 0
       }
     ],
