@@ -135,7 +135,7 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n6",
         alternativas: [
-          "",
+          "Lei ordinária",
           ""
         ],
         lacuna: true,
