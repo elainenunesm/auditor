@@ -251,10 +251,10 @@ window.AULA_DATA = {
           "Ciência exata",
           "Ciência Social",
           "É uma arte",
-          ""
+          "É uma metodologia"
         ],
         lacuna: true,
-        correta: 0
+        correta: 1
       },
       {
         id: "n3",
