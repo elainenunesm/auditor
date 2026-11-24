@@ -263,7 +263,7 @@ window.AULA_DATA = {
       {
         id: "n5",
         texto: "",
-        paiId: "n1",
+        paiId: "n3",
         alternativas: [
           "Envia aos cofres públicos",
           "Distribui para os entes(municípios, estados, distrito federal)."
