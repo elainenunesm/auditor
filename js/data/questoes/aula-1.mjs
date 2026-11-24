@@ -249,10 +249,20 @@ window.AULA_DATA = {
       },
       {
         id: "n3",
-        texto: "Vai para os cofre",
+        texto: "Vai para os cofres públicos",
         tipo: "nenhum",
         cor: "#DFF5E5",
         paiId: "n2",
+        cartaoTexto: "",
+        textoDestaque: [],
+        textoDestaqueNegrito: []
+      },
+      {
+        id: "n4",
+        texto: "",
+        tipo: "nenhum",
+        cor: "#FCE8E8",
+        paiId: "n1",
         cartaoTexto: ""
       }
     ],
