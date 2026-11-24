@@ -143,8 +143,8 @@ window.AULA_DATA = {
     tituloNegrito: true
   },
   {
-    titulo: "",
-    instrucao: "O que o Direito tributário faz?",
+    titulo: "O que o Direito tributário faz?",
+    instrucao: "",
     nos: [
       {
         id: "n1",
@@ -162,7 +162,11 @@ window.AULA_DATA = {
         lacuna: true,
         correta: 0
       }
-    ]
+    ],
+    tituloDestaque: [
+      3
+    ],
+    tituloDestaqueNegrito: []
   }
 ],
 
