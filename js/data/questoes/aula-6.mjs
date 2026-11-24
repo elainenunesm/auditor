@@ -118,7 +118,7 @@ window.AULA_DATA = {
     ]
   },
   {
-    tipo: "acao",
+    tipo: "livro",
     texto: "Então a Constituição federal estabeleceu quê, uma lei complementar irá definir as normas gerais sobre tributos e disciplinar as limitações ao poder de tributar.",
     conclusao: "A titulo de informação:",
     obs: "A lei complementar não escolhe livremente quem terá competência para criar cada tributo. \n\nA própria Constituição distribui as competências tributárias, e a lei complementar estabelece regras para disciplinar essa matéria e resolver conflitos.",
