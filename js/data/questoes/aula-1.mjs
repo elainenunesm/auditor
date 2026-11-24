@@ -177,7 +177,7 @@ window.AULA_DATA = {
 
   checagem: [
   {
-    titulo: "",
+    titulo: "Quando os contribuintes pagam tributos, como impostos, taxas e contribuições, e esses valores ingressam nos cofres públicos, estamos diante de qual conceito?",
     correta: 0,
     feedbackCorreto: "",
     feedbackErrado: "",
@@ -192,9 +192,12 @@ window.AULA_DATA = {
       []
     ],
     dificuldade: "Fácil",
-    subtitulo: "Quando os contribuintes pagam tributos, como impostos, taxas e contribuições, e esses valores ingressam nos cofres públicos, estamos diante de qual conceito?",
+    subtitulo: "",
     subtituloDestaque: [],
-    subtituloDestaqueNegrito: []
+    subtituloDestaqueNegrito: [],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: [],
+    tituloNegrito: true
   }
 ],
 
