@@ -27,7 +27,8 @@ window.AULA_DATA = {
   descricaoDestaqueNegrito: [],
   tituloNegrito: true,
   aprenderDestaque: [],
-  aprenderDestaqueNegrito: []
+  aprenderDestaqueNegrito: [],
+  aprenderNegrito: true
 },
 
   exemplo: [],
