@@ -166,7 +166,7 @@ window.AULA_DATA = {
       {
         id: "n10",
         texto: "",
-        paiId: "n1",
+        paiId: "n7",
         alternativas: [
           "",
           ""
