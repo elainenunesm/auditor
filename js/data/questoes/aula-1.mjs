@@ -17,7 +17,7 @@ window.AULA_DATA = {
   "exemplo2",
   "checagem0",
   "checagem1",
-  "mapaConceitual0"
+  "mapaInterativo0"
 ],
 
   antesComecar: {
@@ -224,54 +224,23 @@ window.AULA_DATA = {
 
   tabelaAnimada: [],
 
-  mapaConceitual: [
+  mapaConceitual: [],
+
+  mapaInterativo: [
   {
     titulo: "Arrecardação",
+    instrucao: "",
     nos: [
       {
         id: "n1",
-        texto: "Contribuintes pagam os tributos",
-        tipo: "nenhum",
-        paiId: '',
-        cartaoTexto: "(direito tributário)",
-        cartaoTextoDestaque: [],
-        cartaoTextoDestaqueNegrito: []
-      },
-      {
-        id: "n2",
-        texto: "Arrecardação",
-        tipo: "nenhum",
-        cor: "#DFF3FC",
-        paiId: "n1",
-        cartaoTexto: "",
-        textoDestaque: [],
-        textoDestaqueNegrito: []
-      },
-      {
-        id: "n3",
-        texto: "Vai para os cofres públicos",
-        tipo: "nenhum",
-        cor: "#DFF5E5",
-        paiId: "n2",
-        cartaoTexto: "",
-        textoDestaque: [],
-        textoDestaqueNegrito: []
-      },
-      {
-        id: "n4",
         texto: "",
-        tipo: "nenhum",
-        cor: "#FCE8E8",
-        paiId: "n1",
-        cartaoTexto: ""
+        paiId: ''
       }
     ],
     tituloDestaque: [],
     tituloDestaqueNegrito: []
   }
 ],
-
-  mapaInterativo: [],
 
   questoes: [],
 };
