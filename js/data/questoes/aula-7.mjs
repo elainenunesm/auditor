@@ -72,12 +72,12 @@ window.AULA_DATA = {
 
   mapaInterativo: [
   {
-    titulo: "Direito Tributário.",
+    titulo: "",
     instrucao: "",
     nos: [
       {
         id: "n1",
-        texto: "",
+        texto: "Direito ",
         paiId: ''
       }
     ],
