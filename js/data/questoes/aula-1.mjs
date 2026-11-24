@@ -247,29 +247,6 @@ window.AULA_DATA = {
         lacuna: true,
         correta: 0,
         dica: "Tributo não é a mesma coisa que multa."
-      },
-      {
-        id: "n3",
-        texto: "Envia ao cofre público",
-        paiId: "n2",
-        alternativas: []
-      },
-      {
-        id: "n4",
-        texto: "O que faz com a arrecadação?",
-        paiId: "n3",
-        alternativas: []
-      },
-      {
-        id: "n5",
-        texto: "",
-        paiId: "n3",
-        alternativas: [
-          "Envia aos cofres públicos",
-          "Distribui para os entes(municípios, estados, distrito federal)."
-        ],
-        lacuna: true,
-        correta: 0
       }
     ],
     tituloDestaque: [],
