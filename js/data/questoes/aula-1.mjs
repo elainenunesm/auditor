@@ -56,9 +56,7 @@ window.AULA_DATA = {
     conclusao: "Tributo é uma obrigação de pagar uma quantia em dinheiro ao Estado, criada por lei, para que o governo possa arrecadar recursos e financiar suas atividades.",
     obs: "As atividades são, exemplo: \nCriar hospitais, escolas, comprar materiais, pagar servidores, etc...\n\nPor esse motivo existe a arrecadação de tributos.",
     pontos: [],
-    textoDestaque: [
-      4
-    ],
+    textoDestaque: [],
     textoDestaqueNegrito: [
       4
     ],
