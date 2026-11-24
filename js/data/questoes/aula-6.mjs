@@ -94,7 +94,7 @@ window.AULA_DATA = {
   mapaInterativo: [
   {
     titulo: "",
-    instrucao: "",
+    instrucao: "O Que o direito",
     nos: [
       {
         id: "n1",
