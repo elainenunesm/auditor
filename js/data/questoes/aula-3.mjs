@@ -361,6 +361,7 @@ window.AULA_DATA = {
         paiId: "n11",
         alternativas: [
           "",
+          "Algo que já possuo",
           ""
         ],
         lacuna: true,
