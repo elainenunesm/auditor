@@ -38,7 +38,7 @@ window.AULA_DATA = {
   exemplo: [
   {
     tipo: "estudo",
-    texto: "Além da rrecardação o Direito Tributário também cria tributos e fiscaliza esse tributo.",
+    texto: "Além da Arrecardação o Direito Tributário também Cria tributos e fiscaliza esse tributo.",
     conclusao: "",
     obs: "",
     pontos: [],
