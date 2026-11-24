@@ -20,7 +20,7 @@ window.AULA_DATA = {
   titulo: "Direito Tributário",
   descricao: "",
   aprender: "Outros conceitos do Direito Tributário.",
-  importancia: "Precisa entender os",
+  importancia: "Precisa entender o conceito completo.",
   tituloDestaque: [],
   tituloDestaqueNegrito: [],
   descricaoDestaque: [],
