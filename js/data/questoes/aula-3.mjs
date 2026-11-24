@@ -102,10 +102,13 @@ window.AULA_DATA = {
       0
     ],
     conclusaoDestaque: [
-      1
+      1,
+      33
     ],
     conclusaoDestaqueNegrito: [
-      1
+      1,
+      33,
+      59
     ],
     obsDestaque: [],
     obsDestaqueNegrito: []
