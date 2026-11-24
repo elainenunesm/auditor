@@ -193,7 +193,8 @@ window.AULA_DATA = {
           "Ampliar o poder do estado ao tributar"
         ],
         lacuna: true,
-        correta: 0
+        correta: 0,
+        dica: "Pense que o estado só faz ou deixa de fazer o que está em lei, por isso, lei tem o papel de l"
       }
     ],
     tituloDestaque: [
