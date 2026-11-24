@@ -77,7 +77,7 @@ window.AULA_DATA = {
     nos: [
       {
         id: "n1",
-        texto: "Direito tributário",
+        texto: "O que o Direito tributário faz?",
         paiId: ''
       },
       {
