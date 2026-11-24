@@ -241,7 +241,7 @@ window.AULA_DATA = {
         texto: "Arre",
         paiId: "n1",
         alternativas: [
-          "Contribuintes pagando os tr",
+          "Contribuintes pagando os tributos",
           ""
         ],
         lacuna: true,
