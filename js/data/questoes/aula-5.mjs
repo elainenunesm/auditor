@@ -81,7 +81,7 @@ window.AULA_DATA = {
         paiId: "n1",
         alternativas: [
           "Pagam tributos",
-          "Pagam "
+          "Pagam multa"
         ],
         lacuna: true,
         correta: 0
