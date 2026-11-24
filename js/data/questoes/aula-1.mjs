@@ -86,7 +86,7 @@ window.AULA_DATA = {
   {
     tipo: "servidor",
     texto: "Direito Tributário é o ramo do Direito Público.",
-    conclusao: "O Auditor é a autoridade administrativa responsável por aplicar a lei tributária na prática, fiscalizando o contribuinte e garantindo que o estado receba os recursos devidos.",
+    conclusao: "Ele que estuda:\n\n as regras relacionadas à criação, arrecadação e fiscalização dos tributos, bem como os limites do poder do Estado de tributar.",
     obs: "",
     pontos: [],
     textoDestaque: [
