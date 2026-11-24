@@ -258,14 +258,20 @@ window.AULA_DATA = {
       },
       {
         id: "n3",
-        texto: "Estuda",
-        paiId: "n2",
+        texto: "Estuda o quê?",
+        paiId: "n1",
         alternativas: [
           "",
           ""
         ],
         lacuna: false,
         correta: 0
+      },
+      {
+        id: "n4",
+        texto: "",
+        paiId: "n1",
+        alternativas: []
       }
     ],
     tituloDestaque: [],
