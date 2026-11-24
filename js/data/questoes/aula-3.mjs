@@ -329,7 +329,7 @@ window.AULA_DATA = {
       {
         id: "n9",
         texto: "",
-        paiId: "n1",
+        paiId: "n6",
         alternativas: [
           "",
           ""
