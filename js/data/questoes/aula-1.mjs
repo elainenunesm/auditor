@@ -233,7 +233,7 @@ window.AULA_DATA = {
     nos: [
       {
         id: "n1",
-        texto: "",
+        texto: "Contribuintes pagam os trib",
         paiId: ''
       }
     ],
