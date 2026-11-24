@@ -256,9 +256,20 @@ window.AULA_DATA = {
       },
       {
         id: "n4",
-        texto: "O que faz com a arrecad",
+        texto: "O que faz com a arrecadação?",
         paiId: "n3",
         alternativas: []
+      },
+      {
+        id: "n5",
+        texto: "",
+        paiId: "n1",
+        alternativas: [
+          "",
+          ""
+        ],
+        lacuna: true,
+        correta: 0
       }
     ],
     tituloDestaque: [],
