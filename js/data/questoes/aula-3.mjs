@@ -63,7 +63,7 @@ window.AULA_DATA = {
   },
   {
     tipo: "nenhum",
-    texto: "",
+    texto: "Termos importantes:\n\n",
     conclusao: "",
     obs: "",
     pontos: [],
