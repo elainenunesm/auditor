@@ -132,19 +132,14 @@ window.AULA_DATA = {
       titulo: "Direito Tributário → Arrecadação → Ingresso dos tributos nos cofres públicos.",
       subtitulo: "",
       texto: "* A destinação e a aplicação dos recursos públicos são estudadas pelo Direito Financeiro.",
-      tituloDestaque: [
-        3,
-        7,
-        9,
-        10
-      ],
+      tituloDestaque: [],
       tituloDestaqueNegrito: [
         9,
         10,
         3,
-        4,
         0,
-        1
+        1,
+        7
       ],
       subtituloDestaque: [],
       subtituloDestaqueNegrito: [],
