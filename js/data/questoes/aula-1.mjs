@@ -97,8 +97,9 @@ window.AULA_DATA = {
     ],
     textoDestaqueNegrito: [
       1,
-      4,
-      0
+      0,
+      7,
+      6
     ],
     conclusaoDestaque: [
       4,
