@@ -12,6 +12,7 @@ window.AULA_DATA = {
   // Ordem das telas na sequência de estudo — definida em "Estrutura das telas".
   ordem: [
   "antesComecar",
+  "mapaInterativo0",
   "resumo",
   "licao"
 ],
@@ -64,7 +65,21 @@ window.AULA_DATA = {
 
   mapaConceitual: [],
 
-  mapaInterativo: [],
+  mapaInterativo: [
+  {
+    titulo: "Arrecardação",
+    instrucao: "",
+    nos: [
+      {
+        id: "n1",
+        texto: "",
+        paiId: ''
+      }
+    ],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: []
+  }
+],
 
   questoes: [],
 };
