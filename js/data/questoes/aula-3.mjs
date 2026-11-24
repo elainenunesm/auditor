@@ -343,7 +343,7 @@ window.AULA_DATA = {
         paiId: "n9",
         alternativas: [
           "",
-          ""
+          "Algo que já possuo"
         ],
         lacuna: true,
         correta: 0
