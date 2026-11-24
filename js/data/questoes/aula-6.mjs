@@ -93,8 +93,8 @@ window.AULA_DATA = {
 
   mapaInterativo: [
   {
-    titulo: "",
-    instrucao: "O que o Direito tributário faz?",
+    titulo: "O que o Direito tributário faz?",
+    instrucao: "",
     nos: [
       {
         id: "n1",
@@ -136,7 +136,10 @@ window.AULA_DATA = {
       }
     ],
     tituloDestaque: [],
-    tituloDestaqueNegrito: []
+    tituloDestaqueNegrito: [
+      3,
+      4
+    ]
   }
 ],
 
