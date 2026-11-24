@@ -244,8 +244,14 @@ window.AULA_DATA = {
       },
       {
         id: "n3",
-        texto: "",
+        texto: "Envia ao cofre público",
         paiId: "n2",
+        alternativas: []
+      },
+      {
+        id: "n4",
+        texto: "",
+        paiId: "n3",
         alternativas: []
       }
     ],
