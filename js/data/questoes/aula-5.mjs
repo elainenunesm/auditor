@@ -71,7 +71,9 @@ window.AULA_DATA = {
       ],
       textoDestaqueNegrito: [
         10,
-        9
+        9,
+        2,
+        5
       ]
     }
   }
