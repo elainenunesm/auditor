@@ -124,7 +124,10 @@ window.AULA_DATA = {
     obs: "A lei complementar não escolhe livremente quem terá competência para criar cada tributo. \n\nA própria Constituição distribui as competências tributárias, e a lei complementar estabelece regras para disciplinar essa matéria e resolver conflitos.",
     pontos: [],
     textoDestaque: [],
-    textoDestaqueNegrito: [],
+    textoDestaqueNegrito: [
+      3,
+      2
+    ],
     conclusaoDestaque: [
       3,
       0,
