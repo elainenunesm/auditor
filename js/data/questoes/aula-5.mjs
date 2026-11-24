@@ -18,7 +18,7 @@ window.AULA_DATA = {
 
   antesComecar: {
   titulo: "Resumo maroto",
-  descricao: "",
+  descricao: "Mapas mentais para compreender melhor.",
   aprender: "",
   importancia: "",
   tituloDestaque: [],
