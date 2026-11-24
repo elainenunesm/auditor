@@ -14,6 +14,7 @@ window.AULA_DATA = {
   "antesComecar",
   "exemplo0",
   "mapaInterativo0",
+  "exemplo1",
   "resumo",
   "licao"
 ],
@@ -58,6 +59,13 @@ window.AULA_DATA = {
       12,
       8
     ]
+  },
+  {
+    tipo: "nenhum",
+    texto: "",
+    conclusao: "",
+    obs: "",
+    pontos: []
   }
 ],
 
