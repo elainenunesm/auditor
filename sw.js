@@ -22,6 +22,7 @@ const ARQUIVOS = [
   "./js/data/questoes/aula-1.mjs",
   "./js/data/questoes/aula-5.mjs",
   "./js/data/questoes/aula-6.mjs",
+  "./js/data/questoes/aula-7.mjs",
   "./js/data/questoes/aula-3.mjs",
   "./js/data/questoes/aula-2.mjs",
   "./js/data/questoes/aula-4.mjs",
