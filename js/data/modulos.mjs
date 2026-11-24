@@ -52,8 +52,8 @@ const MODULOS = [
   },
   {
     id:      3,
-    titulo:  "Direito tributário",
-    materia: "Direito tributário",
+    titulo:  "Direito Tributário",
+    materia: "Direito Tributário",
     aulas: [
       {
         id:      2,
