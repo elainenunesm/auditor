@@ -92,7 +92,7 @@ window.AULA_DATA = {
         paiId: "n2",
         alternativas: [
           "Arrecardação de tributos",
-          ""
+          "Distribuição de tributos"
         ],
         lacuna: true,
         correta: 0
