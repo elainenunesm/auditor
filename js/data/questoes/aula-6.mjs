@@ -44,9 +44,6 @@ window.AULA_DATA = {
     obs: "Uma empresa presta um serviço e vende um produto.\n\nSurge uma dúvida:\n\n- O Estado pode cobrar ICMS sobre essa operação?\n- O Município pode cobrar ISS?\n- Qual ente(união, estados, distrito federal, e os municípios) tem competência para tributar essa atividade?",
     pontos: [],
     textoDestaque: [
-      19,
-      20,
-      21,
       30,
       32,
       34,
