@@ -242,7 +242,7 @@ window.AULA_DATA = {
         paiId: "n1",
         alternativas: [
           "Contribuintes pagando os tributos",
-          ""
+          "Contribuintes pagando as multas"
         ],
         lacuna: true,
         correta: 0
