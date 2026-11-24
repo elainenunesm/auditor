@@ -266,7 +266,7 @@ window.AULA_DATA = {
         paiId: "n1",
         alternativas: [
           "Envia aos cofres públicos",
-          "Distribui pa"
+          "Distribui para os entes("
         ],
         lacuna: true,
         correta: 0
