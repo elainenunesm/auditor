@@ -86,8 +86,16 @@ window.AULA_DATA = {
       9,
       4
     ],
-    conclusaoDestaque: [],
-    conclusaoDestaqueNegrito: []
+    conclusaoDestaque: [
+      4,
+      5
+    ],
+    conclusaoDestaqueNegrito: [
+      1,
+      5,
+      4,
+      6
+    ]
   },
   {
     tipo: "sujeito",
