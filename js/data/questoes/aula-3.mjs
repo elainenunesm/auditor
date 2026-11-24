@@ -362,7 +362,7 @@ window.AULA_DATA = {
         alternativas: [
           "",
           "Algo que já possuo",
-          ""
+          "Algo que ainda vou receber"
         ],
         lacuna: true,
         correta: 0
