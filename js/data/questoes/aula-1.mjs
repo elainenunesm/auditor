@@ -228,7 +228,7 @@ window.AULA_DATA = {
 
   mapaInterativo: [
   {
-    titulo: "Arrecardação",
+    titulo: "Direito Tributário",
     instrucao: "",
     nos: [
       {
