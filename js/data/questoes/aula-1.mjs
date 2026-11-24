@@ -245,7 +245,8 @@ window.AULA_DATA = {
           "Contribuintes pagando as multas"
         ],
         lacuna: true,
-        correta: 0
+        correta: 0,
+        dica: "Tributo não é a "
       },
       {
         id: "n3",
