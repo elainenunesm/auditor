@@ -239,7 +239,7 @@ window.AULA_DATA = {
       },
       {
         id: "n2",
-        texto: "Arrecar",
+        texto: "Arrecardação",
         tipo: "nenhum",
         cor: "#DFF3FC",
         paiId: "n1",
