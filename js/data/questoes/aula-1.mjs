@@ -257,7 +257,7 @@ window.AULA_DATA = {
         ],
         lacuna: true,
         correta: 0,
-        dica: "Tributo não é a mesma coisa que multa. \nO tributo é uma obrigação prevista em lei.\nMulta é uma infração quando não se cumpri à lei."
+        dica: "Tributo não é a mesma coisa que multa. \n\nO Tributo é uma obrigação prevista em lei.\n\nMulta é uma infração quando não se cumpri à lei."
       },
       {
         id: "n3",
