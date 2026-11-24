@@ -17,6 +17,7 @@ window.AULA_DATA = {
   "exemplo2",
   "exemplo3",
   "checagem0",
+  "checagem1",
   "resumo",
   "licao"
 ],
@@ -208,6 +209,25 @@ window.AULA_DATA = {
     tituloDestaque: [],
     tituloDestaqueNegrito: [],
     tituloNegrito: false
+  },
+  {
+    titulo: "A distribuição dos valores arrecadados entre União, Estados e Municípios é a mesma coisa que arrecadação tributária?",
+    correta: 0,
+    feedbackCorreto: "",
+    feedbackErrado: "",
+    opcoes: [
+      "Certo",
+      "Errado"
+    ],
+    certoErrado: true,
+    opcoesNegrito: [],
+    opcoesItalico: [],
+    opcoesDestaque: [
+      [],
+      []
+    ],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: []
   }
 ],
 
