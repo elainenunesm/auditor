@@ -16,9 +16,7 @@ window.AULA_DATA = {
   "exemplo1",
   "exemplo2",
   "exemplo3",
-  "mapaInterativo0",
-  "resumo",
-  "licao"
+  "mapaInterativo0"
 ],
 
   antesComecar: {
