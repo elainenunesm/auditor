@@ -119,7 +119,7 @@ window.AULA_DATA = {
   },
   {
     tipo: "acao",
-    texto: "Então a Constituição federal",
+    texto: "Então a Constituição federal estabeleceu qu",
     conclusao: "",
     obs: "",
     pontos: []
