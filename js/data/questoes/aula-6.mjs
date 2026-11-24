@@ -38,10 +38,12 @@ window.AULA_DATA = {
   exemplo: [
   {
     tipo: "estudo",
-    texto: "Além da arrecardação",
+    texto: "Além da arrecardação o Direito Tributário ",
     conclusao: "",
     obs: "",
-    pontos: []
+    pontos: [],
+    textoDestaque: [],
+    textoDestaqueNegrito: []
   }
 ],
 
