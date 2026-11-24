@@ -23,7 +23,7 @@ window.AULA_DATA = {
   antesComecar: {
   titulo: "Direito Tributário",
   descricao: "",
-  aprender: "Outros conceitos do Direito Tributário.",
+  aprender: "Outros conceitos do Direito Tributário na constituição.",
   importancia: "Precisa entender o conceito completo.",
   tituloDestaque: [],
   tituloDestaqueNegrito: [],
