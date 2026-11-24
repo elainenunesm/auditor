@@ -82,9 +82,20 @@ window.AULA_DATA = {
       },
       {
         id: "n2",
-        texto: "",
+        texto: "O que o Direito tributário faz?",
         paiId: "n1",
         alternativas: []
+      },
+      {
+        id: "n3",
+        texto: "",
+        paiId: "n1",
+        alternativas: [
+          "",
+          ""
+        ],
+        lacuna: true,
+        correta: 0
       }
     ],
     tituloDestaque: [],
