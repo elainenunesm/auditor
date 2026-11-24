@@ -249,7 +249,8 @@ window.AULA_DATA = {
         paiId: "n1",
         alternativas: [
           "Ciência exata",
-          "Ciência Social"
+          "Ciência Social",
+          "É uma arte"
         ],
         lacuna: true,
         correta: 0
