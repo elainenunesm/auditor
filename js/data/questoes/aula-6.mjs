@@ -62,7 +62,7 @@ window.AULA_DATA = {
   },
   {
     tipo: "nenhum",
-    texto: "A Constituição federal (art 145 a 162)\n",
+    texto: "A Constituição federal (art 145 a 162) sobre a criaç~\n",
     conclusao: "",
     obs: "",
     pontos: [],
