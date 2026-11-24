@@ -119,7 +119,7 @@ window.AULA_DATA = {
   },
   {
     tipo: "acao",
-    texto: "Então a Constituição federal estabeleceu quê, uma lei complementar é quem irá falar quem tem a competencia em relação ao tributo e como deve ser limitado ao poder tributar.",
+    texto: "Então a Constituição federal estabeleceu quê, uma lei complementar defini as normas gerais sobre tributos e disciplinar as limitações ao poder de tributar.",
     conclusao: "",
     obs: "",
     pontos: [],
