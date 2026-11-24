@@ -48,7 +48,9 @@ window.AULA_DATA = {
       titulo: "Objetivo do estudo do direito tributário é como essa arrecadação (receita derivada que tem origem do patrimônio do particular) chega aos cofres públicos.",
       subtitulo: "",
       texto: " A parte da distribuição dos recursos é estudado pelo Direito Financeiro.",
-      tituloDestaque: [],
+      tituloDestaque: [
+        0
+      ],
       tituloDestaqueNegrito: [],
       subtituloDestaque: [],
       subtituloDestaqueNegrito: [],
