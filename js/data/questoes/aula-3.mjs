@@ -277,7 +277,8 @@ window.AULA_DATA = {
           "Técnicas contábeis",
           "É o caixa",
           "O orçamento",
-          "O orçamento"
+          "O lucro",
+          ""
         ],
         lacuna: true,
         correta: 1
