@@ -12,7 +12,9 @@ window.AULA_DATA = {
   // Ordem das telas na sequência de estudo — definida em "Estrutura das telas".
   ordem: [
   "antesComecar",
-  "mapaInterativo0"
+  "mapaInterativo0",
+  "resumo",
+  "licao"
 ],
 
   antesComecar: {
