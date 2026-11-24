@@ -334,7 +334,7 @@ window.AULA_DATA = {
           "",
           ""
         ],
-        lacuna: true,
+        lacuna: false,
         correta: 0
       }
     ],
