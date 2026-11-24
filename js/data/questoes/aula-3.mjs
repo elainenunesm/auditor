@@ -318,8 +318,8 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n7",
         alternativas: [
-          "Algo que j",
-          ""
+          "Algo que já possuo",
+          "Algo que ainda vou recebe"
         ],
         lacuna: true,
         correta: 0
