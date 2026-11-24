@@ -128,7 +128,7 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n1",
         alternativas: [
-          "",
+          "Fiscaliza os tributos",
           ""
         ],
         lacuna: true,
