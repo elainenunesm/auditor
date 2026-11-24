@@ -77,7 +77,8 @@ window.AULA_DATA = {
       }
     ],
     tituloDestaque: [],
-    tituloDestaqueNegrito: []
+    tituloDestaqueNegrito: [],
+    tituloNegrito: true
   }
 ],
 
