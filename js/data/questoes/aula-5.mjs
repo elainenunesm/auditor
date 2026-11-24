@@ -91,7 +91,7 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n2",
         alternativas: [
-          "Arr",
+          "Arrecardação vai para os cofres",
           ""
         ],
         lacuna: true,
