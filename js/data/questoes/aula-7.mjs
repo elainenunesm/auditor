@@ -121,7 +121,7 @@ window.AULA_DATA = {
       },
       {
         id: "n6",
-        texto: "",
+        texto: "Constituição federal (Art 146 )",
         paiId: "n1",
         alternativas: [
           "",
