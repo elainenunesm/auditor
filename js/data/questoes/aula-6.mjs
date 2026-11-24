@@ -119,7 +119,7 @@ window.AULA_DATA = {
   },
   {
     tipo: "acao",
-    texto: "Então a Constituição federal estabeleceu quê, uma lei complementar é quem irá",
+    texto: "Então a Constituição federal estabeleceu quê, uma lei complementar é quem irá falar quem tem a compe",
     conclusao: "",
     obs: "",
     pontos: []
