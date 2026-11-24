@@ -133,7 +133,10 @@ window.AULA_DATA = {
       subtitulo: "",
       texto: " A Distribuição dos recursos é estudado pelo Direito Financeiro.",
       tituloDestaque: [
-        3
+        3,
+        7,
+        9,
+        10
       ],
       tituloDestaqueNegrito: [
         9,
