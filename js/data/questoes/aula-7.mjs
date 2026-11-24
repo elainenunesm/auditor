@@ -1,13 +1,13 @@
 'use strict';
 
 /**
- * AULA-7.MJS — Nova aula
+ * AULA-7.MJS — Resumo - Conceitos iniciais 2
  * Gerado pelo Construtor de Aulas (aba "Conteúdo da aula").
  */
 window.AULA_DATA = {
   id:     7,
   modulo: "Direito Tributário",
-  titulo: "Nova aula",
+  titulo: "Resumo - Conceitos iniciais 2",
 
   // Ordem das telas na sequência de estudo — definida em "Estrutura das telas".
   ordem: [

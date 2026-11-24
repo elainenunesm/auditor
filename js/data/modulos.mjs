@@ -31,7 +31,7 @@ const MODULOS = [
       },
       {
         id:      7,
-        titulo:  "Nova aula",
+        titulo:  "Resumo - Conceitos iniciais 2",
         arquivo: "aula-7",
         icone:   'padrao',
       }
