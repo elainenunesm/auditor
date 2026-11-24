@@ -122,7 +122,7 @@ window.AULA_DATA = {
     ]
   },
   {
-    tipo: "nenhum",
+    tipo: "externo",
     texto: "",
     conclusao: "",
     obs: "",
