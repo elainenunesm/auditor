@@ -73,7 +73,7 @@ window.AULA_DATA = {
   {
     tipo: "servidor",
     texto: "O Auditor estuda essa matéria porque é a sua principal ferramenta de trabalho cotidiano.",
-    conclusao: "",
+    conclusao: "É a autoridade administrativa responsável por aplicar a lei tributária na prática, fiscalizando o contribuinte e garantindo que o estado receba os recursos devidos.",
     obs: "",
     pontos: [],
     textoDestaque: [
