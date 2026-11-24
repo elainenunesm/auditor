@@ -197,7 +197,7 @@ window.AULA_DATA = {
       },
       {
         id: "n3",
-        texto: "Lei Complementar",
+        texto: "Constituição federal",
         paiId: "n1",
         alternativas: [
           "",
