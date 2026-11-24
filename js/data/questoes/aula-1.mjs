@@ -184,15 +184,19 @@ window.AULA_DATA = {
     opcoes: [
       "Distribuição de receitas públicas",
       "Arrecadação tributária",
-      "Repartição das competências tributárias"
+      "Repartição das competências tributárias",
+      ""
     ],
     opcoesNegrito: [
+      false,
       false
     ],
     opcoesItalico: [
+      false,
       false
     ],
     opcoesDestaque: [
+      [],
       [],
       [],
       []
