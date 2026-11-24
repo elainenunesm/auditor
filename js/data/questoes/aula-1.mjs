@@ -191,7 +191,10 @@ window.AULA_DATA = {
       [],
       []
     ],
-    dificuldade: "Fácil"
+    dificuldade: "Fácil",
+    subtitulo: "O que é ",
+    subtituloDestaque: [],
+    subtituloDestaqueNegrito: []
   }
 ],
 
