@@ -214,7 +214,7 @@ window.AULA_DATA = {
     titulo: "A distribuição dos valores arrecadados entre União, Estados e Municípios é a mesma coisa que arrecadação tributária?",
     correta: 1,
     feedbackCorreto: "Arrecadação: entrada dos tributos nos cofres públicos.\nDistribuição de receitas: repartição dos recursos entre os entes públicos.",
-    feedbackErrado: "Resposta: ErradaArrecadação: entrada dos tributos nos cofres públicos.\nDistribuição de receitas: repartição dos recursos entre os entes públicos.",
+    feedbackErrado: "Resposta: Errada - \nArrecadação: entrada dos tributos nos cofres públicos.\nDistribuição de receitas: repartição dos recursos entre os entes públicos.",
     opcoes: [
       "Certo",
       "Errado"
