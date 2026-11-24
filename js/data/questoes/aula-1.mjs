@@ -236,6 +236,14 @@ window.AULA_DATA = {
         cartaoTexto: "(direito tributário)",
         cartaoTextoDestaque: [],
         cartaoTextoDestaqueNegrito: []
+      },
+      {
+        id: "n2",
+        texto: "",
+        tipo: "nenhum",
+        cor: "#FFF8D9",
+        paiId: "n1",
+        cartaoTexto: ""
       }
     ]
   }
