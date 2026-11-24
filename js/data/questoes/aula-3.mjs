@@ -254,7 +254,8 @@ window.AULA_DATA = {
           "É uma metodologia"
         ],
         lacuna: true,
-        correta: 1
+        correta: 1,
+        dica: "A pegadinha da prova: Afirmar que se trata de uma \"ciência exata\" ou exata/matemática pelo fato de utilizar números e cálculo."
       },
       {
         id: "n3",
