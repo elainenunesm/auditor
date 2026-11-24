@@ -305,12 +305,12 @@ window.AULA_DATA = {
       {
         id: "n7",
         texto: "",
-        paiId: "n1",
+        paiId: "n6",
         alternativas: [
           "",
           ""
         ],
-        lacuna: true,
+        lacuna: false,
         correta: 0
       }
     ],
