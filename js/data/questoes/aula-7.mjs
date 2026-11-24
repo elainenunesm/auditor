@@ -81,54 +81,10 @@ window.AULA_DATA = {
         paiId: ''
       },
       {
-        id: "n6",
-        texto: "",
-        paiId: "n1",
-        alternativas: []
-      },
-      {
         id: "n2",
         texto: "",
         paiId: "n1",
-        alternativas: [
-          "Arrecardação de tributos",
-          "Distribuição de tributos"
-        ],
-        lacuna: true,
-        correta: 0
-      },
-      {
-        id: "n3",
-        texto: "",
-        paiId: "n1",
-        alternativas: [
-          "Extinguir os tributos",
-          "Criação dos tributos"
-        ],
-        lacuna: true,
-        correta: 1
-      },
-      {
-        id: "n4",
-        texto: "",
-        paiId: "n1",
-        alternativas: [
-          "Distribuição dos tributos.",
-          "Fiscalização os tributos"
-        ],
-        lacuna: true,
-        correta: 1
-      },
-      {
-        id: "n5",
-        texto: "",
-        paiId: "n1",
-        alternativas: [
-          "",
-          ""
-        ],
-        lacuna: true,
-        correta: 0
+        alternativas: []
       }
     ],
     tituloDestaque: [],
