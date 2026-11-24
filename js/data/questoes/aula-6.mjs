@@ -186,7 +186,7 @@ window.AULA_DATA = {
     nos: [
       {
         id: "n1",
-        texto: "Lei complementar x Constituição Federal",
+        texto: "Resumo",
         paiId: ''
       },
       {
