@@ -229,7 +229,7 @@ window.AULA_DATA = {
         paiId: "n5",
         alternativas: [
           "Disciplina os conflitos e estabelece normas gerais para que essa competência seja exercida corretamente",
-          ""
+          "Distribui a competência tributária"
         ],
         lacuna: true,
         correta: 0
