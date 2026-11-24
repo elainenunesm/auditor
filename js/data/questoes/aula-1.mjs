@@ -135,7 +135,10 @@ window.AULA_DATA = {
         3
       ],
       textoDestaqueNegrito: [
-        3
+        3,
+        1,
+        7,
+        8
       ]
     }
   }
