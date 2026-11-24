@@ -76,10 +76,19 @@ window.AULA_DATA = {
       0,
       1
     ],
-    conclusaoDestaque: [],
+    conclusaoDestaque: [
+      22,
+      24,
+      25,
+      26
+    ],
     conclusaoDestaqueNegrito: [
       1,
-      16
+      16,
+      22,
+      26,
+      25,
+      24
     ],
     obsDestaque: [],
     obsDestaqueNegrito: [],
