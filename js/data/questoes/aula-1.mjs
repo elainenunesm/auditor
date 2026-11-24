@@ -146,14 +146,14 @@ window.AULA_DATA = {
       ],
       subtituloDestaque: [],
       subtituloDestaqueNegrito: [],
-      textoDestaque: [
-        1
-      ],
+      textoDestaque: [],
       textoDestaqueNegrito: [
-        3,
-        1,
         7,
-        8
+        8,
+        2,
+        5,
+        12,
+        13
       ]
     }
   }
