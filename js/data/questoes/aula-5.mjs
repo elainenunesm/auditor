@@ -183,6 +183,17 @@ window.AULA_DATA = {
         ],
         lacuna: true,
         correta: 1
+      },
+      {
+        id: "n5",
+        texto: "",
+        paiId: "n1",
+        alternativas: [
+          "Limitar",
+          ""
+        ],
+        lacuna: true,
+        correta: 0
       }
     ],
     tituloDestaque: [
