@@ -107,7 +107,7 @@ window.AULA_DATA = {
         paiId: "n1",
         alternativas: [
           "Arrecardação de tributos",
-          "Distribuição de "
+          "Distribuição de tributos"
         ],
         lacuna: true,
         correta: 0
@@ -117,7 +117,7 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n1",
         alternativas: [
-          "Criação",
+          "Criação d",
           "Extinguir"
         ],
         lacuna: true,
