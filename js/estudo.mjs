@@ -1379,6 +1379,7 @@ const RESUMO_ICONES = {
   dinheiro: cor => `<rect x="2" y="6" width="20" height="12" rx="2" fill="none" stroke="${cor}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="2.8" fill="none" stroke="${cor}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="${cor}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 9.5v.01M18 14.5v.01"/>`,
   casa: cor => `<path fill="none" stroke="${cor}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 11l9-8 9 8M5 9.5V20h14V9.5M10 20v-6h4v6"/>`,
   estudo: cor => `<path fill="none" stroke="${cor}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 10L12 5 2 10l10 5 10-5z"/><path fill="none" stroke="${cor}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 12v5c3 2.5 9 2.5 12 0v-5M22 10v6"/>`,
+  objetivo: cor => `<circle cx="12" cy="12" r="9" fill="none" stroke="${cor}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="5" fill="none" stroke="${cor}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="1.2" fill="${cor}" stroke="${cor}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>`,
 };
 
 function mostrarInfinitivo(aula, introIdx) {
