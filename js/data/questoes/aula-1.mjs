@@ -275,7 +275,7 @@ window.AULA_DATA = {
         ],
         lacuna: true,
         correta: 1,
-        dica: "Entre arrecadar e enviar aos cofres públicos houve a criação de lei e a fiscalização, assim como o limite a atuação do "
+        dica: "Entre arrecadar e enviar aos cofres públicos houve a criação de lei e a fiscalização, assim como o limite a atuação do Estado."
       },
       {
         id: "n5",
