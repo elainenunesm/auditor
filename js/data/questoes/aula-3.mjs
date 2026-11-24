@@ -64,7 +64,7 @@ window.AULA_DATA = {
   {
     tipo: "nenhum",
     texto: "Termos importantes:",
-    conclusao: "* Entidade — É uma pessoa ou organização que existe e possui patrimônio próprio\n\n",
+    conclusao: "* Entidade — É uma pessoa ou organização que existe e possui patrimônio próprio,\n\n* Patrimônio — É o conjunto de bens, direitos e obrigações.",
     obs: "",
     pontos: [],
     textoDestaque: [],
