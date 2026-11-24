@@ -230,7 +230,7 @@ window.AULA_DATA = {
     nos: [
       {
         id: "n1",
-        texto: "Arrecardação",
+        texto: "Contibuintes pagam os trib",
         tipo: "nenhum",
         paiId: '',
         cartaoTexto: "(direito tributário)",
