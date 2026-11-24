@@ -16,9 +16,7 @@ window.AULA_DATA = {
   "mapaInterativo0",
   "exemplo1",
   "exemplo2",
-  "exemplo3",
-  "resumo",
-  "licao"
+  "exemplo3"
 ],
 
   antesComecar: {
@@ -64,7 +62,7 @@ window.AULA_DATA = {
   },
   {
     tipo: "nenhum",
-    texto: "A Constituição federal (art 145 a 162) sobre a criação da lei, fala que cabe a lei complementar dispor conflito de compêtencia, em méteria de tributária entre os entes(união, estados, distrito federal, e os municípios)\n",
+    texto: "A Constituição federal (art 145 a 162) sobre a criação da lei, fala que cabe a lei complementar dispor conflito de compêtencia, em matéria de tributária entre os entes(união, estados, distrito federal, e os municípios)\n",
     conclusao: "O que isso quer dizer?\n\nImagine a seguinte situação:",
     obs: "Uma empresa presta um serviço e vende um produto.\n\nSurge uma dúvida:\n\n- O Estado pode cobrar ICMS sobre essa operação?\n- O Município pode cobrar ISS?\n- Quem tem competência para tributar essa atividade?",
     pontos: [],
@@ -165,7 +163,9 @@ window.AULA_DATA = {
     conclusaoDestaqueNegrito: [
       0,
       4
-    ]
+    ],
+    obsDestaque: [],
+    obsDestaqueNegrito: []
   }
 ],
 
