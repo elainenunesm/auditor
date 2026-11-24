@@ -74,6 +74,12 @@ window.AULA_DATA = {
         id: "n1",
         texto: "Contribuintes",
         paiId: ''
+      },
+      {
+        id: "n2",
+        texto: "",
+        paiId: "n1",
+        alternativas: []
       }
     ],
     tituloDestaque: [],
