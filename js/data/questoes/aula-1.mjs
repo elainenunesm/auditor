@@ -102,7 +102,6 @@ window.AULA_DATA = {
       6
     ],
     conclusaoDestaque: [
-      4,
       5,
       8,
       15
@@ -110,11 +109,10 @@ window.AULA_DATA = {
     conclusaoDestaqueNegrito: [
       1,
       5,
-      4,
       6,
       8,
-      10,
-      15
+      15,
+      4
     ],
     textoNegrito: false
   },
