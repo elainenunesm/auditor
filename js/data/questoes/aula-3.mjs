@@ -14,6 +14,7 @@ window.AULA_DATA = {
   "antesComecar",
   "exemplo0",
   "exemplo1",
+  "exemplo2",
   "resumo",
   "licao"
 ],
@@ -78,13 +79,18 @@ window.AULA_DATA = {
     conclusaoDestaque: [],
     conclusaoDestaqueNegrito: [
       1,
-      16,
-      29,
-      61
+      16
     ],
     obsDestaque: [],
     obsDestaqueNegrito: [],
     textoNegrito: false
+  },
+  {
+    tipo: "nenhum",
+    texto: "",
+    conclusao: "",
+    obs: "",
+    pontos: []
   }
 ],
 
