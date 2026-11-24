@@ -24,7 +24,7 @@ window.AULA_DATA = {
   titulo: "Direito Tributário",
   descricao: "",
   aprender: "Outros conceitos do Direito Tributário na constituição.",
-  importancia: "Cai em prova a respeita c",
+  importancia: "Cai em prova a respeita da constituição.",
   tituloDestaque: [],
   tituloDestaqueNegrito: [],
   descricaoDestaque: [],
