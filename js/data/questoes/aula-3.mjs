@@ -278,7 +278,7 @@ window.AULA_DATA = {
           "O patrimônio",
           "O lucro",
           "O orçamento",
-          ""
+          "Apuração de imposto"
         ],
         lacuna: true,
         correta: 3
