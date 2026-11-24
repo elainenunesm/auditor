@@ -79,7 +79,11 @@ window.AULA_DATA = {
       23
     ],
     obsDestaque: [],
-    obsDestaqueNegrito: []
+    obsDestaqueNegrito: [
+      1,
+      2,
+      0
+    ]
   },
   {
     tipo: "servidor",
