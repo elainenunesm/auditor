@@ -343,7 +343,8 @@ window.AULA_DATA = {
         paiId: "n9",
         alternativas: [
           "",
-          "Algo que já possuo"
+          "Algo que já possuo",
+          "Algo que ainda vou receber"
         ],
         lacuna: true,
         correta: 0
