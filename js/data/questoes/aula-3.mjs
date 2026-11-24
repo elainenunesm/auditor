@@ -91,10 +91,20 @@ window.AULA_DATA = {
     conclusao: "* Bens — São coisas que têm valor econômico e fazem parte do patrimônio. É o que a entidade já possui. Um carro, uma casa, uma loja...\n\n* Direitos — o que a entidade tem a receber.\nEu tenho o direito de receber o salário por mês pq trabalhei 8 horas.\n\n* Obrigações — o que a entidade tem a pagar.\nEu tenho obrigações no final do mês como por exemplo o aluguel.\n\n",
     obs: "O conjunto de bens, direitos e obrigações chama-se patrimônio.",
     pontos: [],
-    textoDestaque: [],
-    textoDestaqueNegrito: [],
+    textoDestaque: [
+      0,
+      1,
+      3
+    ],
+    textoDestaqueNegrito: [
+      3,
+      1,
+      0
+    ],
     conclusaoDestaque: [],
-    conclusaoDestaqueNegrito: []
+    conclusaoDestaqueNegrito: [],
+    obsDestaque: [],
+    obsDestaqueNegrito: []
   }
 ],
 
