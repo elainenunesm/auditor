@@ -328,13 +328,24 @@ window.AULA_DATA = {
       },
       {
         id: "n9",
-        texto: "",
+        texto: "O Que são direitos?",
         paiId: "n6",
         alternativas: [
           "",
           ""
         ],
         lacuna: false,
+        correta: 0
+      },
+      {
+        id: "n10",
+        texto: "",
+        paiId: "n9",
+        alternativas: [
+          "",
+          ""
+        ],
+        lacuna: true,
         correta: 0
       }
     ],
