@@ -78,8 +78,6 @@ window.AULA_DATA = {
       1
     ],
     conclusaoDestaque: [
-      22,
-      25,
       26,
       65,
       66,
@@ -92,9 +90,7 @@ window.AULA_DATA = {
     conclusaoDestaqueNegrito: [
       1,
       16,
-      22,
       26,
-      25,
       5,
       6,
       42,
