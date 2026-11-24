@@ -157,7 +157,7 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n8",
         alternativas: [
-          "Só discipli",
+          "Só disciplina o poder.",
           ""
         ],
         lacuna: true,
