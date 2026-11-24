@@ -92,7 +92,7 @@ window.AULA_DATA = {
         paiId: "n2",
         alternativas: [
           "Arrecardação vai para os cofres públicos",
-          "Arrecardação vai para os cofres públicos"
+          "Arrecardação é distribuída"
         ],
         lacuna: true,
         correta: 0
