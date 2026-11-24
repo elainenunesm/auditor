@@ -52,7 +52,9 @@ window.AULA_DATA = {
         0
       ],
       tituloDestaqueNegrito: [
-        0
+        0,
+        21,
+        22
       ],
       subtituloDestaque: [],
       subtituloDestaqueNegrito: [],
