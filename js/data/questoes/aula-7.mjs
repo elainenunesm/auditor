@@ -136,10 +136,10 @@ window.AULA_DATA = {
         paiId: "n6",
         alternativas: [
           "Lei ordinária",
-          ""
+          "Lei complementar"
         ],
         lacuna: true,
-        correta: 0
+        correta: 1
       }
     ],
     tituloDestaque: [],
