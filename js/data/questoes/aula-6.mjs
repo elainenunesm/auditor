@@ -100,6 +100,12 @@ window.AULA_DATA = {
         id: "n1",
         texto: "Direito tributário",
         paiId: ''
+      },
+      {
+        id: "n2",
+        texto: "",
+        paiId: "n1",
+        alternativas: []
       }
     ],
     tituloDestaque: [],
