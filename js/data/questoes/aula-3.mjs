@@ -157,10 +157,12 @@ window.AULA_DATA = {
   },
   {
     tipo: "nenhum",
-    texto: "",
+    texto: "O que é contabilidade?",
     conclusao: "",
     obs: "",
-    pontos: []
+    pontos: [],
+    textoDestaque: [],
+    textoDestaqueNegrito: []
   }
 ],
 
