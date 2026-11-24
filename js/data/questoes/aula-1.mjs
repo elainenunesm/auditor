@@ -230,7 +230,7 @@ window.AULA_DATA = {
     nos: [
       {
         id: "n1",
-        texto: "Contibuintes pagam os trib",
+        texto: "Contribuintes pagam os tributos",
         tipo: "nenhum",
         paiId: '',
         cartaoTexto: "(direito tributário)",
