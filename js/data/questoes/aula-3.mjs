@@ -342,12 +342,18 @@ window.AULA_DATA = {
         texto: "",
         paiId: "n9",
         alternativas: [
-          "",
+          "Algo que vou pagar",
           "Algo que já possuo",
           "Algo que ainda vou receber"
         ],
         lacuna: true,
-        correta: 0
+        correta: 2
+      },
+      {
+        id: "n11",
+        texto: "",
+        paiId: "n1",
+        alternativas: []
       }
     ],
     tituloDestaque: [],
