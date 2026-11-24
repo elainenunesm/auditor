@@ -48,14 +48,15 @@ window.AULA_DATA = {
       16
     ],
     textoDestaqueNegrito: [
-      1,
-      2,
       17,
       3,
       5,
       16,
       34,
-      37
+      37,
+      0,
+      1,
+      7
     ],
     conclusaoDestaque: [
       6,
