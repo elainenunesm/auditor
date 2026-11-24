@@ -279,7 +279,7 @@ window.AULA_DATA = {
       },
       {
         id: "n5",
-        texto: "A distribuição fica a par do estudo do Direito Financeiro",
+        texto: "A distribuição aos entes é estudo do Direito Financeiro",
         paiId: "n4",
         alternativas: []
       }
