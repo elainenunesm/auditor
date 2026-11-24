@@ -144,8 +144,13 @@ window.AULA_DATA = {
       {
         id: "n8",
         texto: "",
-        paiId: "n1",
-        alternativas: []
+        paiId: "n7",
+        alternativas: [
+          "",
+          "Conflito de competência"
+        ],
+        lacuna: true,
+        correta: 0
       }
     ],
     tituloDestaque: [],
