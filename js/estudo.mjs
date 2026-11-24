@@ -3027,7 +3027,7 @@ function mostrarMapaInterativo(aula, introIdx, i) {
     nos.forEach(no => { const el = noEl(no.id); if (el) el.style.width = larg ? `${larg}px` : ''; });
     // Mede cada nó com o texto FINAL (resposta certa já no lugar), senão nó com texto longo seria cortado/sobreposto.
     const alturas = new Map();
-    nos.forEach((no, ni) => {
+    if (larg) nos.forEach((no, ni) => { // só na tela cheia; na atividade o mapa fica compacto pra as alternativas caberem na tela
       const el = noEl(no.id);
       if (!el) return;
       const t = el.querySelector('.mi-no-texto'), antes = t.textContent;
@@ -3035,9 +3035,9 @@ function mostrarMapaInterativo(aula, introIdx, i) {
       alturas.set(no.id, Math.max(48, el.offsetHeight));
       t.textContent = antes;
     });
-    const alt = id => alturas.get(id) || 48;
+    const alt = id => (larg ? alturas.get(id) || 48 : 56);
     const maxH = Math.max(48, ...nos.map(n => alt(n.id)));
-    const ESPACO_X = larg ? larg + 56 : 210, ESPACO_Y = Math.max(92, maxH + 34);
+    const ESPACO_X = larg ? larg + 56 : 210, ESPACO_Y = larg ? maxH + 34 : 92;
     const ESP_COL = LARG + 28;
     // Vertical: cada nível começa abaixo do nó mais alto do nível anterior.
     const topoNivel = [];

@@ -32,6 +32,20 @@ const SESSION_CHAVE_PROGRESSO = 'estudo-progresso-sessao';
 function limparProgressoDoNavegador() {
   try { localStorage.removeItem(LOCALSTORAGE_CHAVE_PROGRESSO); } catch (e) { /* ignora */ }
   try {
+    let emIframe = false;
+    try { emIframe = window.top !== window; } catch (e) { emIframe = true; }
+    if (emIframe) {
+      // Dentro de um iframe (ex.: pré-visualização) quem atualiza é a página-mãe: o iframe nasce de novo
+      // como "navegação", mas a sessão da aba continua. Compara a "origem de tempo" da página de cima —
+      // muda a cada carregamento dela, e fica igual quando só o iframe troca de tela.
+      let origem = null;
+      try { origem = String(window.top.performance.timeOrigin); } catch (e) { /* página-mãe de outra origem */ }
+      if (origem) {
+        if (sessionStorage.getItem('estudo-progresso-origem') !== origem) sessionStorage.removeItem(SESSION_CHAVE_PROGRESSO);
+        sessionStorage.setItem('estudo-progresso-origem', origem);
+        return;
+      }
+    }
     const nav = performance.getEntriesByType('navigation')[0];
     if (nav && nav.type === 'reload') sessionStorage.removeItem(SESSION_CHAVE_PROGRESSO);
   } catch (e) { /* ignora */ }
