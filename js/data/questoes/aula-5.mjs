@@ -194,7 +194,7 @@ window.AULA_DATA = {
         ],
         lacuna: true,
         correta: 0,
-        dica: "Pense que o estado só faz ou deixa de fazer o que está em lei, por isso, lei tem o papel de l"
+        dica: "Pense que o estado só faz ou deixa de fazer o que está em lei, por isso, lei tem o papel de limitar a "
       }
     ],
     tituloDestaque: [
