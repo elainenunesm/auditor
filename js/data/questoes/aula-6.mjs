@@ -1,13 +1,13 @@
 'use strict';
 
 /**
- * AULA-6.MJS — Aula 2 - Conceitos iniciais
+ * AULA-6.MJS — Aula 2 - Conceitos iniciais - Constituição
  * Gerado pelo Construtor de Aulas (aba "Conteúdo da aula").
  */
 window.AULA_DATA = {
   id:     6,
   modulo: "Direito Tributário",
-  titulo: "Aula 2 - Conceitos iniciais",
+  titulo: "Aula 2 - Conceitos iniciais - Constituição",
 
   // Ordem das telas na sequência de estudo — definida em "Estrutura das telas".
   ordem: [
