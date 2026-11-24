@@ -287,9 +287,20 @@ window.AULA_DATA = {
       },
       {
         id: "n5",
-        texto: "O Conjunt",
+        texto: "O que é o patrimônio?",
         paiId: "n4",
         alternativas: []
+      },
+      {
+        id: "n6",
+        texto: "",
+        paiId: "n5",
+        alternativas: [
+          "",
+          ""
+        ],
+        lacuna: true,
+        correta: 0
       }
     ],
     tituloDestaque: [],
