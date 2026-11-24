@@ -108,10 +108,10 @@ window.AULA_DATA = {
         paiId: "n1",
         alternativas: [
           "",
-          ""
+          "Fiscalização os tributos"
         ],
         lacuna: true,
-        correta: 0
+        correta: 1
       }
     ],
     tituloDestaque: [],
