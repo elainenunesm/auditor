@@ -17,10 +17,12 @@ window.AULA_DATA = {
 ],
 
   antesComecar: {
-  titulo: "",
+  titulo: "Outros conceitos do direito ",
   descricao: "",
   aprender: "",
-  importancia: ""
+  importancia: "",
+  tituloDestaque: [],
+  tituloDestaqueNegrito: []
 },
 
   exemplo: [],
