@@ -39,7 +39,7 @@ window.AULA_DATA = {
   exemplo: [
   {
     tipo: "nenhum",
-    texto: "A Constituição federal (art. 146 ) sobre a criação da lei, fala que cabe a lei complementar dispor conflito de compêtencia, em máteria de tributário entre os entes(união, estados, distrito federal, e os municípios)\n",
+    texto: "Constituição Federal — Art. 146, I\n\nA Constituição federal (art. 146 ) sobre a criação da lei, fala que cabe a lei complementar dispor conflito de compêtencia, em máteria de tributário entre os entes(união, estados, distrito federal, e os municípios)\n",
     conclusao: "O que isso quer dizer?\n\nImagine a seguinte situação:",
     obs: "Uma empresa presta um serviço e vende um produto.\n\nSurge uma dúvida:\n\n- O Estado pode cobrar ICMS sobre essa operação?\n- O Município pode cobrar ISS?\n- Qual ente(união, estados, distrito federal, e os municípios) tem competência para tributar essa atividade?",
     pontos: [],
