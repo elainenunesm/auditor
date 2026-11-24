@@ -174,7 +174,7 @@ window.AULA_DATA = {
   {
     titulo: "Compete à lei ordinária municipal resolver conflitos de competência tributária entre os Municípios e os Estados.",
     correta: 1,
-    feedbackCorreto: "Cor!\n\nA competência para dispor sobre conflitos de competência tributária entre os entes federativos é da lei complementar, conforme o art. 146, I, da Constituição Federal.",
+    feedbackCorreto: "Correto!\n\nA competência para dispor sobre conflitos de competência tributária entre os entes federativos é da lei complementar, conforme o art. 146, I, da Constituição Federal.",
     feedbackErrado: "Errado!\n\nA competência para dispor sobre conflitos de competência tributária entre os entes federativos é da lei complementar, conforme o art. 146, I, da Constituição Federal.",
     opcoes: [
       "Certo",
