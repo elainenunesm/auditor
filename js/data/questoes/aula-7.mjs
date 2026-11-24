@@ -150,7 +150,7 @@ window.AULA_DATA = {
           "Conflito de competência"
         ],
         lacuna: true,
-        correta: 0
+        correta: 1
       }
     ],
     tituloDestaque: [],
