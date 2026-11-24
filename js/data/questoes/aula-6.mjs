@@ -66,10 +66,16 @@ window.AULA_DATA = {
     conclusao: "",
     obs: "",
     pontos: [],
-    textoDestaque: [],
+    textoDestaque: [
+      17,
+      18,
+      22
+    ],
     textoDestaqueNegrito: [
       1,
-      2
+      2,
+      18,
+      17
     ]
   }
 ],
