@@ -64,11 +64,13 @@ window.AULA_DATA = {
   {
     tipo: "nenhum",
     texto: "Termos importantes:\n\n",
-    conclusao: "",
+    conclusao: "Entidades",
     obs: "",
     pontos: [],
     textoDestaque: [],
-    textoDestaqueNegrito: []
+    textoDestaqueNegrito: [],
+    conclusaoDestaque: [],
+    conclusaoDestaqueNegrito: []
   }
 ],
 
