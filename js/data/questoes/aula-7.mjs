@@ -90,6 +90,12 @@ window.AULA_DATA = {
         ],
         lacuna: true,
         correta: 0
+      },
+      {
+        id: "n3",
+        texto: "",
+        paiId: "n1",
+        alternativas: []
       }
     ],
     tituloDestaque: [],
