@@ -15,6 +15,7 @@ window.AULA_DATA = {
   "exemplo0",
   "mapaInterativo0",
   "exemplo1",
+  "exemplo2",
   "resumo",
   "licao"
 ],
@@ -115,6 +116,13 @@ window.AULA_DATA = {
       34,
       36
     ]
+  },
+  {
+    tipo: "acao",
+    texto: "Então a Constituição federal",
+    conclusao: "",
+    obs: "",
+    pontos: []
   }
 ],
 
