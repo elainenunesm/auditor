@@ -267,7 +267,7 @@ window.AULA_DATA = {
       },
       {
         id: "n5",
-        texto: "A distribuição fica a par do estudo do Dire",
+        texto: "A distribuição fica a par do estudo do Direito Financeiro",
         paiId: "n4",
         alternativas: []
       }
