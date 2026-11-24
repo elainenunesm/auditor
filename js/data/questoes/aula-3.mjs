@@ -70,7 +70,9 @@ window.AULA_DATA = {
     textoDestaque: [],
     textoDestaqueNegrito: [],
     conclusaoDestaque: [],
-    conclusaoDestaqueNegrito: [],
+    conclusaoDestaqueNegrito: [
+      1
+    ],
     obsDestaque: [],
     obsDestaqueNegrito: [],
     textoNegrito: true
