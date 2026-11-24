@@ -249,7 +249,7 @@ window.AULA_DATA = {
       },
       {
         id: "n3",
-        texto: "Cof",
+        texto: "Vai para os cofre",
         tipo: "nenhum",
         cor: "#DFF5E5",
         paiId: "n2",
