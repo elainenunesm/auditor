@@ -77,8 +77,14 @@ window.AULA_DATA = {
     nos: [
       {
         id: "n1",
-        texto: "Direito ",
+        texto: "Direito tributário",
         paiId: ''
+      },
+      {
+        id: "n2",
+        texto: "",
+        paiId: "n1",
+        alternativas: []
       }
     ],
     tituloDestaque: [],
