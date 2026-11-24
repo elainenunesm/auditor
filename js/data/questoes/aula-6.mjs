@@ -212,7 +212,7 @@ window.AULA_DATA = {
         paiId: "n3",
         alternativas: [
           "Distribui a competência tributária",
-          "Deixa a lei compl"
+          "Deixa a lei complementar distribuir competência e "
         ],
         lacuna: true,
         correta: 0
