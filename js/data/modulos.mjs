@@ -13,7 +13,7 @@ const MODULOS = [
     aulas: [
       {
         id:      1,
-        titulo:  "Aula 1 - Conceitos iniciais D. Tributário",
+        titulo:  "Aula 1 - Conceitos iniciais - D. Tributário",
         arquivo: "aula-1",
         icone:   'padrao',
       },
