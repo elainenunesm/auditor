@@ -230,7 +230,7 @@ window.AULA_DATA = {
   },
   {
     titulo: "O objeto de estudo da contabilidade é o caixa.",
-    correta: 0,
+    correta: 1,
     feedbackCorreto: "",
     feedbackErrado: "",
     opcoes: [
@@ -242,11 +242,15 @@ window.AULA_DATA = {
     opcoesItalico: [],
     opcoesDestaque: [
       [],
-      []
+      [
+        0
+      ]
     ],
     dificuldade: "Fácil",
     subtituloDestaque: [],
-    subtituloDestaqueNegrito: []
+    subtituloDestaqueNegrito: [],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: []
   }
 ],
 
