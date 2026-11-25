@@ -30,7 +30,10 @@ window.AULA_DATA = {
   ],
   descricaoDestaqueNegrito: [
     1,
-    0
+    0,
+    2,
+    3,
+    4
   ],
   aprenderDestaque: [],
   aprenderDestaqueNegrito: [],
