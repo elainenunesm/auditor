@@ -1,41 +1,26 @@
 'use strict';
 
 /**
- * AULA-7.MJS — Resumo - Conceitos iniciais 2
+ * AULA-7.MJS — Nova aula
  * Gerado pelo Construtor de Aulas (aba "Conteúdo da aula").
  */
 window.AULA_DATA = {
   id:     7,
-  modulo: "Direito Tributário",
-  titulo: "Resumo - Conceitos iniciais 2",
+  modulo: "Contabilidade Geral",
+  titulo: "Nova aula",
 
   // Ordem das telas na sequência de estudo — definida em "Estrutura das telas".
   ordem: [
   "antesComecar",
-  "mapaInterativo0"
+  "resumo",
+  "licao"
 ],
 
   antesComecar: {
-  titulo: "Resumo maroto",
-  descricao: "Mapas mentais para compreender melhor.",
-  aprender: "Vai exercitar os conceitos",
-  importancia: "Quanto mais exercita mais lembra dos conceitos.",
-  tituloDestaque: [],
-  tituloDestaqueNegrito: [],
-  aprenderDestaque: [],
-  aprenderDestaqueNegrito: [],
-  descricaoDestaque: [
-    0,
-    1
-  ],
-  descricaoDestaqueNegrito: [
-    0,
-    1
-  ],
-  importanciaDestaque: [],
-  importanciaDestaqueNegrito: [],
-  tituloNegrito: true,
-  descricaoNegrito: true
+  titulo: "",
+  descricao: "",
+  aprender: "",
+  importancia: ""
 },
 
   exemplo: [],
@@ -68,115 +53,7 @@ window.AULA_DATA = {
 
   mapaConceitual: [],
 
-  mapaInterativo: [
-  {
-    titulo: "",
-    instrucao: "",
-    nos: [
-      {
-        id: "n1",
-        texto: "Direito tributário",
-        paiId: ''
-      },
-      {
-        id: "n2",
-        texto: "O que o Direito tributário faz?",
-        paiId: "n1",
-        alternativas: []
-      },
-      {
-        id: "n3",
-        texto: "",
-        paiId: "n2",
-        alternativas: [
-          "Arrecardação de tributos",
-          "Distribuição de tributos"
-        ],
-        lacuna: true,
-        correta: 0
-      },
-      {
-        id: "n4",
-        texto: "",
-        paiId: "n2",
-        alternativas: [
-          "Extinguir os tributos",
-          "Criação dos tributos"
-        ],
-        lacuna: true,
-        correta: 1
-      },
-      {
-        id: "n5",
-        texto: "",
-        paiId: "n2",
-        alternativas: [
-          "Distribuição dos tributos.",
-          "Fiscalização os tributos"
-        ],
-        lacuna: true,
-        correta: 1
-      },
-      {
-        id: "n6",
-        texto: "Constituição federal (Art 146 )",
-        paiId: "n1",
-        alternativas: [
-          "",
-          ""
-        ],
-        lacuna: false,
-        correta: 0
-      },
-      {
-        id: "n7",
-        texto: "",
-        paiId: "n6",
-        alternativas: [
-          "Lei ordinária",
-          "Lei complementar"
-        ],
-        lacuna: true,
-        correta: 1
-      },
-      {
-        id: "n8",
-        texto: "",
-        paiId: "n7",
-        alternativas: [
-          "Escolhe livremente quem terá competência para criar cada tributo.",
-          "Dispõe sobre os conflito de competência"
-        ],
-        lacuna: true,
-        correta: 1
-      },
-      {
-        id: "n9",
-        texto: "",
-        paiId: "n8",
-        alternativas: [
-          "Só disciplina o poder.",
-          "Disciplinar as limitações ao poder"
-        ],
-        lacuna: true,
-        correta: 1
-      },
-      {
-        id: "n10",
-        texto: "",
-        paiId: "n7",
-        alternativas: [
-          "CT (CÓDIGO TRIBUTÁRIO) 5.172/1966",
-          "CNT (CÓDIGO TRIBUTÁRIO NACIONAL) 5.172/1966"
-        ],
-        lacuna: true,
-        correta: 1
-      }
-    ],
-    tituloDestaque: [],
-    tituloDestaqueNegrito: []
-  }
-],
+  mapaInterativo: [],
 
   questoes: [],
 };
