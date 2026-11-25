@@ -116,7 +116,7 @@ window.AULA_DATA = {
 
   checagem: [
   {
-    titulo: "\nEntidade  uma pessoa ou organização que existe e possui patrimônio próprio",
+    titulo: "\nEntidade é uma pessoa ou organização que existe e possui patrimônio próprio",
     correta: 0,
     feedbackCorreto: "",
     feedbackErrado: "",
