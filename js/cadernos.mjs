@@ -12,7 +12,7 @@ let subCadernoAtivo = 'aula';
 
 const SUBTABS_POR_CADERNO = {
   erros:   [{ valor: 'aula', label: 'Por aula' }, { valor: 'geral', label: 'Geral' }],
-  revisao: [{ valor: 'telas', label: 'Aulas' }, { valor: 'perguntas', label: 'Perguntas' }],
+  revisao: [{ valor: 'telas', label: 'Aulas' }, { valor: 'perguntas', label: 'Perguntas' }, { valor: 'geral', label: 'Geral' }],
 };
 
 function trocarCadernoTab(tab) {
@@ -24,6 +24,7 @@ function trocarCadernoTab(tab) {
   if (config) {
     subtabsBar.style.display = 'flex';
     const botoes = subtabsBar.querySelectorAll('.caderno-subtab');
+    botoes.forEach((b, i) => { b.style.display = i < config.length ? '' : 'none'; });
     config.forEach((cfg, i) => {
       if (!botoes[i]) return;
       botoes[i].textContent = cfg.label;
@@ -146,10 +147,35 @@ function renderFavoritosView() {
   list.innerHTML = html || EMPTY_FAVORITOS;
 }
 
+/** Aba "Geral" da Revisão: junta tudo que foi marcado (telas e perguntas), de todas as aulas, na ordem das
+ * aulas — um botão só que percorre as aulas em sequência (ver ?seq= em estudo.mjs). */
+async function renderRevisaoGeral(marcados) {
+  const list = document.getElementById('errosList');
+  const aulas = listaAulas().filter(a => (marcados[String(a.id)] || []).length > 0);
+  if (!aulas.length) { list.innerHTML = emptyRevisaoHtml(false); return; }
+  let telas = 0, perguntas = 0;
+  aulas.forEach(a => (marcados[String(a.id)] || []).forEach(c => { if (ehPergunta(c)) perguntas++; else telas++; }));
+  const partes = [];
+  if (telas) partes.push(`${telas} ${telas !== 1 ? 'telas' : 'tela'}`);
+  if (perguntas) partes.push(`${perguntas} ${perguntas !== 1 ? 'perguntas' : 'pergunta'}`);
+  list.innerHTML = `
+    <div class="erro-card">
+      <div class="erro-card-info">
+        <h3>Revisão geral</h3>
+        <p class="cor-revisao">${partes.join(' e ')} de ${aulas.length} ${aulas.length !== 1 ? 'aulas' : 'aula'}, na ordem das aulas</p>
+      </div>
+      <button type="button" class="btn-praticar" id="btnRevisaoGeral" data-aulas="${aulas.map(a => a.id).join(',')}">Ver</button>
+    </div>` + aulas.map(a => {
+      const n = (marcados[String(a.id)] || []).length;
+      return `<p class="revisao-geral-item">${escaparHtml(a.titulo)} — ${n} ${n !== 1 ? 'itens' : 'item'}</p>`;
+    }).join('');
+}
+
 async function renderRevisaoView() {
   const list = document.getElementById('errosList');
   if (!list) return;
   const marcados = await getCartoesMarcados();
+  if (subCadernoAtivo === 'geral') return renderRevisaoGeral(marcados);
   const mostrarPerguntas = subCadernoAtivo === 'perguntas';
   let html = '';
   listaAulas().forEach(aula => {
@@ -182,6 +208,12 @@ function configurarEventosCadernos() {
     btn.addEventListener('click', () => trocarCadernoSubTab(btn.dataset.subtab));
   });
   document.getElementById('errosList').addEventListener('click', e => {
+    const geralRev = e.target.closest('#btnRevisaoGeral');
+    if (geralRev) {
+      const [primeira, ...resto] = geralRev.dataset.aulas.split(',');
+      window.location.href = `estudo.html?aula=${primeira}&modo=revisao` + (resto.length ? `&seq=${resto.join(',')}` : '');
+      return;
+    }
     if (e.target.closest('#btnPraticarGeral')) {
       window.location.href = 'estudo.html?modo=erros&geral=1';
       return;

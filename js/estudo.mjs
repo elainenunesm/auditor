@@ -18,6 +18,14 @@ const modoErrosGeral = modoErros && params.get('geral') === '1';
 // marcadas, 'telas' mostra só definicao/contexto/exemplo* marcadas. Sem o
 // parâmetro (links antigos), mostra tudo que estiver marcado, como antes.
 const tipoRevisao = params.get('tipo');
+// Revisão "Geral": ids das PRÓXIMAS aulas a revisar, em sequência (?seq=3,5,8). Ao terminar uma aula, abre a seguinte.
+const seqRevisao = (params.get('seq') || '').split(',').filter(Boolean);
+/** Destino ao terminar a revisão desta aula: a próxima aula da sequência (se houver) ou a lista de revisão. */
+function destinoFimRevisao() {
+  if (!seqRevisao.length) return 'index.html?view=erros';
+  const [prox, ...resto] = seqRevisao;
+  return `estudo.html?aula=${encodeURIComponent(prox)}&modo=revisao` + (tipoRevisao ? `&tipo=${tipoRevisao}` : '') + (resto.length ? `&seq=${resto.join(',')}` : '');
+}
 
 // Questões pontuadas desativadas por enquanto (dado da aula mantido em
 // js/data/questoes/aula-N.mjs para reativar depois — é só voltar para true).
@@ -4606,8 +4614,14 @@ carregarDadosIniciais().then((carregado) => {
         if (!naOrdem.has(introScreens[k])) introScreens.splice(k, 1);
       }
     }
+    // Mesma ordem em que as telas aparecem na aula (telas e perguntas misturadas, como no Construtor).
+    if (Array.isArray(aula.ordem) && aula.ordem.length > 0) {
+      const pos = new Map(aula.ordem.map((t, k) => [t === 'justificativa' ? 'antesComecar' : t, k]));
+      const posDe = c => (pos.has(c) ? pos.get(c) : 1e6);
+      introScreens.sort((a, b) => posDe(a) - posDe(b));
+    }
     if (introScreens.length === 0) {
-      window.location.href = 'index.html?view=erros';
+      window.location.href = destinoFimRevisao(); // nada a revisar aqui (ex.: tela excluída): segue pra próxima aula
       return;
     }
   } else if (Array.isArray(aula.ordem) && aula.ordem.length > 0) {
@@ -4765,7 +4779,7 @@ carregarDadosIniciais().then((carregado) => {
       if (introIdx < introScreens.length) {
         introFns[introScreens[introIdx]](aula, introIdx);
       } else if (modoRevisao) {
-        window.location.href = 'index.html?view=erros';
+        window.location.href = destinoFimRevisao();
       } else {
         finalizarChecagens();
       }
