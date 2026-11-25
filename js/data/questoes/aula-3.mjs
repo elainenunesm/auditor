@@ -232,7 +232,7 @@ window.AULA_DATA = {
     titulo: "O objeto de estudo da contabilidade é o caixa.",
     correta: 1,
     feedbackCorreto: "O objeto de estudo da contabilidade é o Patrimônio.",
-    feedbackErrado: "\nO objeto de estudo da contabilidade é o Patrimônio.",
+    feedbackErrado: "Alterna\nO objeto de estudo da contabilidade é o Patrimônio.",
     opcoes: [
       "Certo",
       "Errado"
