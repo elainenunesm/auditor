@@ -220,6 +220,7 @@ function ajustarQuebraFrase(caixa, seletorGrid) {
     const g = base.cloneNode(false);
     g.removeAttribute('id');
     g.style.marginTop = '12px';
+    g.style.justifyContent = 'start'; // colunas com a largura da palavra, sem esticar até a borda
     return g;
   });
   gridsLinha.forEach((g, k) => {
