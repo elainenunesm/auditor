@@ -1190,6 +1190,8 @@ function mostrarExemplo(aula, introIdx, i) {
           </div>`).join('')}
       </div>` : ''}
       ${ex.palavraSelecionavel ? `
+      ${ex.palavraSelecionavel.titulo ? `<p class="point-label-titulo"${estiloTextoInline(ex.palavraSelecionavel, 'titulo')}>${renderFraseComDestaque(ex.palavraSelecionavel.titulo, ex.palavraSelecionavel.tituloDestaque, ex.palavraSelecionavel.tituloDestaqueNegrito)}</p>` : ''}
+      ${ex.palavraSelecionavel.subtitulo ? `<p class="point-label-subtitulo"${estiloTextoInline(ex.palavraSelecionavel, 'subtitulo')}>${renderFraseComDestaque(ex.palavraSelecionavel.subtitulo, ex.palavraSelecionavel.subtituloDestaque, ex.palavraSelecionavel.subtituloDestaqueNegrito)}</p>` : ''}
       <div class="passo-caixa">
         <div class="passo-caixa-cabecalho">
           <div class="passo-caixa-icone"><svg viewBox="0 0 24 24" width="22" height="22">${RESUMO_ICONES.tarefa('#4A80F0')}</svg></div>
