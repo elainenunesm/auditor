@@ -19,7 +19,7 @@ const MODULOS = [
       },
       {
         id:      5,
-        titulo:  "Resumo 1 - Conceitos iniciais D. Tributário",
+        titulo:  "Resumo 1 - Conceitos iniciais - D. Tributário",
         arquivo: "aula-5",
         icone:   'padrao',
       },

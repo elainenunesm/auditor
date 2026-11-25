@@ -1,13 +1,13 @@
 'use strict';
 
 /**
- * AULA-5.MJS — Resumo 1 - Conceitos iniciais D. Tributário
+ * AULA-5.MJS — Resumo 1 - Conceitos iniciais - D. Tributário
  * Gerado pelo Construtor de Aulas (aba "Conteúdo da aula").
  */
 window.AULA_DATA = {
   id:     5,
   modulo: "Direito Tributário",
-  titulo: "Resumo 1 - Conceitos iniciais D. Tributário",
+  titulo: "Resumo 1 - Conceitos iniciais - D. Tributário",
 
   // Ordem das telas na sequência de estudo — definida em "Estrutura das telas".
   ordem: [
