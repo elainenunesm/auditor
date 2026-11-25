@@ -199,11 +199,17 @@ window.AULA_DATA = {
     feedbackErrado: "",
     opcoes: [
       "Uma Arte",
-      "Uma Ciência Social"
+      "Uma Ciência Social",
+      "Ciência exata"
     ],
-    opcoesNegrito: [],
-    opcoesItalico: [],
+    opcoesNegrito: [
+      false
+    ],
+    opcoesItalico: [
+      false
+    ],
     opcoesDestaque: [
+      [],
       [],
       []
     ],
