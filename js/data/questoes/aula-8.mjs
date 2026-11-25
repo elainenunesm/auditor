@@ -20,7 +20,7 @@ window.AULA_DATA = {
   titulo: "Resumo maroto",
   descricao: "Mapas mentais para compreender melhor.",
   aprender: "Vai exercitar os conceitos e constituição art. 146.",
-  importancia: "",
+  importancia: "Quanto mais exercita mais lembra dos conceitos.",
   tituloDestaque: [],
   tituloDestaqueNegrito: [],
   descricaoDestaque: [
