@@ -194,12 +194,12 @@ window.AULA_DATA = {
   checagem: [
   {
     titulo: "Contabilidade é?",
-    correta: 0,
+    correta: 1,
     feedbackCorreto: "",
     feedbackErrado: "",
     opcoes: [
       "",
-      ""
+      "Uma ciência social"
     ],
     opcoesNegrito: [],
     opcoesItalico: [],
