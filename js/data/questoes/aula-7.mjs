@@ -86,9 +86,7 @@ window.AULA_DATA = {
         2
       ],
       subtitulo: "A contabilidade é uma ciência social.",
-      subtituloDestaque: [
-        5
-      ],
+      subtituloDestaque: [],
       instrucao: "",
       instrucaoDestaque: [],
       sentenca: [
