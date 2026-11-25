@@ -68,7 +68,10 @@ window.AULA_DATA = {
       titulo: "Selecione a palavra errada. ",
       tituloDestaque: [],
       tituloDestaqueNegrito: [],
-      subtitulo: "A contabilidade é uma ciência exata."
+      subtitulo: "A contabilidade é uma ciência exata.",
+      subtituloDestaque: [],
+      subtituloDestaqueNegrito: [],
+      subtituloNegrito: true
     }
   },
   {
