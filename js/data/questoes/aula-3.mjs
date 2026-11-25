@@ -193,7 +193,7 @@ window.AULA_DATA = {
 
   checagem: [
   {
-    titulo: "",
+    titulo: "O que é contabilidade?",
     correta: 0,
     feedbackCorreto: "",
     feedbackErrado: "",
