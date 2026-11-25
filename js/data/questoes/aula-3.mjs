@@ -195,8 +195,8 @@ window.AULA_DATA = {
   {
     titulo: "Contabilidade é?",
     correta: 1,
-    feedbackCorreto: "A Contabilidade também faz cálculos exatos! O que acontece é que seu objeto de estudo, o patrimônio, envolve situações que exigem interpretação e julgamento, por isso, social",
-    feedbackErrado: "Alternativa correta B.\n\nA Contabilidade também faz cálculos exatos! O que acontece é que seu objeto de estudo, o patrimônio, envolve situações que exigem interpretação e julgamento, por isso, social",
+    feedbackCorreto: "A Contabilidade também faz cálculos exatos! O que acontece é que seu objeto de estudo, o patrimônio, envolve situações que exigem interpretação e julgamento, por isso, social.",
+    feedbackErrado: "Alternativa correta B.\n\nA Contabilidade também faz cálculos exatos! O que acontece é que seu objeto de estudo, o patrimônio, envolve situações que exigem interpretação e julgamento, por isso, social.",
     opcoes: [
       "Uma Arte",
       "Uma Ciência Social",
