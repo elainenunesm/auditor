@@ -149,8 +149,128 @@ questaoArea.addEventListener('click', e => {
 // cortada/sumida. Liga .tem-overflow (degradê na borda, ver estudo.css) só
 // quando o conteúdo realmente não cabe inteiro. Chamada depois de popular
 // qualquer grid .frase-anotada, então roda em todas de uma vez.
+
+/* ── QUEBRA DE LINHA DA FRASE ANOTADA ────────────────────────────────────────
+ * A frase é um grid de uma coluna por palavra (colchetes/rótulos ficam nas linhas de baixo, ligados à
+ * coluna da palavra). Frase larga não cabia e saía da caixa. Aqui, quando a soma das colunas passa da
+ * largura disponível, as palavras são distribuídas em várias "linhas": cada uma é um grid próprio
+ * (mesma classe) com as palavras, colchetes e rótulos daquele trecho. Um colchete que cruza a quebra é
+ * repartido (cópia decorativa na linha seguinte). Roda de novo ao redimensionar e quando algo é
+ * acrescentado depois (ex.: colchete aparece após acertar). Sempre parte das posições ORIGINAIS,
+ * guardadas em data-qc / data-qs / data-qr na primeira passada. */
+function ajustarQuebraFrase(caixa, seletorGrid) {
+  const grids = [...caixa.querySelectorAll(seletorGrid)];
+  const base = grids[0];
+  if (!base) return;
+  if (base.dataset.qt === undefined) base.dataset.qt = base.style.gridTemplateColumns || '';
+
+  // Re-render: o grid base foi recriado do zero (nenhum filho com posição guardada) — descarta as linhas velhas.
+  const baseTemAntigos = [...base.children].some(el => el.dataset.qc !== undefined);
+  if (!baseTemAntigos && grids.length > 1) { grids.slice(1).forEach(g => g.remove()); grids.length = 1; }
+
+  // 1) Junta tudo de volta no grid base, na posição original.
+  const filhos = [];
+  grids.forEach(g => [...g.children].forEach(el => {
+    if (el.dataset.qclone) { el.remove(); return; }
+    if (el.dataset.qc === undefined) {
+      const m = (el.style.gridColumn || '').match(/^\s*(\d+)(?:\s*\/\s*span\s*(\d+))?/);
+      if (!m) { filhos.push({ el, livre: true }); return; }
+      el.dataset.qc = m[1]; el.dataset.qs = m[2] || '1'; el.dataset.qr = el.style.gridRow || '1';
+    }
+    filhos.push({ el, c: +el.dataset.qc, s: +el.dataset.qs, r: el.dataset.qr });
+  }));
+  grids.slice(1).forEach(g => g.remove());
+  filhos.forEach(f => {
+    if (!f.livre) {
+      f.el.style.gridColumn = f.s > 1 ? `${f.c}/span ${f.s}` : String(f.c);
+      f.el.style.gridRow = f.r;
+    }
+    base.appendChild(f.el);
+  });
+  base.style.gridTemplateColumns = base.dataset.qt;
+  base.style.marginTop = '';
+
+  // 2) Mede a largura de cada coluna (a palavra, linha 1) e vê se cabe.
+  const pai = base.parentElement;
+  const cs = getComputedStyle(pai);
+  const disp = pai.clientWidth - (parseFloat(cs.paddingLeft) || 0) - (parseFloat(cs.paddingRight) || 0);
+  if (disp <= 0) return; // oculto no momento — roda de novo quando aparecer
+  const gap = parseFloat(getComputedStyle(base).columnGap) || 8;
+  const larguras = [];
+  filhos.forEach(f => { if (!f.livre && f.s === 1 && f.r === '1') larguras[f.c] = f.el.getBoundingClientRect().width; });
+  const n = Math.max(0, ...filhos.filter(f => !f.livre).map(f => f.c + f.s - 1));
+  const total = larguras.reduce((a, w) => a + (w || 0), 0) + gap * Math.max(0, n - 1);
+  if (total <= disp + 1) return;
+
+  // 3) Distribui as palavras em linhas (guloso).
+  const linhas = [];
+  let ini = 1, acc = 0;
+  for (let c = 1; c <= n; c++) {
+    const w = larguras[c] || 0;
+    const novo = acc === 0 ? w : acc + gap + w;
+    if (acc > 0 && novo > disp) { linhas.push([ini, c - 1]); ini = c; acc = w; }
+    else acc = novo;
+  }
+  linhas.push([ini, n]);
+  if (linhas.length < 2) return;
+
+  // 4) Um grid por linha; cada item vai pra linha(s) que cobre (colchete que cruza a quebra é repartido).
+  const gridsLinha = linhas.map((_, k) => {
+    if (k === 0) return base;
+    const g = base.cloneNode(false);
+    g.removeAttribute('id');
+    g.style.marginTop = '12px';
+    return g;
+  });
+  gridsLinha.forEach((g, k) => {
+    const [a, b] = linhas[k];
+    g.style.gridTemplateColumns = `repeat(${b - a + 1},auto)`;
+    if (k > 0) gridsLinha[k - 1].insertAdjacentElement('afterend', g);
+  });
+  filhos.forEach(f => {
+    if (f.livre) return;
+    let usouOriginal = false;
+    linhas.forEach(([a, b], k) => {
+      const lo = Math.max(f.c, a), hi = Math.min(f.c + f.s - 1, b);
+      if (lo > hi) return;
+      let el = f.el;
+      if (usouOriginal) { el = f.el.cloneNode(true); el.dataset.qclone = '1'; delete el.dataset.qc; }
+      usouOriginal = true;
+      el.style.gridColumn = hi > lo ? `${lo - a + 1}/span ${hi - lo + 1}` : String(lo - a + 1);
+      el.style.gridRow = f.r;
+      gridsLinha[k].appendChild(el);
+    });
+  });
+  // Linha sem colchete/rótulo não reserva espaço pras linhas de baixo (senão fica um vão enorme entre as linhas).
+  gridsLinha.forEach(g => {
+    let maxLinha = 1;
+    [...g.children].forEach(el => { maxLinha = Math.max(maxLinha, parseInt(el.style.gridRow, 10) || 1); });
+    g.style.gridTemplateRows = ['auto', 'minmax(30px, auto)', 'minmax(30px, auto)'].slice(0, Math.min(3, maxLinha)).join(' ');
+  });
+}
+
+/** Liga a quebra numa caixa (e a refaz quando filhos são acrescentados ou a tela é redimensionada). */
+function ligarQuebraFrase(caixa, seletorGrid) {
+  ajustarQuebraFrase(caixa, seletorGrid);
+  if (caixa._quebraObs) return;
+  let agendado = false;
+  const obs = new MutationObserver(() => {
+    if (agendado) return;
+    agendado = true;
+    requestAnimationFrame(() => {
+      agendado = false;
+      obs.disconnect();
+      try { ajustarQuebraFrase(caixa, seletorGrid); } finally { obs.observe(caixa, { childList: true, subtree: true }); }
+    });
+  });
+  obs.observe(caixa, { childList: true, subtree: true });
+  caixa._quebraObs = obs;
+  window.addEventListener('resize', () => { if (caixa.isConnected) ajustarQuebraFrase(caixa, seletorGrid); });
+}
+
 function marcarOverflowNasFrasesAnotadas() {
   document.querySelectorAll('.frase-anotada-wrap').forEach(wrap => {
+    ligarQuebraFrase(wrap, '.frase-anotada'); // frase larga quebra em várias linhas em vez de rolar pro lado
     wrap.classList.toggle('tem-overflow', wrap.scrollWidth > wrap.clientWidth + 2);
   });
 }
