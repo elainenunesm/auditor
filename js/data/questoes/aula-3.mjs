@@ -229,7 +229,7 @@ window.AULA_DATA = {
     tituloDestaqueNegrito: []
   },
   {
-    titulo: "O objeto de es é o caixa",
+    titulo: "O objeto de estudo da conta é o caixa",
     correta: 0,
     feedbackCorreto: "",
     feedbackErrado: "",
