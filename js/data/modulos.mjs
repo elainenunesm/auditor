@@ -28,6 +28,12 @@ const MODULOS = [
         titulo:  "Aula 2 - Conceitos - Constituição art.146 - D. Tributário",
         arquivo: "aula-6",
         icone:   'padrao',
+      },
+      {
+        id:      8,
+        titulo:  "Nova aula",
+        arquivo: "aula-8",
+        icone:   'padrao',
       }
     ],
   },
