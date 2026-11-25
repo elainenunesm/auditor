@@ -93,8 +93,7 @@ window.AULA_DATA = {
         5
       ],
       rotulo: "Não exata.",
-      tituloDestaqueNegrito: [],
-      subtituloDestaqueNegrito: []
+      tituloDestaqueNegrito: []
     }
   }
 ],
