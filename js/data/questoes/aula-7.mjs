@@ -86,7 +86,9 @@ window.AULA_DATA = {
         2
       ],
       subtitulo: "A contabilidade é uma ciência social.",
-      subtituloDestaque: [],
+      subtituloDestaque: [
+        5
+      ],
       instrucao: "",
       instrucaoDestaque: [],
       sentenca: [
@@ -104,6 +106,10 @@ window.AULA_DATA = {
       rotulo: "Não exata.",
       tituloDestaqueNegrito: [
         2
+      ],
+      subtituloDestaqueNegrito: [
+        5,
+        4
       ]
     }
   }
