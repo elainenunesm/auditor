@@ -12,7 +12,7 @@ let subCadernoAtivo = 'aula';
 
 const SUBTABS_POR_CADERNO = {
   erros:   [{ valor: 'aula', label: 'Por aula' }, { valor: 'geral', label: 'Geral' }],
-  revisao: [{ valor: 'telas', label: 'Aulas' }, { valor: 'perguntas', label: 'Perguntas' }, { valor: 'geral', label: 'Geral' }],
+  revisao: [{ valor: 'telas', label: 'Aulas' }, { valor: 'perguntas', label: 'Perguntas' }, { valor: 'geral', label: 'Geral' }, { valor: 'geralPerguntas', label: 'Geral de perguntas' }],
 };
 
 function trocarCadernoTab(tab) {
@@ -149,25 +149,27 @@ function renderFavoritosView() {
 
 /** Aba "Geral" da Revisão: junta tudo que foi marcado (telas e perguntas), de todas as aulas, na ordem das
  * aulas — um botão só que percorre as aulas em sequência (ver ?seq= em estudo.mjs). */
-async function renderRevisaoGeral(marcados) {
+async function renderRevisaoGeral(marcados, soPerguntas = false) {
   const list = document.getElementById('errosList');
-  const aulas = listaAulas().filter(a => (marcados[String(a.id)] || []).length > 0);
-  if (!aulas.length) { list.innerHTML = emptyRevisaoHtml(false); return; }
+  // soPerguntas: aba "Geral de perguntas" — só as perguntas marcadas, de todas as aulas, numa revisão só.
+  const marcadasDe = a => (marcados[String(a.id)] || []).filter(c => !soPerguntas || ehPergunta(c));
+  const aulas = listaAulas().filter(a => marcadasDe(a).length > 0);
+  if (!aulas.length) { list.innerHTML = emptyRevisaoHtml(soPerguntas); return; }
   let telas = 0, perguntas = 0;
-  aulas.forEach(a => (marcados[String(a.id)] || []).forEach(c => { if (ehPergunta(c)) perguntas++; else telas++; }));
+  aulas.forEach(a => marcadasDe(a).forEach(c => { if (ehPergunta(c)) perguntas++; else telas++; }));
   const partes = [];
   if (telas) partes.push(`${telas} ${telas !== 1 ? 'telas' : 'tela'}`);
   if (perguntas) partes.push(`${perguntas} ${perguntas !== 1 ? 'perguntas' : 'pergunta'}`);
   list.innerHTML = `
     <div class="erro-card">
       <div class="erro-card-info">
-        <h3>Revisão geral</h3>
+        <h3>${soPerguntas ? 'Revisão geral de perguntas' : 'Revisão geral'}</h3>
         <p class="cor-revisao">${partes.join(' e ')} de ${aulas.length} ${aulas.length !== 1 ? 'aulas' : 'aula'}, na ordem das aulas</p>
       </div>
-      <button type="button" class="btn-praticar" id="btnRevisaoGeral" data-aulas="${aulas.map(a => a.id).join(',')}">Ver tudo</button>
+      <button type="button" class="btn-praticar" id="btnRevisaoGeral" data-aulas="${aulas.map(a => a.id).join(',')}" data-tipo="${soPerguntas ? 'perguntas' : ''}">Ver tudo</button>
     </div>
     <p class="revisao-geral-item">Ordem da revisão geral:</p>` + aulas.map((a, i) => {
-      const n = (marcados[String(a.id)] || []).length;
+      const n = marcadasDe(a).length;
       return `
     <div class="erro-card">
       <div class="erro-card-info">
@@ -183,15 +185,12 @@ async function renderRevisaoView() {
   if (!list) return;
   const marcados = await getCartoesMarcados();
   if (subCadernoAtivo === 'geral') return renderRevisaoGeral(marcados);
+  if (subCadernoAtivo === 'geralPerguntas') return renderRevisaoGeral(marcados, true);
   const mostrarPerguntas = subCadernoAtivo === 'perguntas';
   let html = '';
-  let total = 0;
-  const idsAulas = [];
   listaAulas().forEach(aula => {
     const chaves = (marcados[String(aula.id)] || []).filter(c => ehPergunta(c) === mostrarPerguntas);
     if (chaves.length === 0) return;
-    total += chaves.length;
-    idsAulas.push(aula.id);
     const rotulo = mostrarPerguntas ? 'pergunta' : 'tela';
     html += `
       <div class="erro-card">
@@ -202,19 +201,6 @@ async function renderRevisaoView() {
         <button type="button" class="btn-praticar" data-aula="${aula.id}">Ver</button>
       </div>`;
   });
-  if (html) {
-    // "Geral" desta aba: junta tudo (todas as perguntas, ou todas as telas) numa revisão só, na ordem das aulas.
-    const um = mostrarPerguntas ? 'pergunta' : 'tela';
-    const todos = mostrarPerguntas ? 'perguntas' : 'telas';
-    html = `
-      <div class="erro-card">
-        <div class="erro-card-info">
-          <h3>Todas as ${todos}</h3>
-          <p class="cor-revisao">${total} ${total !== 1 ? todos : um} de ${idsAulas.length} ${idsAulas.length !== 1 ? 'aulas' : 'aula'}, numa revisão só</p>
-        </div>
-        <button type="button" class="btn-praticar" id="btnRevisaoGeralTipo" data-aulas="${idsAulas.join(',')}" data-tipo="${mostrarPerguntas ? 'perguntas' : 'telas'}">Ver tudo</button>
-      </div>` + html;
-  }
   list.innerHTML = html || emptyRevisaoHtml(mostrarPerguntas);
 }
 
@@ -232,16 +218,11 @@ function configurarEventosCadernos() {
     btn.addEventListener('click', () => trocarCadernoSubTab(btn.dataset.subtab));
   });
   document.getElementById('errosList').addEventListener('click', e => {
-    const geralTipo = e.target.closest('#btnRevisaoGeralTipo');
-    if (geralTipo) {
-      const [primeira, ...resto] = geralTipo.dataset.aulas.split(',');
-      window.location.href = `estudo.html?aula=${primeira}&modo=revisao&tipo=${geralTipo.dataset.tipo}&ger=1/${resto.length + 1}` + (resto.length ? `&seq=${resto.join(',')}` : '');
-      return;
-    }
     const geralRev = e.target.closest('#btnRevisaoGeral');
     if (geralRev) {
       const [primeira, ...resto] = geralRev.dataset.aulas.split(',');
-      window.location.href = `estudo.html?aula=${primeira}&modo=revisao&ger=1/${resto.length + 1}` + (resto.length ? `&seq=${resto.join(',')}` : '');
+      const tipo = geralRev.dataset.tipo ? `&tipo=${geralRev.dataset.tipo}` : '';
+      window.location.href = `estudo.html?aula=${primeira}&modo=revisao${tipo}&ger=1/${resto.length + 1}` + (resto.length ? `&seq=${resto.join(',')}` : '');
       return;
     }
     if (e.target.closest('#btnPraticarGeral')) {
