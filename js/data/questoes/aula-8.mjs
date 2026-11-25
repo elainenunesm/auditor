@@ -13,6 +13,7 @@ window.AULA_DATA = {
   ordem: [
   "antesComecar",
   "mapaInterativo0",
+  "mapaInterativo1",
   "resumo",
   "licao"
 ],
@@ -122,6 +123,70 @@ window.AULA_DATA = {
     ],
     tituloDestaque: [],
     tituloDestaqueNegrito: []
+  },
+  {
+    titulo: "O que o Direito tributário faz?",
+    instrucao: "",
+    nos: [
+      {
+        id: "n1",
+        texto: "Direito Tributário",
+        paiId: ''
+      },
+      {
+        id: "n2",
+        texto: "",
+        paiId: "n1",
+        alternativas: [
+          "Arrecadação de tributos",
+          "Distribuição de tributos"
+        ],
+        lacuna: true,
+        correta: 0
+      },
+      {
+        id: "n3",
+        texto: "",
+        paiId: "n1",
+        alternativas: [
+          "Criação dos tributos",
+          "Extinguir os tributos"
+        ],
+        lacuna: true,
+        correta: 0
+      },
+      {
+        id: "n4",
+        texto: "",
+        paiId: "n1",
+        alternativas: [
+          "Ditribuição dos tributos.",
+          "Fiscalização os tributos"
+        ],
+        lacuna: true,
+        correta: 1
+      },
+      {
+        id: "n5",
+        texto: "",
+        paiId: "n1",
+        alternativas: [
+          "Limitar o poder do estado ao tributar",
+          "Ampliar o poder do estado ao tributar"
+        ],
+        lacuna: true,
+        correta: 0,
+        dica: "Pense que o estado só faz ou deixa de fazer o que está em lei, por isso, lei tem o papel de limitar a atuação do estado."
+      }
+    ],
+    tituloDestaque: [
+      3,
+      4
+    ],
+    tituloDestaqueNegrito: [
+      3,
+      4
+    ]
   }
 ],
 
