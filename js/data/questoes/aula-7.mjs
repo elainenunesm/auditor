@@ -50,7 +50,7 @@ window.AULA_DATA = {
     obs: "",
     pontos: [],
     palavraSelecionavel: {
-      instrucao: "Selecione a palavra errada. ",
+      instrucao: "",
       sentenca: [
         "A",
         "contabilidade",
@@ -64,7 +64,10 @@ window.AULA_DATA = {
       rotulo: "Social",
       instrucaoDestaque: [],
       instrucaoDestaqueNegrito: [],
-      instrucaoNegrito: true
+      instrucaoNegrito: true,
+      titulo: "Selecione a palavra errada. ",
+      tituloDestaque: [],
+      tituloDestaqueNegrito: []
     }
   },
   {
