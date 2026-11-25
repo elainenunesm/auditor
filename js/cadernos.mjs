@@ -185,9 +185,13 @@ async function renderRevisaoView() {
   if (subCadernoAtivo === 'geral') return renderRevisaoGeral(marcados);
   const mostrarPerguntas = subCadernoAtivo === 'perguntas';
   let html = '';
+  let total = 0;
+  const idsAulas = [];
   listaAulas().forEach(aula => {
     const chaves = (marcados[String(aula.id)] || []).filter(c => ehPergunta(c) === mostrarPerguntas);
     if (chaves.length === 0) return;
+    total += chaves.length;
+    idsAulas.push(aula.id);
     const rotulo = mostrarPerguntas ? 'pergunta' : 'tela';
     html += `
       <div class="erro-card">
@@ -198,6 +202,19 @@ async function renderRevisaoView() {
         <button type="button" class="btn-praticar" data-aula="${aula.id}">Ver</button>
       </div>`;
   });
+  if (html) {
+    // "Geral" desta aba: junta tudo (todas as perguntas, ou todas as telas) numa revisão só, na ordem das aulas.
+    const um = mostrarPerguntas ? 'pergunta' : 'tela';
+    const todos = mostrarPerguntas ? 'perguntas' : 'telas';
+    html = `
+      <div class="erro-card">
+        <div class="erro-card-info">
+          <h3>Todas as ${todos}</h3>
+          <p class="cor-revisao">${total} ${total !== 1 ? todos : um} de ${idsAulas.length} ${idsAulas.length !== 1 ? 'aulas' : 'aula'}, numa revisão só</p>
+        </div>
+        <button type="button" class="btn-praticar" id="btnRevisaoGeralTipo" data-aulas="${idsAulas.join(',')}" data-tipo="${mostrarPerguntas ? 'perguntas' : 'telas'}">Ver tudo</button>
+      </div>` + html;
+  }
   list.innerHTML = html || emptyRevisaoHtml(mostrarPerguntas);
 }
 
@@ -215,6 +232,12 @@ function configurarEventosCadernos() {
     btn.addEventListener('click', () => trocarCadernoSubTab(btn.dataset.subtab));
   });
   document.getElementById('errosList').addEventListener('click', e => {
+    const geralTipo = e.target.closest('#btnRevisaoGeralTipo');
+    if (geralTipo) {
+      const [primeira, ...resto] = geralTipo.dataset.aulas.split(',');
+      window.location.href = `estudo.html?aula=${primeira}&modo=revisao&tipo=${geralTipo.dataset.tipo}&ger=1/${resto.length + 1}` + (resto.length ? `&seq=${resto.join(',')}` : '');
+      return;
+    }
     const geralRev = e.target.closest('#btnRevisaoGeral');
     if (geralRev) {
       const [primeira, ...resto] = geralRev.dataset.aulas.split(',');
