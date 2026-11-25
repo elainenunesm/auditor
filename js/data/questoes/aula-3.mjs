@@ -195,7 +195,7 @@ window.AULA_DATA = {
   {
     titulo: "Contabilidade é?",
     correta: 1,
-    feedbackCorreto: "",
+    feedbackCorreto: "Ape",
     feedbackErrado: "",
     opcoes: [
       "Uma Arte",
