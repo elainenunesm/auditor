@@ -20,14 +20,16 @@ window.AULA_DATA = {
   titulo: "Resumo maroto",
   descricao: "Mapas mentais para compreender melhor.",
   aprender: "Vai exercitar os conceitos",
-  importancia: "",
+  importancia: "Quanto mais exercita mais lembra dos conceitos.",
   tituloDestaque: [],
   tituloDestaqueNegrito: [],
   tituloNegrito: true,
   descricaoDestaque: [],
   descricaoDestaqueNegrito: [],
   aprenderDestaque: [],
-  aprenderDestaqueNegrito: []
+  aprenderDestaqueNegrito: [],
+  importanciaDestaque: [],
+  importanciaDestaqueNegrito: []
 },
 
   exemplo: [],
