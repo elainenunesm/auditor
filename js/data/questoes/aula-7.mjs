@@ -49,7 +49,7 @@ window.AULA_DATA = {
     obs: "",
     pontos: [],
     palavraSelecionavel: {
-      instrucao: "Selecione a palavra errada. ",
+      instrucao: "Selecione a palavra errada. A contabilidade é a ciência exata que estuda, interpreta e registra os fenômenos que afetam o patrimônio de uma entidade, que é formado pelos seus bens, direitos e obrigações.",
       sentenca: [
         "A",
         "contabilidade",
