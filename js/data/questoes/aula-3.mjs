@@ -242,9 +242,7 @@ window.AULA_DATA = {
     opcoesItalico: [],
     opcoesDestaque: [
       [],
-      [
-        0
-      ]
+      []
     ],
     dificuldade: "Fácil",
     subtituloDestaque: [],
