@@ -19,7 +19,7 @@ window.AULA_DATA = {
   antesComecar: {
   titulo: "Resumo maroto",
   descricao: "Mapas mentais para compreender melhor.",
-  aprender: "",
+  aprender: "Vai exercitar os conceitos e constituição art. 146.",
   importancia: "",
   tituloDestaque: [],
   tituloDestaqueNegrito: [],
@@ -31,7 +31,9 @@ window.AULA_DATA = {
     1,
     0
   ],
-  tituloNegrito: true
+  tituloNegrito: true,
+  aprenderDestaque: [],
+  aprenderDestaqueNegrito: []
 },
 
   exemplo: [],
