@@ -3103,6 +3103,11 @@ function mostrarMapaInterativo(aula, introIdx, i) {
     alvo.appendChild(document.createTextNode(t)); // textContent: a dica é texto puro, nunca HTML
   }
 
+  /** A dica aparece ANTES de responder: assim que a lacuna fica ativa. Sem lacuna ativa (tudo preenchido), some. */
+  function mostrarDicaDaAtual() {
+    mostrarDica(atual < lacunas.length ? lacunas[atual].dica : '');
+  }
+
   function limparEstadoErro(no) {
     const el = noEl(no.id);
     if (!el) return;
@@ -3164,15 +3169,14 @@ function mostrarMapaInterativo(aula, introIdx, i) {
       el.querySelector('.mi-no-badge').textContent = '✕';
       el.querySelector('.mi-no-msg').textContent = 'Incorreto! Tente outra opção.';
       el.classList.remove('mi-tremer'); void el.offsetWidth; el.classList.add('mi-tremer');
-      mostrarDica(lacuna.dica);
-      return;
+      return; // a dica já está na tela desde que a lacuna ficou ativa
     }
     // Acertou: preenche com animação e libera a próxima lacuna (ou o "Próximo", se for a última).
     limparEstadoErro(lacuna);
     preenchidas.add(lacuna.id);
     el.classList.remove('mi-pop'); void el.offsetWidth; el.classList.add('mi-pop');
-    mostrarDica(lacuna.dica);
     while (atual < lacunas.length && preenchidas.has(lacunas[atual].id)) atual++;
+    mostrarDicaDaAtual();
     atualizarNos(); atualizarRodape(); renderAlternativas();
     if (preenchidas.size === lacunas.length) btnProxima.disabled = false;
     else rolarAteElemento(noEl(lacunas[atual].id));
@@ -3183,8 +3187,8 @@ function mostrarMapaInterativo(aula, introIdx, i) {
     preenchidas.clear();
     atual = 0;
     nos.forEach(no => { const el = noEl(no.id); if (el) el.classList.remove('mi-no-preenchida', 'mi-no-ativa', 'mi-pop', 'mi-tremer'); });
-    mostrarDica('');
     btnProxima.disabled = lacunas.length > 0;
+    mostrarDicaDaAtual();
     atualizarNos(); atualizarRodape(); renderAlternativas();
   });
 
@@ -3248,6 +3252,7 @@ function mostrarMapaInterativo(aula, introIdx, i) {
   };
 
   posicionar();
+  mostrarDicaDaAtual();
   atualizarNos(); atualizarRodape(); renderAlternativas();
   requestAnimationFrame(() => requestAnimationFrame(desenharLinhas));
 }
