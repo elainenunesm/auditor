@@ -14,6 +14,7 @@ window.AULA_DATA = {
   "antesComecar",
   "mapaInterativo0",
   "mapaInterativo1",
+  "mapaInterativo2",
   "resumo",
   "licao"
 ],
@@ -187,6 +188,55 @@ window.AULA_DATA = {
       3,
       4
     ]
+  },
+  {
+    titulo: "Direito Tributário",
+    instrucao: "",
+    nos: [
+      {
+        id: "n1",
+        texto: "O que faz parte da arrecadação?",
+        paiId: ''
+      },
+      {
+        id: "n2",
+        texto: "Arre",
+        paiId: "n1",
+        alternativas: [
+          "Contribuintes pagando os tributos",
+          "Contribuintes pagando as multas"
+        ],
+        lacuna: true,
+        correta: 0,
+        dica: "Tributo não é a mesma coisa que multa. \n\nTributo é uma obrigação prevista em lei.\n\nMulta é uma infração quando não se cumpri à lei."
+      },
+      {
+        id: "n3",
+        texto: "O que faz depois da arrecadação?",
+        paiId: "n2",
+        alternativas: []
+      },
+      {
+        id: "n4",
+        texto: "",
+        paiId: "n3",
+        alternativas: [
+          "Distribui os recursos",
+          "Envia aos cofre públicos"
+        ],
+        lacuna: true,
+        correta: 1,
+        dica: "Entre arrecadar e enviar aos cofres públicos houve a criação de lei e a fiscalização, assim como o limite a atuação do Estado."
+      },
+      {
+        id: "n5",
+        texto: "A distribuição aos entes é estudo do Direito Financeiro",
+        paiId: "n4",
+        alternativas: []
+      }
+    ],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: []
   }
 ],
 
