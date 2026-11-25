@@ -1,13 +1,13 @@
 'use strict';
 
 /**
- * AULA-6.MJS — Aula 2 - Conceitos iniciais - Constituição art.146 D. Tributário
+ * AULA-6.MJS — Aula 2 - Conceitos - Constituição art.146 - D. Tributário
  * Gerado pelo Construtor de Aulas (aba "Conteúdo da aula").
  */
 window.AULA_DATA = {
   id:     6,
   modulo: "Direito Tributário",
-  titulo: "Aula 2 - Conceitos iniciais - Constituição art.146 D. Tributário",
+  titulo: "Aula 2 - Conceitos - Constituição art.146 - D. Tributário",
 
   // Ordem das telas na sequência de estudo — definida em "Estrutura das telas".
   ordem: [
