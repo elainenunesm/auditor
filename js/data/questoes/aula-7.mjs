@@ -86,7 +86,7 @@ window.AULA_DATA = {
         "."
       ],
       correta: 5,
-      rotulo: "",
+      rotulo: "Social",
       instrucaoDestaque: [],
       instrucaoDestaqueNegrito: []
     }
