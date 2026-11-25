@@ -17,7 +17,8 @@ window.AULA_DATA = {
   "exemplo2",
   "exemplo3",
   "mapaInterativo0",
-  "checagem0"
+  "checagem0",
+  "checagem1"
 ],
 
   antesComecar: {
@@ -226,6 +227,26 @@ window.AULA_DATA = {
     subtituloDestaqueNegrito: [],
     tituloDestaque: [],
     tituloDestaqueNegrito: []
+  },
+  {
+    titulo: "O objeto é o caixa",
+    correta: 0,
+    feedbackCorreto: "",
+    feedbackErrado: "",
+    opcoes: [
+      "Certo",
+      "Errado"
+    ],
+    certoErrado: true,
+    opcoesNegrito: [],
+    opcoesItalico: [],
+    opcoesDestaque: [
+      [],
+      []
+    ],
+    dificuldade: "Fácil",
+    subtituloDestaque: [],
+    subtituloDestaqueNegrito: []
   }
 ],
 
