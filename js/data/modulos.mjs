@@ -38,7 +38,7 @@ const MODULOS = [
     aulas: [
       {
         id:      3,
-        titulo:  "Aula 1 - Conceitos iniciais",
+        titulo:  "Aula 1 - Conceitos iniciais - Contabilidade G.",
         arquivo: "aula-3",
         icone:   'padrao',
       }
