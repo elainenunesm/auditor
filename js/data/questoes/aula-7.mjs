@@ -85,8 +85,10 @@ window.AULA_DATA = {
         "obrigações",
         "."
       ],
-      correta: 0,
-      rotulo: ""
+      correta: 5,
+      rotulo: "",
+      instrucaoDestaque: [],
+      instrucaoDestaqueNegrito: []
     }
   }
 ],
