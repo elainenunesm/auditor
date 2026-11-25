@@ -17,8 +17,7 @@ window.AULA_DATA = {
   "exemplo2",
   "exemplo3",
   "mapaInterativo0",
-  "resumo",
-  "licao"
+  "checagem0"
 ],
 
   antesComecar: {
@@ -192,7 +191,27 @@ window.AULA_DATA = {
   }
 ],
 
-  checagem: [],
+  checagem: [
+  {
+    titulo: "",
+    correta: 0,
+    feedbackCorreto: "",
+    feedbackErrado: "",
+    opcoes: [
+      "",
+      ""
+    ],
+    opcoesNegrito: [],
+    opcoesItalico: [],
+    opcoesDestaque: [
+      [],
+      []
+    ],
+    dificuldade: "Fácil",
+    subtituloDestaque: [],
+    subtituloDestaqueNegrito: []
+  }
+],
 
   resumo: {
   titulo: "Porque estudar contabilidade?",
