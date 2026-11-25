@@ -44,7 +44,7 @@ const MODULOS = [
       },
       {
         id:      7,
-        titulo:  "Nova aula",
+        titulo:  "Resumo 1 - Conceitos iniciais - Contabilidade G.",
         arquivo: "aula-7",
         icone:   'padrao',
       }
