@@ -14,7 +14,8 @@ window.AULA_DATA = {
   "antesComecar",
   "mapaInterativo0",
   "exemplo0",
-  "exemplo1"
+  "exemplo1",
+  "checagem0"
 ],
 
   antesComecar: {
@@ -113,7 +114,28 @@ window.AULA_DATA = {
   }
 ],
 
-  checagem: [],
+  checagem: [
+  {
+    titulo: "",
+    correta: 0,
+    feedbackCorreto: "",
+    feedbackErrado: "",
+    opcoes: [
+      "Certo",
+      "Errado"
+    ],
+    certoErrado: true,
+    opcoesNegrito: [],
+    opcoesItalico: [],
+    opcoesDestaque: [
+      [],
+      []
+    ],
+    dificuldade: "Fácil",
+    subtituloDestaque: [],
+    subtituloDestaqueNegrito: []
+  }
+],
 
   resumo: {
   titulo: "",
