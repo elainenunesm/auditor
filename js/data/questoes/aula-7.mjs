@@ -144,7 +144,7 @@ window.AULA_DATA = {
       corretas: [
         5
       ],
-      rotulo: "",
+      rotulo: "Não exata.",
       tituloDestaqueNegrito: []
     }
   }
