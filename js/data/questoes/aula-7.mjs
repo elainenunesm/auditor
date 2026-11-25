@@ -100,7 +100,7 @@ window.AULA_DATA = {
     obs: "",
     pontos: [],
     palavraPointLabelExemplo: {
-      titulo: "",
+      titulo: "O texto correto é.",
       tituloDestaque: [],
       subtitulo: "",
       subtituloDestaque: [],
