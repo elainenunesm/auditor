@@ -84,9 +84,7 @@ window.AULA_DATA = {
     pontos: [],
     palavraPointLabelExemplo: {
       titulo: "O texto correto é.",
-      tituloDestaque: [
-        2
-      ],
+      tituloDestaque: [],
       subtitulo: "A contabilidade é uma ciência social.",
       subtituloDestaque: [],
       instrucao: "",
