@@ -76,7 +76,7 @@ window.AULA_DATA = {
     palavraPointLabelExemplo: {
       titulo: "O texto correto é.",
       tituloDestaque: [],
-      subtitulo: "",
+      subtitulo: "A contabilidade é uma ciência social.",
       subtituloDestaque: [],
       instrucao: "",
       instrucaoDestaque: [],
@@ -93,7 +93,8 @@ window.AULA_DATA = {
         5
       ],
       rotulo: "Não exata.",
-      tituloDestaqueNegrito: []
+      tituloDestaqueNegrito: [],
+      subtituloDestaqueNegrito: []
     }
   }
 ],
