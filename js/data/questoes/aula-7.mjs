@@ -77,7 +77,7 @@ window.AULA_DATA = {
     }
   },
   {
-    tipo: "acao",
+    tipo: "certo",
     texto: "",
     conclusao: "",
     obs: "",
