@@ -101,10 +101,81 @@ async function lerHandleProgresso() {
 
 /** Atualiza o selo no cabeçalho da tela inicial (#pastaProgressoBadge) — só existe em index.html,
  * por isso sempre confere se o elemento está na página antes de mexer nele. */
+let _arquivoProgressoManualNome = null; // navegador sem pasta (celular): nome do progresso.json aberto
+const SEM_PASTA = !('showDirectoryPicker' in window);
+
+/** Navegador sem pasta (Chrome do celular): botão extra "Salvar" que baixa o progresso.json. */
+function garantirBotaoSalvarProgresso(badge) {
+  let btn = document.getElementById('pastaProgressoSalvar');
+  if (btn) return btn;
+  btn = badge.cloneNode(true);
+  btn.id = 'pastaProgressoSalvar';
+  btn.removeAttribute('onclick');
+  btn.title = 'Baixa o seu progresso em um arquivo progresso.json — depois use "Abrir progresso" pra carregar de volta';
+  btn.querySelector('.pasta-progresso-badge-texto').removeAttribute('id');
+  btn.querySelector('.pasta-progresso-badge-texto').textContent = 'Salvar';
+  btn.classList.remove('conectado');
+  btn.addEventListener('click', salvarArquivoProgressoManual);
+  // Os dois botões num grupo só — o cabeçalho distribui o espaço entre seus filhos diretos.
+  const grupo = document.createElement('div');
+  grupo.className = 'pasta-progresso-grupo';
+  badge.parentNode.insertBefore(grupo, badge);
+  grupo.append(badge, btn);
+  return btn;
+}
+
+function salvarArquivoProgressoManual() {
+  const blob = new Blob([JSON.stringify(_progressoCache, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = NOME_ARQUIVO_PROGRESSO;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 2000);
+}
+
+/** Navegador sem pasta: abre um progresso.json escolhido pela aluna (precisa de toque, por isso no clique). */
+function abrirArquivoProgressoManual() {
+  const inp = document.createElement('input');
+  inp.type = 'file';
+  inp.accept = '.json,application/json';
+  inp.addEventListener('change', async () => {
+    const arq = inp.files && inp.files[0];
+    if (!arq) return;
+    let dados;
+    try {
+      dados = JSON.parse(await arq.text());
+      if (!dados || typeof dados !== 'object' || Array.isArray(dados)) throw new Error('formato');
+    } catch (e) {
+      window.alert('Esse arquivo não parece um progresso.json válido.');
+      return;
+    }
+    _progressoCache = dados;
+    escreverProgressoLocalStorage(dados); // vai-e-vem da visita: sobrevive à troca de tela, não ao F5
+    _arquivoProgressoManualNome = arq.name;
+    atualizarBadgePastaProgresso();
+    if (typeof carregarProgresso === 'function') {
+      await carregarProgresso();
+      if (typeof renderAulas === 'function') renderAulas();
+      if (typeof atualizarSeletoresDeNivel === 'function') atualizarSeletoresDeNivel();
+    }
+  });
+  inp.click();
+}
+
 function atualizarBadgePastaProgresso() {
   const badge = document.getElementById('pastaProgressoBadge');
   if (!badge) return;
   const texto = document.getElementById('pastaProgressoBadgeTexto');
+  if (SEM_PASTA) {
+    garantirBotaoSalvarProgresso(badge);
+    badge.classList.toggle('conectado', !!_arquivoProgressoManualNome);
+    texto.textContent = _arquivoProgressoManualNome || 'Abrir progresso';
+    badge.title = 'Este navegador não conecta pastas — abra o seu progresso.json salvo antes e use "Salvar" para baixar uma cópia atualizada';
+    return;
+  }
   if (_pastaProgressoHandle) {
     badge.classList.add('conectado');
     texto.textContent = _pastaProgressoHandle.name;
@@ -148,10 +219,7 @@ async function lerArquivoProgressoDaPasta() {
 /** Abre o seletor de pasta do sistema operacional — chamado pelo clique no selo do cabeçalho.
  * Precisa de gesto do usuário (clique), por isso não roda sozinho ao carregar a página. */
 async function conectarPastaProgresso() {
-  if (!('showDirectoryPicker' in window)) {
-    window.alert('Seu navegador não permite conectar a uma pasta. Use o Chrome ou o Edge.');
-    return;
-  }
+  if (SEM_PASTA) { abrirArquivoProgressoManual(); return; }
   let handle;
   try {
     handle = await window.showDirectoryPicker();

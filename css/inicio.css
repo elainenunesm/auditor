@@ -44,6 +44,7 @@ body { background: #fff; min-height: 100vh; }
 }
 .pasta-progresso-badge:hover { background: #ececf5; }
 .pasta-progresso-badge.conectado { background: #e8f9ee; border-color: #b8ecc9; color: #1a9d52; }
+.pasta-progresso-grupo { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; flex-shrink: 0; }
 .pasta-progresso-badge-icone { flex-shrink: 0; }
 .pasta-progresso-badge-texto { max-width: 110px; overflow: hidden; text-overflow: ellipsis; }
 
