@@ -66,8 +66,12 @@ window.AULA_DATA = {
       instrucaoDestaqueNegrito: [],
       instrucaoNegrito: true,
       titulo: "Selecione a palavra errada. ",
-      tituloDestaque: [],
-      tituloDestaqueNegrito: [],
+      tituloDestaque: [
+        3
+      ],
+      tituloDestaqueNegrito: [
+        3
+      ],
       subtitulo: "",
       subtituloDestaque: [],
       subtituloDestaqueNegrito: [],
