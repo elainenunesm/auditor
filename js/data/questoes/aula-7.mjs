@@ -116,7 +116,7 @@ window.AULA_DATA = {
 
   checagem: [
   {
-    titulo: "",
+    titulo: "\nEntidade pe uma pessoa ou organização que existe e possui patrimônio próprio",
     correta: 0,
     feedbackCorreto: "",
     feedbackErrado: "",
@@ -133,7 +133,9 @@ window.AULA_DATA = {
     ],
     dificuldade: "Fácil",
     subtituloDestaque: [],
-    subtituloDestaqueNegrito: []
+    subtituloDestaqueNegrito: [],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: []
   }
 ],
 
