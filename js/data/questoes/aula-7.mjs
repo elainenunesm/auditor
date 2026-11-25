@@ -56,7 +56,7 @@ window.AULA_DATA = {
         "é",
         "a",
         "ciência",
-        "social",
+        "exata",
         "que",
         "estuda",
         ",",
