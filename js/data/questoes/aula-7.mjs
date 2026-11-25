@@ -55,7 +55,7 @@ window.AULA_DATA = {
         "A",
         "contabilidade",
         "é",
-        "a",
+        "uma",
         "ciência",
         "exata",
         "."
