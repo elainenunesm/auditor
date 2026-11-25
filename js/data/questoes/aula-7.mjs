@@ -118,7 +118,7 @@ window.AULA_DATA = {
   {
     titulo: "\nEntidade é uma pessoa ou organização que existe e possui patrimônio próprio",
     correta: 0,
-    feedbackCorreto: "Correto.\n\nPara mão falar pessoa ou org",
+    feedbackCorreto: "Correto.\n\nPara mão falar pessoa ou organização, inclui en",
     feedbackErrado: "Errado.\n\nÉ uma pessoa ou organização que existe e possui patrimônio próprio,",
     opcoes: [
       "Certo",
