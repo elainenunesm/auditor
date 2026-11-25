@@ -50,7 +50,7 @@ window.AULA_DATA = {
     obs: "",
     pontos: [],
     palavraSelecionavel: {
-      instrucao: "",
+      instrucao: "A contabilidade é uma ciência exata.",
       sentenca: [
         "A",
         "contabilidade",
