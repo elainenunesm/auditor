@@ -202,7 +202,7 @@ window.AULA_DATA = {
       "Uma Ciência Social",
       "Ciência exata",
       "Uma técnica",
-      "Uma meto"
+      "Uma metodologia"
     ],
     opcoesNegrito: [
       false,
