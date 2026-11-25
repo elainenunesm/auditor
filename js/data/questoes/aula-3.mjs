@@ -208,9 +208,11 @@ window.AULA_DATA = {
     opcoesNegrito: [
       false,
       false,
+      false,
       false
     ],
     opcoesItalico: [
+      false,
       false,
       false,
       false
