@@ -1,13 +1,13 @@
 'use strict';
 
 /**
- * AULA-8.MJS — Nova aula
+ * AULA-8.MJS — Resumo 2 - Conceitos e constituição art. 146 - D. Tributário
  * Gerado pelo Construtor de Aulas (aba "Conteúdo da aula").
  */
 window.AULA_DATA = {
   id:     8,
   modulo: "Direito Tributário",
-  titulo: "Nova aula",
+  titulo: "Resumo 2 - Conceitos e constituição art. 146 - D. Tributário",
 
   // Ordem das telas na sequência de estudo — definida em "Estrutura das telas".
   ordem: [

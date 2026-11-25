@@ -31,7 +31,7 @@ const MODULOS = [
       },
       {
         id:      8,
-        titulo:  "Nova aula",
+        titulo:  "Resumo 2 - Conceitos e constituição art. 146 - D. Tributário",
         arquivo: "aula-8",
         icone:   'padrao',
       }
