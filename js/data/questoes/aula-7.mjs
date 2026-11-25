@@ -13,7 +13,8 @@ window.AULA_DATA = {
   ordem: [
   "antesComecar",
   "mapaInterativo0",
-  "exemplo0"
+  "exemplo0",
+  "exemplo1"
 ],
 
   antesComecar: {
@@ -90,6 +91,58 @@ window.AULA_DATA = {
       instrucaoDestaque: [],
       instrucaoDestaqueNegrito: [],
       instrucaoNegrito: true
+    }
+  },
+  {
+    tipo: "acao",
+    texto: "",
+    conclusao: "",
+    obs: "",
+    pontos: [],
+    palavraPointLabelExemplo: {
+      titulo: "",
+      tituloDestaque: [],
+      subtitulo: "",
+      subtituloDestaque: [],
+      instrucao: "",
+      instrucaoDestaque: [],
+      sentenca: [
+        "A",
+        "contabilidade",
+        "é",
+        "a",
+        "ciência",
+        "social",
+        "que",
+        "estuda",
+        ",",
+        "interpreta",
+        "e",
+        "registra",
+        "os",
+        "fenômenos",
+        "que",
+        "afetam",
+        "o",
+        "patrimônio",
+        "de",
+        "uma",
+        "entidade",
+        ",",
+        "que",
+        "é",
+        "formado",
+        "pelos",
+        "seus",
+        "bens",
+        ",",
+        "direitos",
+        "e",
+        "obrigações",
+        "."
+      ],
+      corretas: [],
+      rotulo: ""
     }
   }
 ],
