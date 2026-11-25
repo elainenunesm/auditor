@@ -49,7 +49,7 @@ window.AULA_DATA = {
     obs: "",
     pontos: [],
     palavraSelecionavel: {
-      instrucao: "",
+      instrucao: "Selecione ",
       sentenca: [
         "A",
         "contabilidade",
