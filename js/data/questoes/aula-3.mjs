@@ -200,15 +200,19 @@ window.AULA_DATA = {
     opcoes: [
       "Uma Arte",
       "Uma Ciência Social",
-      "Ciência exata"
+      "Ciência exata",
+      ""
     ],
     opcoesNegrito: [
+      false,
       false
     ],
     opcoesItalico: [
+      false,
       false
     ],
     opcoesDestaque: [
+      [],
       [],
       [],
       []
