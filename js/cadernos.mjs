@@ -164,10 +164,17 @@ async function renderRevisaoGeral(marcados) {
         <h3>Revisão geral</h3>
         <p class="cor-revisao">${partes.join(' e ')} de ${aulas.length} ${aulas.length !== 1 ? 'aulas' : 'aula'}, na ordem das aulas</p>
       </div>
-      <button type="button" class="btn-praticar" id="btnRevisaoGeral" data-aulas="${aulas.map(a => a.id).join(',')}">Ver</button>
-    </div>` + aulas.map(a => {
+      <button type="button" class="btn-praticar" id="btnRevisaoGeral" data-aulas="${aulas.map(a => a.id).join(',')}">Ver tudo</button>
+    </div>
+    <p class="revisao-geral-item">Ordem da revisão geral:</p>` + aulas.map((a, i) => {
       const n = (marcados[String(a.id)] || []).length;
-      return `<p class="revisao-geral-item">${escaparHtml(a.titulo)} — ${n} ${n !== 1 ? 'itens' : 'item'}</p>`;
+      return `
+    <div class="erro-card">
+      <div class="erro-card-info">
+        <h3>${i + 1}. ${escaparHtml(a.titulo)}</h3>
+        <p class="cor-revisao">${n} ${n !== 1 ? 'itens' : 'item'} para revisar</p>
+      </div>
+    </div>`;
     }).join('');
 }
 
@@ -211,7 +218,7 @@ function configurarEventosCadernos() {
     const geralRev = e.target.closest('#btnRevisaoGeral');
     if (geralRev) {
       const [primeira, ...resto] = geralRev.dataset.aulas.split(',');
-      window.location.href = `estudo.html?aula=${primeira}&modo=revisao` + (resto.length ? `&seq=${resto.join(',')}` : '');
+      window.location.href = `estudo.html?aula=${primeira}&modo=revisao&ger=1/${resto.length + 1}` + (resto.length ? `&seq=${resto.join(',')}` : '');
       return;
     }
     if (e.target.closest('#btnPraticarGeral')) {

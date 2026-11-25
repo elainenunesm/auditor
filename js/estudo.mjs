@@ -24,7 +24,14 @@ const seqRevisao = (params.get('seq') || '').split(',').filter(Boolean);
 function destinoFimRevisao() {
   if (!seqRevisao.length) return 'index.html?view=erros';
   const [prox, ...resto] = seqRevisao;
-  return `estudo.html?aula=${encodeURIComponent(prox)}&modo=revisao` + (tipoRevisao ? `&tipo=${tipoRevisao}` : '') + (resto.length ? `&seq=${resto.join(',')}` : '');
+  const [pos, total] = (params.get('ger') || '').split('/').map(Number);
+  const ger = pos && total ? `&ger=${pos + 1}/${total}` : '';
+  return `estudo.html?aula=${encodeURIComponent(prox)}&modo=revisao` + (tipoRevisao ? `&tipo=${tipoRevisao}` : '') + ger + (resto.length ? `&seq=${resto.join(',')}` : '');
+}
+/** "Revisão geral · aula 2 de 3 — " no título quando a revisão percorre várias aulas. */
+function prefixoRevisaoGeral() {
+  const [pos, total] = (params.get('ger') || '').split('/').map(Number);
+  return pos && total ? `Revisão geral (aula ${pos} de ${total}) — ` : 'Revisão — ';
 }
 
 // Questões pontuadas desativadas por enquanto (dado da aula mantido em
@@ -4506,7 +4513,7 @@ carregarDadosIniciais().then((carregado) => {
       estado.origIdx = errIdxs;
     }
   } else if (modoRevisao) {
-    aula = { ...aulaOriginal, titulo: `Revisão — ${aulaOriginal.titulo}`, questoes: [] };
+    aula = { ...aulaOriginal, titulo: `${prefixoRevisaoGeral()}${aulaOriginal.titulo}`, questoes: [] };
   } else {
     if (!QUESTOES_ATIVAS) aula = { ...aula, questoes: [] };
     estado.origIdx = aula.questoes.map((_, i) => i);
