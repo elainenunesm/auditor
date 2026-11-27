@@ -67,6 +67,12 @@ const NIVEIS = [
     titulo:      "Etapa 1 - Conceitos",
     etapas:      [1, 2],
     insigniaUrl: "",
+  },
+  {
+    id:          2,
+    titulo:      "Nova etapa",
+    etapas:      [],
+    insigniaUrl: "",
   }
 ];
 
