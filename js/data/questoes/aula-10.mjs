@@ -20,7 +20,7 @@ window.AULA_DATA = {
   titulo: "Contabilidade Geral",
   descricao: "",
   aprender: "Outros conceitos da Contabilidade Geral.",
-  importancia: "Importante d",
+  importancia: "Importante para conceituar contabilidade.",
   descricaoDestaque: [],
   descricaoDestaqueNegrito: [],
   tituloDestaque: [],
