@@ -17,12 +17,15 @@ window.AULA_DATA = {
 ],
 
   antesComecar: {
-  titulo: "Contabi",
+  titulo: "Contabilidade Geral",
   descricao: "Outros conceitos da Contabilidade Geral.",
   aprender: "",
   importancia: "",
   descricaoDestaque: [],
-  descricaoDestaqueNegrito: []
+  descricaoDestaqueNegrito: [],
+  tituloDestaque: [],
+  tituloDestaqueNegrito: [],
+  tituloNegrito: true
 },
 
   exemplo: [],
