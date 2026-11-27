@@ -20,14 +20,16 @@ window.AULA_DATA = {
   titulo: "Contabilidade Geral",
   descricao: "",
   aprender: "Outros conceitos da Contabilidade Geral.",
-  importancia: "Cai em prova a respeita da constituição.",
+  importancia: "Importante d",
   descricaoDestaque: [],
   descricaoDestaqueNegrito: [],
   tituloDestaque: [],
   tituloDestaqueNegrito: [],
   tituloNegrito: true,
   importanciaDestaque: [],
-  importanciaDestaqueNegrito: []
+  importanciaDestaqueNegrito: [],
+  aprenderDestaque: [],
+  aprenderDestaqueNegrito: []
 },
 
   exemplo: [],
