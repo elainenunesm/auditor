@@ -18,7 +18,7 @@ window.AULA_DATA = {
 
   antesComecar: {
   titulo: "",
-  descricao: "",
+  descricao: "Outros conceitos da C",
   aprender: "",
   importancia: ""
 },
