@@ -212,7 +212,9 @@ function montarEtapas() {
           <h2 class="hero-title">${escaparHtml(etapa.materia || etapa.titulo || '')}</h2>
           <p class="hero-etapa"></p>
         </div>
-        <svg class="hero-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${iconeDaDisciplina(etapa.materia || etapa.titulo)}</svg>
+        ${etapa.iconeUrl
+          ? `<img class="hero-icone hero-icone-img" src="${escaparHtml(etapa.iconeUrl)}" alt="">`
+          : `<svg class="hero-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${etapa.iconeSvg || iconeDaDisciplina(etapa.materia || etapa.titulo)}</svg>`}
       </div>
       <div class="modulo-progresso">
         <div class="modulo-progresso-topo"><span>Progresso do módulo</span><strong class="modulo-progresso-pct">0%</strong></div>
