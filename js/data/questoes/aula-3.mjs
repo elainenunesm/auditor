@@ -133,7 +133,6 @@ window.AULA_DATA = {
       68
     ],
     conclusaoDestaqueNegrito: [
-      33,
       20,
       19,
       39,
@@ -146,7 +145,8 @@ window.AULA_DATA = {
       71,
       75,
       0,
-      46
+      46,
+      31
     ],
     obsDestaque: [],
     obsDestaqueNegrito: [
