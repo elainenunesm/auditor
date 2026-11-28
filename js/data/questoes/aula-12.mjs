@@ -184,11 +184,13 @@ window.AULA_DATA = {
       },
       {
         id: "n13",
-        texto: "Governos",
+        texto: "Governo",
         tipo: "nenhum",
         cor: "#DFF5E5",
         paiId: "n8",
-        cartaoTexto: ""
+        cartaoTexto: "",
+        textoDestaque: [],
+        textoDestaqueNegrito: []
       }
     ]
   }
