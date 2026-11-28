@@ -48,8 +48,19 @@ window.AULA_DATA = {
       1,
       0
     ],
-    conclusaoDestaque: [],
-    conclusaoDestaqueNegrito: []
+    conclusaoDestaque: [
+      5,
+      4,
+      7
+    ],
+    conclusaoDestaqueNegrito: [
+      0,
+      1,
+      2,
+      4,
+      5,
+      7
+    ]
   }
 ],
 
