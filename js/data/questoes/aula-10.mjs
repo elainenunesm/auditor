@@ -154,16 +154,22 @@ window.AULA_DATA = {
   },
   {
     titulo: "(Fundatec – Técnico – IFC – 2023).Finalidade da contabilidade.\n\nAssinale a alternativa que apresenta corretamente a finalidade da contabilidade.",
-    correta: 0,
+    correta: 2,
     feedbackCorreto: "",
     feedbackErrado: "",
     opcoes: [
       "Apurar o lucro dos sócios da empresa.",
-      "Priorizar a produção de informações para os órgãos governamentais."
+      "Priorizar a produção de informações para os órgãos governamentais.",
+      "Produzir informações fidedignas da situação de um patrimônio para os seus usuários."
     ],
-    opcoesNegrito: [],
-    opcoesItalico: [],
+    opcoesNegrito: [
+      false
+    ],
+    opcoesItalico: [
+      false
+    ],
     opcoesDestaque: [
+      [],
       [],
       []
     ],
