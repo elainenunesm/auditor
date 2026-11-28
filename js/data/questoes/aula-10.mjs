@@ -15,7 +15,8 @@ window.AULA_DATA = {
   "exemplo0",
   "exemplo1",
   "checagem0",
-  "checagem1"
+  "checagem1",
+  "checagem2"
 ],
 
   antesComecar: {
@@ -196,6 +197,24 @@ window.AULA_DATA = {
       7,
       8
     ]
+  },
+  {
+    titulo: "(CEBRASPE – Técnico – FUB – 2025)Objeto.\n\nO objeto da contabilidade é o patrimônio da entidade.\n",
+    correta: 0,
+    feedbackCorreto: "",
+    feedbackErrado: "",
+    opcoes: [
+      "Certo",
+      "Errado"
+    ],
+    certoErrado: true,
+    opcoesNegrito: [],
+    opcoesItalico: [],
+    opcoesDestaque: [
+      [],
+      []
+    ],
+    dificuldade: "Fácil"
   }
 ],
 
