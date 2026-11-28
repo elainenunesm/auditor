@@ -225,7 +225,7 @@ window.AULA_DATA = {
     feedbackCorreto: "",
     feedbackErrado: "",
     opcoes: [
-      "",
+      "O patrimônio.",
       ""
     ],
     opcoesNegrito: [],
