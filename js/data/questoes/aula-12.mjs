@@ -114,11 +114,13 @@ window.AULA_DATA = {
       },
       {
         id: "n6",
-        texto: "",
+        texto: "Acio",
         tipo: "nenhum",
         cor: "#F1EBFF",
         paiId: "n2",
-        cartaoTexto: ""
+        cartaoTexto: "",
+        textoDestaque: [],
+        textoDestaqueNegrito: []
       }
     ]
   }
