@@ -151,6 +151,14 @@ window.AULA_DATA = {
         cartaoTexto: "",
         textoDestaque: [],
         textoDestaqueNegrito: []
+      },
+      {
+        id: "n10",
+        texto: "",
+        tipo: "nenhum",
+        cor: "#FCE8E8",
+        paiId: "n1",
+        cartaoTexto: ""
       }
     ]
   }
