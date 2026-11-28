@@ -81,13 +81,24 @@ window.AULA_DATA = {
     ],
     obsDestaque: [
       0,
-      1
+      1,
+      7,
+      12,
+      13,
+      15,
+      16,
+      17
     ],
     obsDestaqueNegrito: [
       1,
       0,
       9,
-      3
+      3,
+      12,
+      13,
+      17,
+      16,
+      15
     ]
   }
 ],
