@@ -164,11 +164,13 @@ window.AULA_DATA = {
       },
       {
         id: "n11",
-        texto: "",
+        texto: "Clientes inv",
         tipo: "nenhum",
         cor: "#EAE8FF",
         paiId: "n8",
-        cartaoTexto: ""
+        cartaoTexto: "",
+        textoDestaque: [],
+        textoDestaqueNegrito: []
       }
     ]
   }
