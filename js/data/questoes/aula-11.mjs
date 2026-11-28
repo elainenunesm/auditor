@@ -13,7 +13,8 @@ window.AULA_DATA = {
   ordem: [
   "antesComecar",
   "checagem0",
-  "checagem1"
+  "checagem1",
+  "checagem2"
 ],
 
   antesComecar: {
@@ -66,6 +67,28 @@ window.AULA_DATA = {
     correta: 1,
     feedbackCorreto: "O objeto de estudo da contabilidade é o Patrimônio.",
     feedbackErrado: "Errado.\n\nO objeto de estudo da contabilidade é o Patrimônio.",
+    opcoes: [
+      "Certo",
+      "Errado"
+    ],
+    certoErrado: true,
+    opcoesNegrito: [],
+    opcoesItalico: [],
+    opcoesDestaque: [
+      [],
+      []
+    ],
+    dificuldade: "Fácil",
+    subtituloDestaque: [],
+    subtituloDestaqueNegrito: [],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: []
+  },
+  {
+    titulo: "Compete à lei ordinária municipal resolver conflitos de competência tributária entre os Municípios e os Estados.",
+    correta: 1,
+    feedbackCorreto: "\nA competência para dispor sobre conflitos de competência tributária entre os entes federativos é da lei complementar, conforme o art. 146, I, da Constituição Federal.",
+    feedbackErrado: "\nA competência para dispor sobre conflitos de competência tributária entre os entes federativos é da lei complementar, conforme o art. 146, I, da Constituição Federal.\n\nObservar que é lei complementar e não lei ordinária.",
     opcoes: [
       "Certo",
       "Errado"
