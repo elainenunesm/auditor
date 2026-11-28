@@ -130,7 +130,7 @@ window.AULA_DATA = {
       12,
       16
     ],
-    conclusaoMarcador: false
+    conclusaoMarcador: true
   },
   {
     tipo: "objetivo",
