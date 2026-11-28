@@ -154,7 +154,7 @@ window.AULA_DATA = {
       },
       {
         id: "n10",
-        texto: "",
+        texto: "Investidores",
         tipo: "nenhum",
         cor: "#DFF5E5",
         paiId: "n8",
