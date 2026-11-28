@@ -162,7 +162,7 @@ window.AULA_DATA = {
       "Priorizar a produção de informações para os órgãos governamentais.",
       "Produzir informações fidedignas da situação de um patrimônio para os seus usuários.",
       "Evitar multas de fiscalização tributária.",
-      ""
+      "Priorizar a produção de informações para investidores."
     ],
     opcoesNegrito: [
       false,
