@@ -19,7 +19,7 @@ window.AULA_DATA = {
   antesComecar: {
   titulo: "Resumo maroto",
   descricao: "Questões para exercitar os conceitos.",
-  aprender: "",
+  aprender: "Vai exercitar os conceitos",
   importancia: "",
   tituloDestaque: [],
   tituloDestaqueNegrito: [],
