@@ -223,7 +223,7 @@ window.AULA_DATA = {
     titulo: "(FAFIPA – Analista Fiscal de Tributos – Pref. Jaguapitã/PR– 2025)Objeto.\n\nAssinale a alternativa que indica CORRETAMENTE o objeto da Contabilidade.\n",
     correta: 0,
     feedbackCorreto: "A Contabilidade é uma ciência (social) que tem por objeto o patrimônio das entidades e por objetivo o controle desse patrimônio, com a finalidade de fornecer informações a seus usuários. Tais informações serão úteis para as tomadas de decisão de natureza econômica e financeira.",
-    feedbackErrado: "",
+    feedbackErrado: "correta a alternativa A.\n\nA Contabilidade é uma ciência (social) que tem por objeto o patrimônio das entidades e por objetivo o controle desse patrimônio, com a finalidade de fornecer informações a seus usuários. Tais informações serão úteis para as tomadas de decisão de natureza econômica e financeira.",
     opcoes: [
       "O patrimônio.",
       "O orçamento.",
