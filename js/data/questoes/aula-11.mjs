@@ -12,7 +12,8 @@ window.AULA_DATA = {
   // Ordem das telas na sequência de estudo — definida em "Estrutura das telas".
   ordem: [
   "antesComecar",
-  "checagem0"
+  "checagem0",
+  "checagem1"
 ],
 
   antesComecar: {
@@ -57,6 +58,28 @@ window.AULA_DATA = {
       [],
       []
     ],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: []
+  },
+  {
+    titulo: "Compete à lei ordinária municipal resolver conflitos de competência tributária entre os Municípios e os Estados.",
+    correta: 1,
+    feedbackCorreto: "\nA competência para dispor sobre conflitos de competência tributária entre os entes federativos é da lei complementar, conforme o art. 146, I, da Constituição Federal.",
+    feedbackErrado: "\nA competência para dispor sobre conflitos de competência tributária entre os entes federativos é da lei complementar, conforme o art. 146, I, da Constituição Federal.\n\nObservar que é lei complementar e não lei ordinária.",
+    opcoes: [
+      "Certo",
+      "Errado"
+    ],
+    certoErrado: true,
+    opcoesNegrito: [],
+    opcoesItalico: [],
+    opcoesDestaque: [
+      [],
+      []
+    ],
+    dificuldade: "Fácil",
+    subtituloDestaque: [],
+    subtituloDestaqueNegrito: [],
     tituloDestaque: [],
     tituloDestaqueNegrito: []
   }
