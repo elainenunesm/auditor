@@ -22,7 +22,10 @@ window.AULA_DATA = {
   aprender: "Vai exercitar os conceitos",
   importancia: "Quanto mais exercita mais lembra dos conceitos.",
   tituloDestaque: [],
-  tituloDestaqueNegrito: [],
+  tituloDestaqueNegrito: [
+    0,
+    1
+  ],
   descricaoDestaque: [],
   descricaoDestaqueNegrito: [],
   aprenderDestaque: [],
