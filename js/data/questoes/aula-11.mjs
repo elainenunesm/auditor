@@ -12,8 +12,7 @@ window.AULA_DATA = {
   // Ordem das telas na sequência de estudo — definida em "Estrutura das telas".
   ordem: [
   "antesComecar",
-  "resumo",
-  "licao"
+  "checagem0"
 ],
 
   antesComecar: {
@@ -41,7 +40,27 @@ window.AULA_DATA = {
 
   exemplo: [],
 
-  checagem: [],
+  checagem: [
+  {
+    titulo: "A distribuição dos valores arrecadados entre União, Estados e Municípios é a mesma coisa que arrecadação tributária?",
+    correta: 1,
+    feedbackCorreto: "Arrecadação: entrada dos tributos nos cofres públicos.\nDistribuição de receitas: repartição dos recursos entre os entes públicos.",
+    feedbackErrado: "Resposta: Errada - \nArrecadação: entrada dos tributos nos cofres públicos.\nDistribuição de receitas: repartição dos recursos entre os entes públicos.",
+    opcoes: [
+      "Certo",
+      "Errado"
+    ],
+    certoErrado: true,
+    opcoesNegrito: [],
+    opcoesItalico: [],
+    opcoesDestaque: [
+      [],
+      []
+    ],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: []
+  }
+],
 
   resumo: {
   titulo: "",
