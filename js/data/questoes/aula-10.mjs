@@ -37,11 +37,17 @@ window.AULA_DATA = {
   {
     tipo: "nenhum",
     texto: "Termos Importantes.",
-    conclusao: "* Objetivo ou finalidade — Fornecer informações aos usuários para a tomada de decisões.\n",
+    conclusao: "\n* Objetivo ou finalidade — Fornecer informações aos usuários para a tomada de decisões.\n",
     obs: "",
     pontos: [],
-    textoDestaque: [],
-    textoDestaqueNegrito: [],
+    textoDestaque: [
+      0,
+      1
+    ],
+    textoDestaqueNegrito: [
+      1,
+      0
+    ],
     conclusaoDestaque: [],
     conclusaoDestaqueNegrito: []
   }
