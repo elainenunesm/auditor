@@ -107,7 +107,7 @@ window.AULA_DATA = {
 
   checagem: [
   {
-    titulo: "(CEBRASPE – Analista de Finanças Públicas – SEFAZ/RJ – 2025)\n\nA contabilidade tem adquirido importância crescente no contexto atual, impulsionada pelo crescimento das organizações, sejam elas públicas ou privadas, pela crescente complexidade de suas transações e operações e pela volatilidade e turbulência do ambiente de negócios.\nA contabilidade tem como objeto\n\nI os acionistas.\n\nII os credores.\n\nIII os stakeholders.\n\nIV o patrimônio das entidades.\nAssinale a opção correta.",
+    titulo: "(CEBRASPE – Analista de Finanças Públicas – SEFAZ/RJ – 2025)\n\nA contabilidade tem adquirido importância crescente no contexto atual, impulsionada pelo crescimento das organizações, sejam elas públicas ou privadas, pela crescente complexidade de suas transações e operações e pela volatilidade e turbulência do ambiente de negócios.\nA contabilidade tem como objeto\n\nI os acionistas.\n\nII os credores.\n\nIII os stakeholders.\n\nIV o patrimônio das entidades.\n\nAssinale a opção correta.",
     correta: 0,
     feedbackCorreto: "",
     feedbackErrado: "",
