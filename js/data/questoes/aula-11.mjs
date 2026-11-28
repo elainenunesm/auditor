@@ -17,7 +17,8 @@ window.AULA_DATA = {
   "checagem2",
   "checagem3",
   "checagem4",
-  "checagem5"
+  "checagem5",
+  "checagem6"
 ],
 
   antesComecar: {
@@ -192,6 +193,43 @@ window.AULA_DATA = {
     tituloDestaque: [],
     tituloDestaqueNegrito: [],
     tituloNegrito: false
+  },
+  {
+    titulo: "Contabilidade é?",
+    correta: 1,
+    feedbackCorreto: "A Contabilidade também faz cálculos exatos! O que acontece é que seu objeto de estudo, o patrimônio, envolve situações que exigem interpretação e julgamento, por isso, social.",
+    feedbackErrado: "Alternativa correta B.\n\nA Contabilidade também faz cálculos exatos! O que acontece é que seu objeto de estudo, o patrimônio, envolve situações que exigem interpretação e julgamento, por isso, social.",
+    opcoes: [
+      "Uma Arte",
+      "Uma Ciência Social",
+      "Ciência exata",
+      "Uma técnica",
+      "Uma metodologia"
+    ],
+    opcoesNegrito: [
+      false,
+      false,
+      false,
+      false
+    ],
+    opcoesItalico: [
+      false,
+      false,
+      false,
+      false
+    ],
+    opcoesDestaque: [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    dificuldade: "Fácil",
+    subtituloDestaque: [],
+    subtituloDestaqueNegrito: [],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: []
   }
 ],
 
