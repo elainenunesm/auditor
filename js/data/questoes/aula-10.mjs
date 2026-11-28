@@ -125,7 +125,8 @@ window.AULA_DATA = {
     subtituloDestaque: [],
     subtituloDestaqueNegrito: [],
     tituloDestaque: [],
-    tituloDestaqueNegrito: []
+    tituloDestaqueNegrito: [],
+    subtitulo: "A contabilidade tem adquirido importância crescente no contexto atual, impulsionada pelo crescimento das organizações, sejam elas públicas ou privadas, pela crescente complexidade de suas transações e operações e pela volatilidade e turbulência do ambiente de negócios. A contabilidade tem como objeto I os acionistas. II os credores. III os stakeholders. IV o patrimônio das entidades. Assinale a opção correta."
   }
 ],
 
