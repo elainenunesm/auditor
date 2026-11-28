@@ -158,7 +158,7 @@ window.AULA_DATA = {
     feedbackCorreto: "",
     feedbackErrado: "",
     opcoes: [
-      "",
+      "Apurar o lucro dos sócios da empresa.",
       ""
     ],
     opcoesNegrito: [],
