@@ -153,11 +153,11 @@ window.AULA_DATA = {
       subtituloDestaqueNegrito: [],
       textoDestaque: [],
       textoDestaqueNegrito: [
+        12,
+        1,
+        6,
         7,
-        8,
-        2,
-        5,
-        12
+        11
       ],
       textoMarcador: true
     }
