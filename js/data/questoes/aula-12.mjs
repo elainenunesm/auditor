@@ -146,7 +146,7 @@ window.AULA_DATA = {
         id: "n9",
         texto: "Credores",
         tipo: "nenhum",
-        cor: "#f0b8ff",
+        cor: "#e5cbec",
         paiId: "n8",
         cartaoTexto: "",
         textoDestaque: [],
