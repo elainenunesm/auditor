@@ -36,10 +36,14 @@ window.AULA_DATA = {
   exemplo: [
   {
     tipo: "nenhum",
-    texto: "Termos Importantes/",
+    texto: "Termos Importantes.",
     conclusao: "",
     obs: "",
-    pontos: []
+    pontos: [],
+    textoDestaque: [],
+    textoDestaqueNegrito: [],
+    conclusaoDestaque: [],
+    conclusaoDestaqueNegrito: []
   }
 ],
 
