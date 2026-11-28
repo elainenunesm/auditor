@@ -220,7 +220,7 @@ window.AULA_DATA = {
     tituloDestaqueNegrito: []
   },
   {
-    titulo: "(FAFIPA – Analista Fiscal de Tributos – Pref. Jaguapitã/PR– 2025)Objeto.\n\nAssinale a alternativa que indica CORRETAMENTE o objeto da Contabilidade.",
+    titulo: "(FAFIPA – Analista Fiscal de Tributos – Pref. Jaguapitã/PR– 2025)Objeto.\n\nAssinale a alternativa que indica CORRETAMENTE o objeto da Contabilidade.\n",
     correta: 0,
     feedbackCorreto: "",
     feedbackErrado: "",
@@ -235,8 +235,8 @@ window.AULA_DATA = {
       []
     ],
     dificuldade: "Fácil",
-    tituloDestaque: [],
-    tituloDestaqueNegrito: []
+    subtituloDestaque: [],
+    subtituloDestaqueNegrito: []
   }
 ],
 
