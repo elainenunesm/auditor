@@ -76,7 +76,8 @@ window.AULA_DATA = {
     ],
     conclusaoDestaque: [],
     conclusaoDestaqueNegrito: [
-      0
+      0,
+      3
     ],
     obsDestaque: [],
     obsDestaqueNegrito: []
