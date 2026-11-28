@@ -67,7 +67,7 @@ window.AULA_DATA = {
   {
     tipo: "nenhum",
     texto: "Termos importantes:",
-    conclusao: "Contabilidade — É uma ciência social.\nA Contabilidade também faz cálculos exatos! \nO que acontece é que seu objeto de estudo, o patrimônio, envolve situações que exigem interpretação e julgamento, por isso, social.\n\n* Entidade — É uma pessoa ou organização que existe e possui patrimônio próprio,\n\n* Patrimônio — É o conjunto de bens, direitos e obrigações.\n",
+    conclusao: "Contabilidade — É uma ciência social.\nA Contabilidade também faz cálculos exatos! \nO que acontece é que seu objeto de estudo, o patrimônio, envolve situações que exigem interpretação e julgamento, por isso, social.\n\n\n* Entidade — É uma pessoa ou organização que existe e possui patrimônio próprio,\n\n* Patrimônio — É o conjunto de bens, direitos e obrigações.\n",
     obs: "",
     pontos: [],
     textoDestaque: [
@@ -79,8 +79,6 @@ window.AULA_DATA = {
       1
     ],
     conclusaoDestaque: [
-      65,
-      66,
       46,
       47,
       48,
@@ -90,8 +88,6 @@ window.AULA_DATA = {
       5,
       42,
       57,
-      65,
-      66,
       46,
       47,
       48,
