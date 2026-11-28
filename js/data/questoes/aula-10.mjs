@@ -202,7 +202,7 @@ window.AULA_DATA = {
     titulo: "(CEBRASPE – Técnico – FUB – 2025)Objeto.\n\nO objeto da contabilidade é o patrimônio da entidade.\n",
     correta: 0,
     feedbackCorreto: "A Contabilidade é uma ciência (social) que tem por objeto o patrimônio das entidades e por objetivo o controle desse patrimônio, com a finalidade de fornecer informações a seus usuários.\nAssim, correta a assertiva.",
-    feedbackErrado: "Alteranota correta.\n\nA Contabilidade é uma ciência (social) que tem por objeto o patrimônio das entidades e por objetivo o controle desse patrimônio, com a finalidade de fornecer informações a seus usuários.\nAssim, correta a assertiva.",
+    feedbackErrado: "Alternativa correta.\n\nA Contabilidade é uma ciência (social) que tem por objeto o patrimônio das entidades e por objetivo o controle desse patrimônio, com a finalidade de fornecer informações a seus usuários.\nAssim, correta a assertiva.",
     opcoes: [
       "Certo",
       "Errado"
