@@ -36,7 +36,7 @@ window.AULA_DATA = {
   exemplo: [
   {
     tipo: "nenhum",
-    texto: "Termo",
+    texto: "Termos Importantes/",
     conclusao: "",
     obs: "",
     pontos: []
