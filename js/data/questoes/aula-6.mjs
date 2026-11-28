@@ -90,7 +90,6 @@ window.AULA_DATA = {
     ],
     obsDestaqueNegrito: [
       19,
-      16,
       46,
       35,
       44,
@@ -98,7 +97,8 @@ window.AULA_DATA = {
       27,
       31,
       32,
-      48
+      48,
+      15
     ]
   },
   {
