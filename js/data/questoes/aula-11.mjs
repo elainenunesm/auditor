@@ -1,13 +1,13 @@
 'use strict';
 
 /**
- * AULA-11.MJS — Nova aula
+ * AULA-11.MJS — Resumo 2 - Conceitos iniciais - Contabilidade G
  * Gerado pelo Construtor de Aulas (aba "Conteúdo da aula").
  */
 window.AULA_DATA = {
   id:     11,
   modulo: "Contabilidade Geral",
-  titulo: "Nova aula",
+  titulo: "Resumo 2 - Conceitos iniciais - Contabilidade G",
 
   // Ordem das telas na sequência de estudo — definida em "Estrutura das telas".
   ordem: [
