@@ -134,10 +134,20 @@ window.AULA_DATA = {
       },
       {
         id: "n8",
+        texto: "Externos",
+        tipo: "nenhum",
+        cor: "#FCE8E8",
+        paiId: "n1",
+        cartaoTexto: "",
+        textoDestaque: [],
+        textoDestaqueNegrito: []
+      },
+      {
+        id: "n9",
         texto: "",
         tipo: "nenhum",
-        cor: "#FFF8D9",
-        paiId: "n1",
+        cor: "#DFF5E5",
+        paiId: "n8",
         cartaoTexto: ""
       }
     ]
