@@ -15,8 +15,7 @@ window.AULA_DATA = {
   "exemplo0",
   "exemplo1",
   "checagem0",
-  "resumo",
-  "licao"
+  "checagem1"
 ],
 
   antesComecar: {
@@ -152,6 +151,27 @@ window.AULA_DATA = {
       0
     ],
     subtitulo: ""
+  },
+  {
+    titulo: "(Fundatec – Técnico – IFC – 2023).Finalidade da contabilidade.\n\nAssinale a alternativa que apresenta corretamente a finalidade da contabilidade.",
+    correta: 0,
+    feedbackCorreto: "",
+    feedbackErrado: "",
+    opcoes: [
+      "",
+      ""
+    ],
+    opcoesNegrito: [],
+    opcoesItalico: [],
+    opcoesDestaque: [
+      [],
+      []
+    ],
+    dificuldade: "Fácil",
+    subtituloDestaque: [],
+    subtituloDestaqueNegrito: [],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: []
   }
 ],
 
