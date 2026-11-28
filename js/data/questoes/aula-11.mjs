@@ -18,13 +18,15 @@ window.AULA_DATA = {
 
   antesComecar: {
   titulo: "Resumo maroto",
-  descricao: "Questões para exercitar os conceitoscompreender melhor.",
+  descricao: "Questões para exercitar os conceitos.",
   aprender: "",
   importancia: "",
   tituloDestaque: [],
   tituloDestaqueNegrito: [],
   descricaoDestaque: [],
-  descricaoDestaqueNegrito: []
+  descricaoDestaqueNegrito: [],
+  aprenderDestaque: [],
+  aprenderDestaqueNegrito: []
 },
 
   exemplo: [],
