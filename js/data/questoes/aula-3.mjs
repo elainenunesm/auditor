@@ -144,9 +144,9 @@ window.AULA_DATA = {
       66,
       68,
       71,
-      48,
       75,
-      0
+      0,
+      46
     ],
     obsDestaque: [],
     obsDestaqueNegrito: [
