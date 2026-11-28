@@ -124,11 +124,13 @@ window.AULA_DATA = {
       },
       {
         id: "n7",
-        texto: "Empreg",
+        texto: "Empregados",
         tipo: "nenhum",
         cor: "#DFF3FC",
         paiId: "n2",
-        cartaoTexto: ""
+        cartaoTexto: "",
+        textoDestaque: [],
+        textoDestaqueNegrito: []
       }
     ]
   }
