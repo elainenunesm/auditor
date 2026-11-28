@@ -67,7 +67,7 @@ window.AULA_DATA = {
     tipo: "nenhum",
     texto: "Objeto X Objetivo",
     conclusao: "\n* Objeto (patrimônio).\n\n\n* Objetivo se não tiver fornecer informações incluir controlar o patrimônio.\n",
-    obs: "Não confunda:\n\nOobjeto(objeto de estudo patrimônio) com objetivo (finalidade, fornecer informações ou controlar o patrimônio)",
+    obs: "Não confunda:\n\nOobjeto (objeto de estudo patrimônio) com objetivo (finalidade, fornecer informações ou controlar o patrimônio)",
     pontos: [],
     textoDestaque: [],
     textoDestaqueNegrito: [
@@ -79,8 +79,14 @@ window.AULA_DATA = {
       0,
       3
     ],
-    obsDestaque: [],
-    obsDestaqueNegrito: []
+    obsDestaque: [
+      0,
+      1
+    ],
+    obsDestaqueNegrito: [
+      1,
+      0
+    ]
   }
 ],
 
