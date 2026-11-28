@@ -164,7 +164,7 @@ window.AULA_DATA = {
       },
       {
         id: "n11",
-        texto: "Clientes inv",
+        texto: "Clientes ou forncedores",
         tipo: "nenhum",
         cor: "#EAE8FF",
         paiId: "n8",
