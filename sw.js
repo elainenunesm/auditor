@@ -27,6 +27,7 @@ const ARQUIVOS = [
   "./js/data/questoes/aula-7.mjs",
   "./js/data/questoes/aula-10.mjs",
   "./js/data/questoes/aula-11.mjs",
+  "./js/data/questoes/aula-12.mjs",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./manifest.json"
