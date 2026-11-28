@@ -84,7 +84,7 @@ window.AULA_DATA = {
       },
       {
         id: "n3",
-        texto: "Pre",
+        texto: "Presidente",
         tipo: "nenhum",
         cor: "#F1EBFF",
         paiId: "n2",
