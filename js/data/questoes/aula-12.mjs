@@ -104,13 +104,21 @@ window.AULA_DATA = {
       },
       {
         id: "n5",
-        texto: "",
+        texto: "Gerentes",
         tipo: "nenhum",
         cor: "#EAE8FF",
         paiId: "n2",
         cartaoTexto: "",
         textoDestaque: [],
         textoDestaqueNegrito: []
+      },
+      {
+        id: "n6",
+        texto: "",
+        tipo: "nenhum",
+        cor: "#F1EBFF",
+        paiId: "n1",
+        cartaoTexto: ""
       }
     ]
   }
