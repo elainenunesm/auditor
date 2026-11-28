@@ -23,7 +23,7 @@ window.AULA_DATA = {
   importancia: "",
   descricaoDestaque: [],
   descricaoDestaqueNegrito: [],
-  descricaoMarcador: false,
+  descricaoMarcador: true,
   aprenderDestaque: [],
   aprenderDestaqueNegrito: [],
   aprenderMarcador: true
