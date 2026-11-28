@@ -16,7 +16,8 @@ window.AULA_DATA = {
   "checagem1",
   "checagem2",
   "checagem3",
-  "checagem4"
+  "checagem4",
+  "checagem5"
 ],
 
   antesComecar: {
@@ -158,6 +159,39 @@ window.AULA_DATA = {
     subtituloDestaqueNegrito: [],
     tituloDestaque: [],
     tituloDestaqueNegrito: []
+  },
+  {
+    titulo: "Quando os contribuintes pagam tributos, como impostos, taxas e contribuições, e esses valores ingressam nos cofres públicos, estamos diante de qual conceito?",
+    correta: 1,
+    feedbackCorreto: "Arrecadação tributária é o ingresso dos valores pagos pelos contribuintes nos cofres públicos.",
+    feedbackErrado: "Resposta corretoa (B) - Arrecadação tributária é o ingresso dos valores pagos pelos contribuintes nos cofres públicos.",
+    opcoes: [
+      "Distribuição de receitas públicas",
+      "Arrecadação tributária",
+      "Repartição das competências tributárias",
+      "Despesa pública"
+    ],
+    opcoesNegrito: [
+      false,
+      false
+    ],
+    opcoesItalico: [
+      false,
+      false
+    ],
+    opcoesDestaque: [
+      [],
+      [],
+      [],
+      []
+    ],
+    dificuldade: "Fácil",
+    subtitulo: "",
+    subtituloDestaque: [],
+    subtituloDestaqueNegrito: [],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: [],
+    tituloNegrito: false
   }
 ],
 
