@@ -126,7 +126,7 @@ window.AULA_DATA = {
         id: "n7",
         texto: "Empregados",
         tipo: "nenhum",
-        cor: "#DFF3FC",
+        cor: "#F1EBFF",
         paiId: "n2",
         cartaoTexto: "",
         textoDestaque: [],
