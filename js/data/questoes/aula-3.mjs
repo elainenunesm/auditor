@@ -129,8 +129,9 @@ window.AULA_DATA = {
       38,
       39,
       66,
-      68,
-      37
+      37,
+      65,
+      64
     ],
     conclusaoDestaqueNegrito: [
       20,
@@ -139,7 +140,6 @@ window.AULA_DATA = {
       38,
       43,
       66,
-      68,
       71,
       75,
       0,
