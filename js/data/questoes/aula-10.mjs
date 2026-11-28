@@ -67,12 +67,14 @@ window.AULA_DATA = {
     tipo: "nenhum",
     texto: "Objeto X Objetivo",
     conclusao: "\nObjeto(patrimônio)\n\n",
-    obs: "Não confunda objeto(objeto de estudo patrimônio) com objetivo(finalidade, fornecer informações ou controlar o patrimonio)",
+    obs: "Não confunda objeto(objeto de estudo patrimônio) com objetivo(finalidade, fornecer informações ou controlar o patrimônio)",
     pontos: [],
     textoDestaque: [],
     textoDestaqueNegrito: [],
     conclusaoDestaque: [],
-    conclusaoDestaqueNegrito: []
+    conclusaoDestaqueNegrito: [],
+    obsDestaque: [],
+    obsDestaqueNegrito: []
   }
 ],
 
