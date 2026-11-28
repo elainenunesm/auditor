@@ -74,9 +74,9 @@ window.AULA_DATA = {
       },
       {
         id: "n2",
-        texto: "",
+        texto: "Internos",
         tipo: "nenhum",
-        cor: "#FFF8D9",
+        cor: "#DFF3FC",
         paiId: "n1",
         cartaoTexto: "",
         textoDestaque: [],
