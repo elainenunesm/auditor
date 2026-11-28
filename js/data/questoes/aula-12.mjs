@@ -20,7 +20,7 @@ window.AULA_DATA = {
   titulo: "Aprenda porque se estuda essa matéria",
   descricao: "Nesta aula você vai dar o primeiro passo para entender os conceitos iniciais.",
   aprender: "Quais são usuários da informação da contabilidade.",
-  importancia: "Entender quem consome das informações d",
+  importancia: "Entender quem consome das informações da contabilidade.",
   tituloDestaque: [],
   tituloDestaqueNegrito: [],
   descricaoDestaque: [],
