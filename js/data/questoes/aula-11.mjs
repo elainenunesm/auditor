@@ -18,7 +18,8 @@ window.AULA_DATA = {
   "checagem3",
   "checagem4",
   "checagem5",
-  "checagem6"
+  "checagem6",
+  "checagem7"
 ],
 
   antesComecar: {
@@ -230,6 +231,54 @@ window.AULA_DATA = {
     subtituloDestaqueNegrito: [],
     tituloDestaque: [],
     tituloDestaqueNegrito: []
+  },
+  {
+    titulo: "(CEBRASPE – Analista de Finanças Públicas – SEFAZ/RJ – 2025)Objeto, finalidade.\n\nA contabilidade tem adquirido importância crescente no contexto atual, impulsionada pelo crescimento das organizações, sejam elas públicas ou privadas, pela crescente complexidade de suas transações e operações e pela volatilidade e turbulência do ambiente de negócios.\nA contabilidade tem como objeto\n\nI os acionistas.\n\nII os credores.\n\nIII os stakeholders.\n\nIV o patrimônio das entidades.\n\nAssinale a opção correta.",
+    correta: 0,
+    feedbackCorreto: "Na Contabilidade, o objeto é sempre o patrimônio de uma Entidade, definido como um conjunto de bens, direitos e de obrigações para com terceiros, pertencente a uma pessoa física, a um conjunto de pessoas, como ocorre nas sociedades informais, ou a uma sociedade ou instituição de qualquer natureza, independentemente da sua finalidade, que pode, ou não, incluir o lucro.",
+    feedbackErrado: "Assim, correta a alternativa A.\n\nNa Contabilidade, o objeto é sempre o patrimônio de uma Entidade, definido como um conjunto de bens, direitos e de obrigações para com terceiros, pertencente a uma pessoa física, a um conjunto de pessoas, como ocorre nas sociedades informais, ou a uma sociedade ou instituição de qualquer natureza, independentemente da sua finalidade, que pode, ou não, incluir o lucro.",
+    opcoes: [
+      "Apenas o item IV está certo.",
+      "Apenas os itens I e II estão certos.",
+      "Apenas os itens II e III estão certos.",
+      "Apenas os itens I, III e IV estão certos.",
+      "Todos os itens estão certos."
+    ],
+    opcoesNegrito: [
+      false,
+      false,
+      false
+    ],
+    opcoesItalico: [
+      false,
+      false,
+      false
+    ],
+    opcoesDestaque: [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    dificuldade: "Fácil",
+    subtituloDestaque: [],
+    subtituloDestaqueNegrito: [],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: [
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0,
+      11
+    ],
+    subtitulo: ""
   }
 ],
 
