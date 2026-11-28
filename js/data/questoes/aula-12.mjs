@@ -68,7 +68,7 @@ window.AULA_DATA = {
         texto: "Usuários das informações contábeis.",
         tipo: "nenhum",
         paiId: '',
-        cartaoTexto: "Internos",
+        cartaoTexto: "Internos ou externos",
         cartaoTextoDestaque: [],
         cartaoTextoDestaqueNegrito: []
       },
