@@ -65,12 +65,14 @@ window.AULA_DATA = {
   },
   {
     tipo: "nenhum",
-    texto: "",
+    texto: "Objeto X Objetivo",
     conclusao: "",
     obs: "",
     pontos: [],
     textoDestaque: [],
-    textoDestaqueNegrito: []
+    textoDestaqueNegrito: [],
+    conclusaoDestaque: [],
+    conclusaoDestaqueNegrito: []
   }
 ],
 
