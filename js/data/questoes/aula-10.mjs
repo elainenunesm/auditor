@@ -110,7 +110,7 @@ window.AULA_DATA = {
     titulo: "(CEBRASPE – Analista de Finanças Públicas – SEFAZ/RJ – 2025)\n\nA contabilidade tem adquirido importância crescente no contexto atual, impulsionada pelo crescimento das organizações, sejam elas públicas ou privadas, pela crescente complexidade de suas transações e operações e pela volatilidade e turbulência do ambiente de negócios.\nA contabilidade tem como objeto\n\nI os acionistas.\n\nII os credores.\n\nIII os stakeholders.\n\nIV o patrimônio das entidades.\n\nAssinale a opção correta.",
     correta: 0,
     feedbackCorreto: "Na Contabilidade, o objeto é sempre o patrimônio de uma Entidade, definido como um conjunto de bens, direitos e de obrigações para com terceiros, pertencente a uma pessoa física, a um conjunto de pessoas, como ocorre nas sociedades informais, ou a uma sociedade ou instituição de qualquer natureza, independentemente da sua finalidade, que pode, ou não, incluir o lucro.",
-    feedbackErrado: "",
+    feedbackErrado: "Assim, correta a alternativa A.",
     opcoes: [
       "Apenas o item IV está certo.",
       "Apenas os itens I e II estão certos.",
