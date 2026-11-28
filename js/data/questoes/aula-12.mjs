@@ -166,11 +166,19 @@ window.AULA_DATA = {
         id: "n11",
         texto: "Clientes ou forncedores",
         tipo: "nenhum",
-        cor: "#FCE8E8",
+        cor: "#DFF5E5",
         paiId: "n8",
         cartaoTexto: "",
         textoDestaque: [],
         textoDestaqueNegrito: []
+      },
+      {
+        id: "n12",
+        texto: "Acion",
+        tipo: "nenhum",
+        cor: "#DFF5E5",
+        paiId: "n8",
+        cartaoTexto: ""
       }
     ]
   }
