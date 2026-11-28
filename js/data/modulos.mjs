@@ -61,19 +61,6 @@ const MODULOS = [
         icone:   'padrao',
       }
     ],
-  },
-  {
-    id:      3,
-    titulo:  "Português",
-    materia: "Português",
-    aulas: [
-      {
-        id:      9,
-        titulo:  "Nova aula",
-        arquivo: "aula-9",
-        icone:   'padrao',
-      }
-    ],
   }
 ];
 
@@ -85,12 +72,6 @@ const NIVEIS = [
     id:          1,
     titulo:      "Etapa 1 - Conceitos",
     etapas:      [1, 2],
-    insigniaUrl: "",
-  },
-  {
-    id:          2,
-    titulo:      "Nova etapa",
-    etapas:      [3],
     insigniaUrl: "",
   }
 ];
