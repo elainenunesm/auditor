@@ -107,7 +107,7 @@ window.AULA_DATA = {
 
   checagem: [
   {
-    titulo: "",
+    titulo: "(CEBRASPE – Analista de Finanças Públicas – SEFAZ/RJ – 2025)",
     correta: 0,
     feedbackCorreto: "",
     feedbackErrado: "",
@@ -123,7 +123,9 @@ window.AULA_DATA = {
     ],
     dificuldade: "Fácil",
     subtituloDestaque: [],
-    subtituloDestaqueNegrito: []
+    subtituloDestaqueNegrito: [],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: []
   }
 ],
 
