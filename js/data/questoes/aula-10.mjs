@@ -67,7 +67,7 @@ window.AULA_DATA = {
     tipo: "nenhum",
     texto: "Objeto X Objetivo",
     conclusao: "\nObjeto(patrimônio)\n\n",
-    obs: "Não confunda oj",
+    obs: "Não confunda objeto(objeto d",
     pontos: [],
     textoDestaque: [],
     textoDestaqueNegrito: [],
