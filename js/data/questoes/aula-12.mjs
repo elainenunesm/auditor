@@ -65,7 +65,7 @@ window.AULA_DATA = {
     nos: [
       {
         id: "n1",
-        texto: "Usuários das informações contabeis.",
+        texto: "Usuários das informações contábeis.",
         tipo: "nenhum",
         paiId: '',
         cartaoTexto: ""
