@@ -226,11 +226,21 @@ window.AULA_DATA = {
     feedbackErrado: "",
     opcoes: [
       "O patrimônio.",
-      "O orçamento."
+      "O orçamento.",
+      "Os ativos.",
+      ""
     ],
-    opcoesNegrito: [],
-    opcoesItalico: [],
+    opcoesNegrito: [
+      false,
+      false
+    ],
+    opcoesItalico: [
+      false,
+      false
+    ],
     opcoesDestaque: [
+      [],
+      [],
       [],
       []
     ],
