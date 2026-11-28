@@ -160,15 +160,23 @@ window.AULA_DATA = {
     opcoes: [
       "Apurar o lucro dos sócios da empresa.",
       "Priorizar a produção de informações para os órgãos governamentais.",
-      "Produzir informações fidedignas da situação de um patrimônio para os seus usuários."
+      "Produzir informações fidedignas da situação de um patrimônio para os seus usuários.",
+      "Evitar multas de fiscalização tributária.",
+      ""
     ],
     opcoesNegrito: [
+      false,
+      false,
       false
     ],
     opcoesItalico: [
+      false,
+      false,
       false
     ],
     opcoesDestaque: [
+      [],
+      [],
       [],
       [],
       []
