@@ -19,7 +19,7 @@ window.AULA_DATA = {
   antesComecar: {
   titulo: "",
   descricao: "teste\nTeste1\n\nkndionfoi\n\nfaiofnaiofn",
-  aprender: "",
+  aprender: "fqfqfqf",
   importancia: "",
   descricaoDestaque: [],
   descricaoDestaqueNegrito: [],
