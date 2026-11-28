@@ -15,7 +15,8 @@ window.AULA_DATA = {
   "checagem0",
   "checagem1",
   "checagem2",
-  "checagem3"
+  "checagem3",
+  "checagem4"
 ],
 
   antesComecar: {
@@ -135,6 +136,28 @@ window.AULA_DATA = {
       6,
       8
     ]
+  },
+  {
+    titulo: "\nEntidade é uma pessoa ou organização que existe e possui patrimônio próprio",
+    correta: 0,
+    feedbackCorreto: "Correto.\n\nPara mão falar pessoa ou organização, inclui entidade.",
+    feedbackErrado: "Errado.\n\nÉ uma pessoa ou organização que existe e possui patrimônio próprio.\nPara mão falar pessoa ou organização, inclui entidade.",
+    opcoes: [
+      "Certo",
+      "Errado"
+    ],
+    certoErrado: true,
+    opcoesNegrito: [],
+    opcoesItalico: [],
+    opcoesDestaque: [
+      [],
+      []
+    ],
+    dificuldade: "Fácil",
+    subtituloDestaque: [],
+    subtituloDestaqueNegrito: [],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: []
   }
 ],
 
