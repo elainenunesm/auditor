@@ -114,7 +114,7 @@ window.AULA_DATA = {
     opcoes: [
       "Apenas o item IV está certo.",
       "Apenas os itens I e II estão certos.",
-      ""
+      "Apenas os itens II e III estão certos."
     ],
     opcoesNegrito: [
       false
