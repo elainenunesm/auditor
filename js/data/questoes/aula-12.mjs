@@ -12,8 +12,7 @@ window.AULA_DATA = {
   // Ordem das telas na sequência de estudo — definida em "Estrutura das telas".
   ordem: [
   "antesComecar",
-  "resumo",
-  "licao"
+  "mapaConceitual0"
 ],
 
   antesComecar: {
@@ -60,7 +59,20 @@ window.AULA_DATA = {
 
   tabelaAnimada: [],
 
-  mapaConceitual: [],
+  mapaConceitual: [
+  {
+    titulo: "",
+    nos: [
+      {
+        id: "n1",
+        texto: "Usuários das informações contabeis.",
+        tipo: "nenhum",
+        paiId: '',
+        cartaoTexto: ""
+      }
+    ]
+  }
+],
 
   mapaInterativo: [],
 
