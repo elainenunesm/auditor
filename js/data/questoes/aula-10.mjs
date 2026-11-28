@@ -112,7 +112,7 @@ window.AULA_DATA = {
     feedbackCorreto: "",
     feedbackErrado: "",
     opcoes: [
-      "",
+      "Apenas o item IV está certo.",
       ""
     ],
     opcoesNegrito: [],
