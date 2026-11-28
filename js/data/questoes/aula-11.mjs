@@ -18,7 +18,7 @@ window.AULA_DATA = {
 
   antesComecar: {
   titulo: "Resumo maroto",
-  descricao: "Questões para compreender melhor.",
+  descricao: "Questões para exercitar os conceitoscompreender melhor.",
   aprender: "",
   importancia: "",
   tituloDestaque: [],
