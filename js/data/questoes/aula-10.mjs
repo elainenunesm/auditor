@@ -217,7 +217,16 @@ window.AULA_DATA = {
     ],
     dificuldade: "Fácil",
     tituloDestaque: [],
-    tituloDestaqueNegrito: []
+    tituloDestaqueNegrito: [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8
+    ]
   },
   {
     titulo: "(FAFIPA – Analista Fiscal de Tributos – Pref. Jaguapitã/PR– 2025)Objeto.\n\nAssinale a alternativa que indica CORRETAMENTE o objeto da Contabilidade.\n",
