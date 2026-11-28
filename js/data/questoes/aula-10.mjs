@@ -159,7 +159,7 @@ window.AULA_DATA = {
     feedbackErrado: "",
     opcoes: [
       "Apurar o lucro dos sócios da empresa.",
-      ""
+      "Priorizar a produção de informações para os órgãos governamentais."
     ],
     opcoesNegrito: [],
     opcoesItalico: [],
