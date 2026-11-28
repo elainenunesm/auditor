@@ -18,10 +18,7 @@ window.AULA_DATA = {
   "checagem3",
   "checagem4",
   "checagem5",
-  "checagem6",
-  "checagem7",
-  "checagem8",
-  "checagem9"
+  "checagem6"
 ],
 
   antesComecar: {
@@ -51,51 +48,10 @@ window.AULA_DATA = {
 
   checagem: [
   {
-    titulo: "A distribuição dos valores arrecadados entre União, Estados e Municípios é a mesma coisa que arrecadação tributária?",
-    correta: 1,
-    feedbackCorreto: "Arrecadação: entrada dos tributos nos cofres públicos.\nDistribuição de receitas: repartição dos recursos entre os entes públicos.",
-    feedbackErrado: "Resposta: Errada - \nArrecadação: entrada dos tributos nos cofres públicos.\nDistribuição de receitas: repartição dos recursos entre os entes públicos.",
-    opcoes: [
-      "Certo",
-      "Errado"
-    ],
-    certoErrado: true,
-    opcoesNegrito: [],
-    opcoesItalico: [],
-    opcoesDestaque: [
-      [],
-      []
-    ],
-    tituloDestaque: [],
-    tituloDestaqueNegrito: []
-  },
-  {
     titulo: "O objeto de estudo da contabilidade é o caixa.",
     correta: 1,
     feedbackCorreto: "O objeto de estudo da contabilidade é o Patrimônio.",
     feedbackErrado: "Errado.\n\nO objeto de estudo da contabilidade é o Patrimônio.",
-    opcoes: [
-      "Certo",
-      "Errado"
-    ],
-    certoErrado: true,
-    opcoesNegrito: [],
-    opcoesItalico: [],
-    opcoesDestaque: [
-      [],
-      []
-    ],
-    dificuldade: "Fácil",
-    subtituloDestaque: [],
-    subtituloDestaqueNegrito: [],
-    tituloDestaque: [],
-    tituloDestaqueNegrito: []
-  },
-  {
-    titulo: "Compete à lei ordinária municipal resolver conflitos de competência tributária entre os Municípios e os Estados.",
-    correta: 1,
-    feedbackCorreto: "\nA competência para dispor sobre conflitos de competência tributária entre os entes federativos é da lei complementar, conforme o art. 146, I, da Constituição Federal.",
-    feedbackErrado: "\nA competência para dispor sobre conflitos de competência tributária entre os entes federativos é da lei complementar, conforme o art. 146, I, da Constituição Federal.\n\nObservar que é lei complementar e não lei ordinária.",
     opcoes: [
       "Certo",
       "Errado"
@@ -163,39 +119,6 @@ window.AULA_DATA = {
     subtituloDestaqueNegrito: [],
     tituloDestaque: [],
     tituloDestaqueNegrito: []
-  },
-  {
-    titulo: "Quando os contribuintes pagam tributos, como impostos, taxas e contribuições, e esses valores ingressam nos cofres públicos, estamos diante de qual conceito?",
-    correta: 1,
-    feedbackCorreto: "Arrecadação tributária é o ingresso dos valores pagos pelos contribuintes nos cofres públicos.",
-    feedbackErrado: "Resposta corretoa (B) - Arrecadação tributária é o ingresso dos valores pagos pelos contribuintes nos cofres públicos.",
-    opcoes: [
-      "Distribuição de receitas públicas",
-      "Arrecadação tributária",
-      "Repartição das competências tributárias",
-      "Despesa pública"
-    ],
-    opcoesNegrito: [
-      false,
-      false
-    ],
-    opcoesItalico: [
-      false,
-      false
-    ],
-    opcoesDestaque: [
-      [],
-      [],
-      [],
-      []
-    ],
-    dificuldade: "Fácil",
-    subtitulo: "",
-    subtituloDestaque: [],
-    subtituloDestaqueNegrito: [],
-    tituloDestaque: [],
-    tituloDestaqueNegrito: [],
-    tituloNegrito: false
   },
   {
     titulo: "Contabilidade é?",
