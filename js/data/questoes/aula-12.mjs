@@ -174,11 +174,13 @@ window.AULA_DATA = {
       },
       {
         id: "n12",
-        texto: "Acion",
+        texto: "Acionistas minoritários",
         tipo: "nenhum",
         cor: "#DFF5E5",
         paiId: "n8",
-        cartaoTexto: ""
+        cartaoTexto: "",
+        textoDestaque: [],
+        textoDestaqueNegrito: []
       }
     ]
   }
