@@ -114,7 +114,7 @@ window.AULA_DATA = {
       },
       {
         id: "n6",
-        texto: "Acio",
+        texto: "Acionistas controladores",
         tipo: "nenhum",
         cor: "#F1EBFF",
         paiId: "n2",
