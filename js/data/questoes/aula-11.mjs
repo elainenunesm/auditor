@@ -12,7 +12,8 @@ window.AULA_DATA = {
   // Ordem das telas na sequência de estudo — definida em "Estrutura das telas".
   ordem: [
   "antesComecar",
-  "checagem0"
+  "checagem0",
+  "checagem1"
 ],
 
   antesComecar: {
@@ -57,6 +58,28 @@ window.AULA_DATA = {
       [],
       []
     ],
+    tituloDestaque: [],
+    tituloDestaqueNegrito: []
+  },
+  {
+    titulo: "O objeto de estudo da contabilidade é o caixa.",
+    correta: 1,
+    feedbackCorreto: "O objeto de estudo da contabilidade é o Patrimônio.",
+    feedbackErrado: "Errado.\n\nO objeto de estudo da contabilidade é o Patrimônio.",
+    opcoes: [
+      "Certo",
+      "Errado"
+    ],
+    certoErrado: true,
+    opcoesNegrito: [],
+    opcoesItalico: [],
+    opcoesDestaque: [
+      [],
+      []
+    ],
+    dificuldade: "Fácil",
+    subtituloDestaque: [],
+    subtituloDestaqueNegrito: [],
     tituloDestaque: [],
     tituloDestaqueNegrito: []
   }
