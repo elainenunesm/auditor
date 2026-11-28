@@ -228,7 +228,7 @@ window.AULA_DATA = {
       "O patrimônio.",
       "O orçamento.",
       "Os ativos.",
-      ""
+      "As receitas."
     ],
     opcoesNegrito: [
       false,
