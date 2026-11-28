@@ -70,7 +70,10 @@ window.AULA_DATA = {
     obs: "Não confunda objeto(objeto de estudo patrimônio) com objetivo(finalidade, fornecer informações ou controlar o patrimônio)",
     pontos: [],
     textoDestaque: [],
-    textoDestaqueNegrito: [],
+    textoDestaqueNegrito: [
+      0,
+      2
+    ],
     conclusaoDestaque: [],
     conclusaoDestaqueNegrito: [],
     obsDestaque: [],
