@@ -156,7 +156,7 @@ window.AULA_DATA = {
     titulo: "(Fundatec – Técnico – IFC – 2023).Finalidade da contabilidade.\n\nAssinale a alternativa que apresenta corretamente a finalidade da contabilidade.",
     correta: 2,
     feedbackCorreto: "A finalidade (o objetivo, a razão de ser da Contabilidade) da contabilidade é identificada com a geração de informações, a serem utilizadas por determinados usuários em decisões que buscam a realização de interesses e objetivos próprios (tomada de decisões).",
-    feedbackErrado: "A finalidade (o objetivo, a razão de ser da Contabilidade) da contabilidade é identificada com a geração de informações, a serem utilizadas por determinados usuários em decisões que buscam a realização de interesses e objetivos próprios (tomada de decisões).",
+    feedbackErrado: "Com isso, correta a alternativa C.\n\nA finalidade (o objetivo, a razão de ser da Contabilidade) da contabilidade é identificada com a geração de informações, a serem utilizadas por determinados usuários em decisões que buscam a realização de interesses e objetivos próprios (tomada de decisões).",
     opcoes: [
       "Apurar o lucro dos sócios da empresa.",
       "Priorizar a produção de informações para os órgãos governamentais.",
