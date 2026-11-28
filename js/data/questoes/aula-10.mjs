@@ -12,6 +12,7 @@ window.AULA_DATA = {
   // Ordem das telas na sequência de estudo — definida em "Estrutura das telas".
   ordem: [
   "antesComecar",
+  "exemplo0",
   "resumo",
   "licao"
 ],
@@ -32,7 +33,15 @@ window.AULA_DATA = {
   aprenderDestaqueNegrito: []
 },
 
-  exemplo: [],
+  exemplo: [
+  {
+    tipo: "nenhum",
+    texto: "Termo",
+    conclusao: "",
+    obs: "",
+    pontos: []
+  }
+],
 
   checagem: [],
 
